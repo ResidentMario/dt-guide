@@ -1,5 +1,7 @@
-Dwarf Therapist Guide Version 23.1
+Dwarf Therapist Guide
 ========
+
+Current for Therapist version 23.1.
 
 Guide written to accompany Dwarf Therapist, a player-made utility popular with players of the esoteric world-guilding game
 "Dwarf Fortress".
