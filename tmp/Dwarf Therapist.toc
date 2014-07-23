@@ -1,0 +1,46 @@
+\contentsline {part}{I\hspace {1em}Preamble}{3}{part.1}
+\contentsline {section}{\numberline {1}What's a Dwarf Therapist?}{3}{section.1}
+\contentsline {section}{\numberline {2}Installation}{4}{section.2}
+\contentsline {part}{II\hspace {1em}Basics}{5}{part.2}
+\contentsline {section}{\numberline {3}Connecting to Dwarf Fortress}{5}{section.3}
+\contentsline {section}{\numberline {4}Main Display}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}Labors View}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Views}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Group By and Filters}{10}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Population Indicator and Status Bar}{10}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Main Toolbar}{11}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Docks}{12}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Menu Bar}{14}{subsection.4.7}
+\contentsline {section}{\numberline {5}Managing Your Dwarves}{16}{section.5}
+\contentsline {subsection}{\numberline {5.1}Making Labor Changes}{16}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Using Groups}{18}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Using Sorts}{20}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Mass Designations}{21}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Assigning Nicknames}{22}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Addendum: Managing your Animals}{23}{subsection.5.6}
+\contentsline {section}{\numberline {6}Options}{24}{section.6}
+\contentsline {subsection}{\numberline {6.1}Formatting Your Display}{25}{subsection.6.1}
+\contentsline {part}{III\hspace {1em}Advanced Features}{28}{part.3}
+\contentsline {section}{\numberline {7}Roles}{28}{section.7}
+\contentsline {subsection}{\numberline {7.1}What's in a Role?}{28}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Using Roles}{30}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Creating Custom Roles}{32}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Exporting and Importing Custom Roles}{34}{subsection.7.4}
+\contentsline {section}{\numberline {8}Custom Professions}{34}{section.8}
+\contentsline {subsection}{\numberline {8.1}Creating Custom Professions}{34}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Exporting and Importing Professions}{35}{subsection.8.2}
+\contentsline {section}{\numberline {9}Custom Grid Views}{36}{section.9}
+\contentsline {subsection}{\numberline {9.1}Creating Your Own Grid Views}{36}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Exporting and Importing Grid Views}{39}{subsection.9.2}
+\contentsline {part}{IV\hspace {1em}Expert Features}{41}{part.4}
+\contentsline {section}{\numberline {10}Filter Scripts}{41}{section.10}
+\contentsline {subsection}{\numberline {10.1}Writing Complex Scripts}{43}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Running Filter Scripts}{46}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Exporting and Importing Filter Scripts}{46}{subsection.10.3}
+\contentsline {section}{\numberline {11}Optimization Plans}{47}{section.11}
+\contentsline {subsection}{\numberline {11.1}Exporting and Importing Optimization Plans}{51}{subsection.11.1}
+\contentsline {section}{\numberline {12}Using Optimization Plans}{51}{section.12}
+\contentsline {section}{\numberline {13}Addendum: Memory Tools}{52}{section.13}
+\contentsline {part}{V\hspace {1em}Appendix}{53}{part.5}
+\contentsline {section}{\numberline {14}Hotkeys}{53}{section.14}
+\contentsline {section}{\numberline {15}Modifying Game Data}{53}{section.15}

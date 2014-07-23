@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Fri Aug 23 22:14:52 EDT 2013
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=Dwarf Therapist.tex
+outputFile=Dwarf Therapist.pdf
+langSpell=en
+markDer=true
+srcDir=

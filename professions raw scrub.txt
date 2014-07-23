@@ -1,0 +1,301 @@
+\begin{tabular}{l l}
+\textbf{Profession} & \textbf{ID}\\
+
+Miner & 0\\
+
+Woodworker & 1\\
+
+Carpenter & 2\\
+
+Bowyer & 3\\
+
+Woodcutter & 4\\
+
+Stoneworker & 5\\
+
+Engraver & 6\\
+
+Mason & 7\\
+
+Ranger & 8\\
+
+Animal Caretaker & 9\\
+
+Animal Trainer & 10\\
+
+Hunter & 11\\
+
+Trapper & 12\\
+
+Animal Dissector & 13\\
+
+Metalsmith & 14\\
+
+Furnace Operator & 15\\
+
+Weaponsmith & 16\\
+
+Armorer & 17\\
+
+Blacksmith & 18\\
+
+Metalcrafter & 19\\
+
+Jeweler & 20\\
+
+Gem Cutter & 21\\
+
+Gem Setter & 22\\
+\end{tabular}
+
+\begin{verbatim}
+
+Craftsman
+23
+
+Woodcrafter
+24
+
+Stonecrafter
+25
+
+Leatherworker
+26
+
+Bone Carver
+27
+
+Weaver
+28
+
+Clothier
+29
+
+Glassmaker
+30
+
+Potter
+31
+
+ Glazer
+32
+
+Wax Worker
+33
+
+Strand Extractor
+34
+
+ Fishery Worker
+35
+
+Fisherman
+36
+
+Fish Dissector
+37
+
+Fish Cleaner
+38
+
+Farmer
+39
+
+Cheesemaker
+40
+
+Milker
+41
+
+Cooking
+42
+
+Thresher
+43
+
+Miller
+44
+
+Butcher
+45
+
+Tanner
+46
+
+Dyer
+47
+
+Planter
+48
+
+Herbalist
+49
+
+Brewer
+50
+
+Soap Maker
+51
+
+Potash Maker
+52
+
+Lye Maker
+53
+
+Wood Burner
+54
+
+Shearer
+55
+
+Spinner
+56
+
+Presser
+57
+
+Beekeeper
+58
+
+Engineer
+59
+
+Mechanic
+60
+
+Siege Engineer
+61
+
+Siege Operator
+62
+
+Pump Operator
+63
+
+Clerk
+64
+
+Administrator
+65
+
+Trader
+66
+
+Architect
+67
+
+Alchemist
+68
+
+Doctor
+69
+
+Diagnoser
+70
+
+Bone Doctor
+71
+
+Suturer
+72
+
+Surgeon
+73
+
+Merchant
+74
+
+Hammerman
+75
+
+Master Hammerman
+76
+
+Spearman
+77
+
+Master Spearman
+78
+
+Crossbowman
+79
+
+Master Crossbowman
+80
+
+Wrestler
+81
+
+Master Wrestler
+82
+
+Axeman
+83
+
+Master Axeman
+84
+
+Swordsman
+85
+
+Master Swordsman
+86
+
+Maceman
+87
+
+Master Maceman
+88
+
+Pikeman
+89
+
+Master Pikeman
+90
+
+Bowman
+91
+
+Master Bowman
+92
+
+Blowgunman
+93
+
+Master Blowgunman
+94
+
+Lasher
+95
+
+Master Lasher
+96
+
+Recruit
+97
+
+Trained Hunter
+98
+
+Trained War
+99
+
+Master Thief
+100
+
+Thief
+101
+
+Peasant
+102
+
+Child
+103
+
+Baby
+104
+
+Drunk
+105
+\end{verbatim}
