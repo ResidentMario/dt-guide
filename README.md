@@ -11,4 +11,5 @@ typesetting language. The hope is that by making its source code publicly availa
 the text, as I don't have the time or commitment to maintain it to a high standard alone.
 
 History
+
 7/22/2014 --- First online repo version posted to GitHub.
