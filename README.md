@@ -8,4 +8,5 @@ This guide was written to accompany Dwarf Therapist, a player-made utility popul
 History
 
 7/22/2014 --- First online repo version posted to GitHub.
+
 7/29/2014 --- Updated to match the 23.2 beta version of Dwarf Therapist. ~6 pages of new content added.
