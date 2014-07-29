@@ -1,46 +1,52 @@
 \BOOKMARK [0][-]{part.1}{I Preamble}{}% 1
 \BOOKMARK [1][-]{section.1}{What's a Dwarf Therapist?}{part.1}% 2
 \BOOKMARK [1][-]{section.2}{Installation}{part.1}% 3
-\BOOKMARK [0][-]{part.2}{II Basics}{}% 4
-\BOOKMARK [1][-]{section.3}{Connecting to Dwarf Fortress}{part.2}% 5
-\BOOKMARK [1][-]{section.4}{Main Display}{part.2}% 6
-\BOOKMARK [2][-]{subsection.4.1}{Labors View}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Views}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.3}{Group By and Filters}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.4}{Population Indicator and Status Bar}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.5}{Main Toolbar}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.6}{Docks}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.7}{Menu Bar}{section.4}% 13
-\BOOKMARK [1][-]{section.5}{Managing Your Dwarves}{part.2}% 14
-\BOOKMARK [2][-]{subsection.5.1}{Making Labor Changes}{section.5}% 15
-\BOOKMARK [2][-]{subsection.5.2}{Using Groups}{section.5}% 16
-\BOOKMARK [2][-]{subsection.5.3}{Using Sorts}{section.5}% 17
-\BOOKMARK [2][-]{subsection.5.4}{Mass Designations}{section.5}% 18
-\BOOKMARK [2][-]{subsection.5.5}{Assigning Nicknames}{section.5}% 19
-\BOOKMARK [2][-]{subsection.5.6}{Addendum: Managing your Animals}{section.5}% 20
-\BOOKMARK [1][-]{section.6}{Options}{part.2}% 21
-\BOOKMARK [2][-]{subsection.6.1}{Formatting Your Display}{section.6}% 22
-\BOOKMARK [0][-]{part.3}{III Advanced Features}{}% 23
-\BOOKMARK [1][-]{section.7}{Roles}{part.3}% 24
-\BOOKMARK [2][-]{subsection.7.1}{What's in a Role?}{section.7}% 25
-\BOOKMARK [2][-]{subsection.7.2}{Using Roles}{section.7}% 26
-\BOOKMARK [2][-]{subsection.7.3}{Creating Custom Roles}{section.7}% 27
-\BOOKMARK [2][-]{subsection.7.4}{Exporting and Importing Custom Roles}{section.7}% 28
-\BOOKMARK [1][-]{section.8}{Custom Professions}{part.3}% 29
-\BOOKMARK [2][-]{subsection.8.1}{Creating Custom Professions}{section.8}% 30
-\BOOKMARK [2][-]{subsection.8.2}{Exporting and Importing Professions}{section.8}% 31
-\BOOKMARK [1][-]{section.9}{Custom Grid Views}{part.3}% 32
-\BOOKMARK [2][-]{subsection.9.1}{Creating Your Own Grid Views}{section.9}% 33
-\BOOKMARK [2][-]{subsection.9.2}{Exporting and Importing Grid Views}{section.9}% 34
-\BOOKMARK [0][-]{part.4}{IV Expert Features}{}% 35
-\BOOKMARK [1][-]{section.10}{Filter Scripts}{part.4}% 36
-\BOOKMARK [2][-]{subsection.10.1}{Writing Complex Scripts}{section.10}% 37
-\BOOKMARK [2][-]{subsection.10.2}{Running Filter Scripts}{section.10}% 38
-\BOOKMARK [2][-]{subsection.10.3}{Exporting and Importing Filter Scripts}{section.10}% 39
-\BOOKMARK [1][-]{section.11}{Optimization Plans}{part.4}% 40
-\BOOKMARK [2][-]{subsection.11.1}{Exporting and Importing Optimization Plans}{section.11}% 41
-\BOOKMARK [1][-]{section.12}{Using Optimization Plans}{part.4}% 42
-\BOOKMARK [1][-]{section.13}{Addendum: Memory Tools}{part.4}% 43
-\BOOKMARK [0][-]{part.5}{V Appendix}{}% 44
-\BOOKMARK [1][-]{section.14}{Hotkeys}{part.5}% 45
-\BOOKMARK [1][-]{section.15}{Modifying Game Data}{part.5}% 46
+\BOOKMARK [1][-]{section.3}{About this Guide}{part.1}% 4
+\BOOKMARK [0][-]{part.2}{II Basics}{}% 5
+\BOOKMARK [1][-]{section.4}{Connecting to Dwarf Fortress}{part.2}% 6
+\BOOKMARK [1][-]{section.5}{Main Display}{part.2}% 7
+\BOOKMARK [2][-]{subsection.5.1}{Labors View}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.2}{Views}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.3}{Group By and Filters}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.4}{Population Indicator and Status Bar}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.5}{Main Toolbar}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.6}{Docks}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.7}{Menu Bar}{section.5}% 14
+\BOOKMARK [1][-]{section.6}{Managing Your Dwarves}{part.2}% 15
+\BOOKMARK [2][-]{subsection.6.1}{Making Labor Changes}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.2}{Using Groups}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.3}{Using Sorts}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.4}{Mass Designations}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.5}{Assigning Nicknames}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.6}{Addendum: Managing your Animals}{section.6}% 21
+\BOOKMARK [1][-]{section.7}{Options}{part.2}% 22
+\BOOKMARK [2][-]{subsection.7.1}{Formatting Your Display}{section.7}% 23
+\BOOKMARK [0][-]{part.3}{III Advanced Features}{}% 24
+\BOOKMARK [1][-]{section.8}{Roles}{part.3}% 25
+\BOOKMARK [2][-]{subsection.8.1}{What's in a Role?}{section.8}% 26
+\BOOKMARK [2][-]{subsection.8.2}{Using Roles\204The Sort Method}{section.8}% 27
+\BOOKMARK [2][-]{subsection.8.3}{Using Roles\204The View Method}{section.8}% 28
+\BOOKMARK [2][-]{subsection.8.4}{Creating Custom Roles}{section.8}% 29
+\BOOKMARK [2][-]{subsection.8.5}{Exporting and Importing Custom Roles}{section.8}% 30
+\BOOKMARK [1][-]{section.9}{Custom Professions}{part.3}% 31
+\BOOKMARK [2][-]{subsection.9.1}{Creating Custom Professions}{section.9}% 32
+\BOOKMARK [2][-]{subsection.9.2}{Exporting and Importing Professions}{section.9}% 33
+\BOOKMARK [1][-]{section.10}{Addendum: Custom Icons}{part.3}% 34
+\BOOKMARK [1][-]{section.11}{Custom Grid Views}{part.3}% 35
+\BOOKMARK [2][-]{subsection.11.1}{Super Labors}{section.11}% 36
+\BOOKMARK [2][-]{subsection.11.2}{Creating Your Own Grid Views}{section.11}% 37
+\BOOKMARK [2][-]{subsection.11.3}{Exporting and Importing Grid Views}{section.11}% 38
+\BOOKMARK [0][-]{part.4}{IV Expert Features}{}% 39
+\BOOKMARK [1][-]{section.12}{Filter Scripts}{part.4}% 40
+\BOOKMARK [2][-]{subsection.12.1}{Writing Complex Scripts}{section.12}% 41
+\BOOKMARK [2][-]{subsection.12.2}{Running Filter Scripts}{section.12}% 42
+\BOOKMARK [2][-]{subsection.12.3}{Exporting and Importing Filter Scripts}{section.12}% 43
+\BOOKMARK [1][-]{section.13}{Optimization Plans}{part.4}% 44
+\BOOKMARK [2][-]{subsection.13.1}{Using Optimization Plans}{section.13}% 45
+\BOOKMARK [2][-]{subsection.13.2}{Exporting and Importing Optimization Plans}{section.13}% 46
+\BOOKMARK [1][-]{section.14}{Addendum: Memory Tools}{part.4}% 47
+\BOOKMARK [1][-]{section.15}{Putting it all Together}{part.4}% 48
+\BOOKMARK [0][-]{part.5}{V Appendix}{}% 49
+\BOOKMARK [1][-]{section.16}{Utility Packages}{part.5}% 50
+\BOOKMARK [1][-]{section.17}{Hotkeys}{part.5}% 51
+\BOOKMARK [1][-]{section.18}{Modifying Game Data}{part.5}% 52

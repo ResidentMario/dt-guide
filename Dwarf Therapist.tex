@@ -9,7 +9,51 @@
 \usepackage{sidecap}
 \usepackage{fullpage}
 \usepackage{enumitem}
+\usepackage{color}
 \DeclareMathSizes{10}{10}{10}{10}
+
+% Color definitions for the legacy and addendum boxes used in the text.
+\definecolor{legacy-content}{RGB}{245,250,220}
+\definecolor{addendum-content}{RGB}{233,222,219}
+
+% Syntax for intra-document section links.
+\newcommand{\jump}[1] {\textbf{``\nameref{sec:#1}}''}
+
+% Syntax for legacy boxes.
+
+\newcommand{\legacy}[1] {
+\begin{center}
+\colorbox{legacy-content}{
+\begin{minipage}[t]{0.95\linewidth}
+#1
+\end{minipage}
+}
+\end{center}
+}
+
+% Syntax for addendum boxes.
+
+\newcommand{\addendum}[1] {
+\begin{center}
+\colorbox{addendum-content}{
+\begin{minipage}[t]{0.96\linewidth}
+#1
+\end{minipage}
+}
+\end{center}
+}
+
+% Syntax for bold-faced steps, as used in ``Putting it all Together''.
+\newcommand{\step}[1] {
+\vspace{12pt}
+\noindent \textbf{Step #1}
+}
+
+% Syntax for bold-faced listing, similar to the ``Step'' stuff used above.
+\newcommand{\boldlist}[1] {
+\vspace{12pt}
+\noindent \textbf{#1}
+}
 
 \begin{document}
 \pagenumbering{gobble}
@@ -27,12 +71,12 @@
 \textbf{Table of Contents}
 \end{center}
 \tableofcontents
-\vfill
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=.5]{Illustration2}
-\end{figure}
-\vfill
+%\vfill
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=.35]{Illustration2}
+%\end{figure}
+%\vfill
 \newpage
 
 \part{Preamble}
@@ -73,38 +117,64 @@ it into a pretty comprehensive fortress management tool, of which tabular labor 
 most obvious and immediately visible application. It's a program that's long since become complicated
 enough to necessitate a guide to go with it.
 
-Which is what you're reading. The bulk of this guide was written by Resident Mario over the
-course of a few weeks in the summer of 2013, as a \LaTeX \space excercise; he maintained it up to Dwarf
-Fortress's 2014 release, at which time he made the document's source code public. The hope is
-that in the future this guide will be maintained by the community, rather than any one busy and
-falliable author.\newpage
+\newpage
 
 \section{Installation}
 \label{sec:Installation}
-The process for individually installing Dwarf Therapist on your computer differs with your operating
-system. Mod managers, which package together multiple utilities into one constantly updating package,
-are also available.
+Different distributions of Dwarf Therapist are available for different operating systems. Dwarf Therapist
+is a large part of the standard Dwarf Fortress utilities package, so player packs containing the
+utility are also widely available.
 
 \vspace{12pt}
 
-\indent\textbf{Windows:} Since Windows is the base version for the utility, installing Dwarf Therapist on
-Windows is easy: just download this ZIP file in the Dwarf Fortress File Depot and then extract onto
-somewhere close to the game files on your computer. The program will look through your active programs to
-try and find the game, so you should generally be safe running it from just about anywhere, even a thumb
-drive, but it's most logical to stick it in the Dwarf Fortress root directory---the one with the game's
-.exe file. Here is the link: \url{http://dffd.wimbli.com/file.php?id=7184}.
+\indent\textbf{Windows:} Windows is the development operating system for Dwarf Therapist; a ZIP of the
+most recent version can be downloaded directly from the Dwarf Fortress File Depot: 
+\url{http://www.bay12forums.com/smf/index.php?topic=126076}. The program will look through your
+active programs to try and find the game, so you should generally be safe running it from just about
+anywhere, even a thumb drive, but it's most logical to stick it in the Dwarf Fortress root
+directory---the one with the game's .exe file.
+
+As of \today, the standard Windows bundle for the game containing Dwarf Therapist is the Dwarf Fortress
+Starter Pack: \url{http://www.bay12forums.com/smf/index.php?topic=126076}.
+
 \vspace{12pt}
 
 \textbf{OSX:}
-A working version of Dwarf Therapist has been created, and is available here:
-\url{http://dffd.wimbli.com/file.php?id=7842}.
+Dwarf Therapist has been ported to Mac, and is available here:
+\url{http://dffd.wimbli.com/file.php?id=8418}. However, do not expect it to keep up with 
+
+The current standard starter pack for Mac is the MacNewbie Pack, available from here:
+\url{http://dffd.wimbli.com/file.php?id=7922}.
 \vspace{12pt}
 
 \textbf{Linux:}
-A Linux-based version of Dwarf Therapist is available for download from the project page:
-\url{http://code.google.com/r/splintermind-attributes/}. Note that it is still considered in alpha,
-however. You can also build it from the source with the instructions available here:
-\url{http://code.google.com/p/dwarftherapist/wiki/BuildingDwarfTherapist}.
+There is no standard Linux release. You can also build it yourself from the source with the instructions
+available here: \url{http://code.google.com/p/dwarftherapist/wiki/BuildingDwarfTherapist}.
+
+\section{About this Guide}
+\label{sec:About this Guide}
+
+The bulk of this guide was written by Resident Mario over the course of a few weeks in the summer of
+2013, as a \LaTeX \space excercise. In the summer of 2014 he made the document's source code public,
+with the hope is that in the future this guide will be maintained by the community, rather than any one
+busy and falliable author.
+
+Splinterz has continued active development on the utility, and additionally the summer of 2014 saw the
+release of the next major version of Dwarf Fortress, two years in the works, version 0.40. As such, the
+version of Dwarf Therapist that you see now has been refined quite a bit over the one that was originally
+covered by this guide. Dwarf Therapist's capacities were exploited over the course of the writing of this
+guide in program-solving exercises, some of which, particularly in terms of the program's look and feel,
+have since been ``solved'' (often by the inclusion of features that the author themselves recommended).
+Some other usecases have since been included in the program's base installation. In order to
+maintain this guide's overall narrative format, for the most part the usecases used now are the same
+ones used when this guide was first written, even in cases where they may seem redundant or have since
+been hard-coded into the utility---just because the changes are no longer novel, doesn't mean that they
+aren't still useful exercises. Usually, a inset ``legacy box'' is provided to inform the reader that the
+default behavior has since changed, and to describe the way things ``used to be''.
+
+Additionally, because Dwarf Therapist and Dwarf Fortress have been updated several times, in the latter
+case in ways that break compatibility with old saves, example illustrations may use old views until a new
+fortress can be played sufficiently in new release versions to generate the needed usecases.
 
 \newpage
 
@@ -157,7 +227,6 @@ spending some time on the Therapist screen once you switch to it, pausing is pro
 \label{sec:Main Display}
 Once you've connected to and loaded a fresh fortress into Dwarf Therapist, your screen should look
 something like this:
-% TODO: Remove the happiness icons from these image files.
 \begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec1Fig4}
 \end{figure}
 
@@ -170,8 +239,8 @@ Most of the screen space is taken up by the the graphical management user interf
 have many members yet, and so most of the view is whitespace.
 
 The labors view visible here is the most important and immediately accessible part of the program,
-and is the feature around which the rest of Dwarf Therapist is built. Toggling labor preferences has been
-the primary purpose of Dwarf Therapist from its very first release, and many users still use it for
+and is the feature around which the rest of Dwarf Therapist is built. Toggling labor preferences has
+been the primary purpose of Dwarf Therapist from its very first release, and many users still use it for
 little else; but Dwarf Therapist has since become an expansive management utility with an
 extensive suite of tools and capacities that this guide will attempt to illuminate in greater depth.
 
@@ -179,53 +248,76 @@ It should be noted that there are more labor preferences available in the game
 then can be comfortably and compactly fit into the screen, necessitating that we contend with a scroll
 bar at the bottom of the screen on all but the widest of monitors; a second one appears on the right once
 your dwarves get too numerous (vertically) to fit into the interface.\footnote{For tips on
-formatting your display for compactness, see the section \textbf{``\nameref{sec:Formatting
-Your Display}"}.} The labors themselves are organized into "tranches", the same way they are within
-Dwarf Fortress, with related labors categorized and sorted under roughly the same color assignments used
-by dwarves of those professions in-game:
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec1Fig6}
+formatting your display for compactness, see the section \jump{Formatting Your Display}.}
+
+Labors are organized into "tranches", with related labors categorized and sorted under industry
+allegiances roughly like the color assignments used by dwarves of those professions in-game:
+\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec1Fig6+}
 \end{figure}
 
-Most of these labors should be familiar to players of the game, as should be their categorical
-professions: miners, woodworkers stoneworkers, rangers, doctors, farmers, fishery workers, metalsmiths,
-jewelers, craftsdwarves, engineers, and peasants. The only novel labors in the interface
-are alchemy, which was a game feature many a version ago that was replaced by soaping (but is expected to
-return in a future version of the game), and cleaning, which is novel mostly because dwarves do it so
-rarely.
+These labors should be familiar to players of the game, as should be their categorical
+professions: miners, woodworkers, stoneworkers, rangers, doctors, farmers, fishery workers, metalsmiths,
+jewelers, craftsdwarves, engineers, and peasants.
+
+\legacy{
+
+In older versions of Dwarf Therapist, the default view sorted labors in the exact
+same order and with the exact same colors that Dwarf Fortress sorts them:
+
+\vspace{12pt}
+\includegraphics[width=\linewidth]{Sec1Fig6}
+\vspace{2pt}
+
+The view is still available in the view add dropdown menu as the ``Labors Alt'' view. It has been
+replaced as the default by the more polished ``Labors Alt'' view, written over the course of this guide
+(see \jump{Custom Grid Views}) and then introduced into Dwarf Therapist as the new default shortly
+thereafter.
+
+}
 
 To the left of the labor columns are dwarfwise informational columns: a gendered list of your dwarves,
 alphabetically ordered, flanked by icons representing their (current) job, a color gradient their
 happiness (with or without emoticons, depending on your settings), and another set of icons their
 profession. Since we jumped into this view immediately after our fortress disembarked, our dwarves have
 neither jobs nor variance in their hapiness just yet, but they do exhibit the different professions I've
-selected for my starting set.
+selected for my starting set. Dwarves which reach legendary status in at least one skill will have their
+names displayed in boldface. to distinguish them from their ``lesser'' brethren.
 
 Clicking on a headers at the top of the screen for any of the columns allows us to sort the list by that
 column; click on it again to reverse the sort order, or on another column to go to that sort instead.
 The name spacer lists your dwarves alphabetically, the job header sorts them by Job ID, happiness by
-happiness levelm, and profession by profession ID.\footnote{\label{footnote} Job IDs and Profession IDs
-are rather abstract lists that numerically organize of their relative items in no particularly
-well-sorted order.
-Applications for and the modification of IDs will be discussed much later in this guide. For further
-reference, see \textbf{``\nameref{sec:Profession IDs}"}.} Hitting the actual labor columns will sort your
-dwarves in two tiers, first dwarves with that labor enabled by their experience level, then dwarves
-without it enabled by the same metric.\footnote{Dwarves accumulate experience levels and ``rank up''
-their skill level every time they pass a certain milestone.} If \emph{none} of your dwarves have
-experience in a task, sorting won't actually do anything.
+happiness level, and equipment by whether or not they are fully clothed and,
+if their job requires a tool, have that tool at hand.\footnote{\label{footnote} Job IDs and
+the related Profession IDs are somewhat abstract lists of jobs and professions, respectively, whose
+modification we will discuss much later in this guide. For further reference, see \jump{Profession IDs}
+in the appendix.} Hitting the actual labor columns will sort your dwarves in two tiers, first dwarves
+with that labor enabled by their experience level, then dwarves without it enabled by the same
+metric.\footnote{Dwarves accumulate experience levels and ``rank up'' their skill level every time they
+pass a certain milestone.} If \emph{none} of your dwarves have experience in a task, sorting won't
+actually do anything.
 
 Within the grid itself the numbers demarkate the skill level of the dwarf at a task while the shading
 tells you whether or not they have it enabled. Try clicking on a few of the cells and seeing how the
 program responds---getting labor changes into the game should be entirely intuitive, even if we're not
 going over it in detail just yet.
 
-\begin{wrapfigure}{R}{0.32\textwidth}
-\vspace{-20pt}
-  \begin{center}
-    \includegraphics{Sec1Fig7}
-  \end{center}
+% \begin{wrapfigure}{R}{0.32\textwidth}
+% \vspace{-20pt}
+%   \begin{center}
+%     \includegraphics{Sec1Fig7}
+%   \end{center}
+% \vspace{-10pt}
+%   \caption{The labor tooltip.}
+% \end{wrapfigure}
+\newpage
+
+\begin{wrapfigure}{R}{0.55\linewidth}
 \vspace{-10pt}
-  \caption{The labor tooltip.}
+  \begin{center}
+    \includegraphics[scale=.8]{Sec1Fig8}
+  \end{center}
 \end{wrapfigure}
+
 One major feature of the grid interace is its tooltips, which pop up whenever you hover over a space in
 the grid. Hovering over the labor column headers will tell you how many dwarves have that labor enabled,
 while hovering over individual labor cells will display the descriptive (Dabbling, Novice, Adequate,
@@ -236,40 +328,30 @@ skill has rusted, that information will appear here as well.\footnote{
 \href{http://dwarffortresswiki.org/index.php/DF2012:Skill\#Skill_rust}{\textbf{Skill rust}} occurs when
 a dwarf has not performed the labor associated with a skill for a long time. Dwarves whose skills are
 "Very Rusty" will eventually see their skill in the labor drain away or even vanish completely.}
-Hovering over a dwarf's happiness gives you a dwarf's exact happiness score, over their profession gives
-you their in-game job title and profession ID, and over their current job gives your
-the numerical ID of that task (see the footnotes below).%\textbf{``\nameref{sec:Using Sorts}"}).
-\newpage
+Hovering over a dwarf's happiness gives you a dwarf's exact happiness score, hovering over their current
+job gives the numerical ID of that task, and hovering over their equipment gives you their current
+clothing and tools carried.
 
-\begin{figure}[h!]
-\centering
-\includegraphics{Sec1Fig8}
-\end{figure}
-
-By far the most information-dense tooltip on display is that of the dwarves themselves. Hovering over
-their names will give you their caste
-\footnote{\href{http://dwarffortresswiki.org/index.php/DF2012:Caste}{\textbf{Castes}} (web link) are raw
-file definitions used to define species or sub-species, and are not very useful in vanilla Dwarf
-Fortress: but having a display for them is handy if you're using mods and have fiddled with your playable
-race.} and gender, their profession, their happiness level, their thoughts (color coded green when good,
-red when bad), their skills (rust will be highlighted), their traits (and anything they can or cannot do
-as a result of them: this dwarf, for instance, cannot gain experience in the "Flatterer" social skill),
-their preferences, and their calculated "Top 3 Roles" (for a detailed discussion
-on this aspect of the program see \textbf{``\nameref{sec:Roles}"}). The caste description that serves as
-the dwarven tagline also makes an appearance, at the end of the tooltip.
-Notably, the first line in the preferences section tells you how much cave adaptation the dwarf has
-experienced: this dwarf is fine with working outside.\footnote{Dwarves that spend a lot of time
-underground (on "Dark" tiles) slowly develop cave adaptation, becoming "irritated by the sun" or worse,
-"nauseated by the sun". If exposed to direct sunlight (a "Light" tile) they will have an unhappy thought
-in the former and start vomiting too in the latter case.}
+By far the most information-dense tooltip on display is that of the dwarves themselves. Hovering over a
+dwarf's name will give you their caste,
+\footnote{\href{http://dwarffortresswiki.org/index.php/DF2012:Caste}{\textbf{Castes}} are raw file
+definitions used to define species or sub-species, and are not very useful in vanilla Dwarf Fortress:
+but having a display for them is handy if you're using mods and have fiddled with your playable race.}
+gender, profession, happiness level, thoughts (color coded green when good, red when bad), skills (rust
+will be highlighted), personality, preferences, and their calculated "Top 3 Roles" (covered later, see
+\jump{Roles}). The dwarven caste description, more or less memorized by the community, also makes an
+appearance, at the end of the tooltip. The information to be displayed here can be included or excluded
+as you please by adjusting the appropriate settings in \texttt{Options > Tooltip}.
 
 \newpage
+
 \subsection{Views}
 \label{sec:Screens Tab}
 Immediately above the labors screen is the screens tab:
+
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=1]{Sec1Fig9}
+\includegraphics{Sec1Fig9}
 \end{figure}
 
 Although the Labors view is the core of the interface, and is the tab open by default, there's a number
@@ -281,11 +363,11 @@ also have multiple instances of a tab open---although this isn't a particularly 
 there. A list of the screens and what they do follows:
 
 \begin{wrapfigure}{L}{0.35\textwidth}
-\vspace{-20pt}
+\vspace{-10pt}
   \begin{center}
     \includegraphics{Sec1Fig10}
   \end{center}
-\vspace{-10pt}
+\vspace{-70pt}
 \end{wrapfigure}
 \noindent\textbf{Animals:} Lists domestic, caged, and tame creatures and their attributes. Includes
 whether or not they are marked for butchering and whether or not they are caged. Distinguishes between
@@ -293,26 +375,26 @@ children and adults, and lists current training levels. This view is unique in t
 not directed at your dwarves.
 
 
-\noindent\textbf{Attributes:} A basic list of attributes. Tranches are physical, then mental.
+\boldlist{Attributes} A basic list of attributes. Tranches are physical, then mental.
 
 
-\noindent\textbf{Health:} A detailed breakdown of all of your dwarves' wounds and ailments.
+\boldlist{Health} A detailed breakdown of all of your dwarves' wounds and ailments.
 
 
-\noindent\textbf{Labors:} The Labors View is the program's primary view and the one it opens up to by
-default; for a detailed description see \textbf{``\nameref{sec:Labors View}"}.
+\boldlist{Labors} A compressed alternative to the legacy Labors view that was originally created
+as part of this guide, and has since been packaged into the utility as the new default: see the section
+\jump{Creating Your Own Grid Views}.
 
 
-\noindent\textbf{Labors Alt:} An colorful, compressed, and altogether more professional alternative to
-the Labors view that was originally created as part of this guide, and has since been packaged into the
-utility: see the section \textbf{``\nameref{sec:Creating Your Own Grid Views}"}.
+\boldlist{Labors Alt} The Labors View is the program's legacy primary view---for a detailed
+description see \jump{Labors View}.
 
 
-\noindent\textbf{Labors NO SPACERS:} Same as the Labors view, but without any spacers between the
+\boldlist{Labors NO SPACERS} Same as the Labors view, but without any spacers between the
 categorial professions, winning back some screen space.
 
 
-\noindent\textbf{Military:} Allows you to view your dwarves' combat ability. It lists the relevant combat
+\boldlist{Military} Allows you to view your dwarves' combat ability. It lists the relevant combat
 skills in melee, fighter, equipment, miscellaneous, and marksdwarf tranches, then gives you a view of
 their combat-related attributes,  then their compatibility scores for various combat roles, then which
 weapons they are or are not able to equip based on their relative size.\footnote{Theoretically all the
@@ -321,32 +403,30 @@ one-handed; however, because of a bug, in Fortress Mode \emph{no} dwarves can wi
 ever.}
 
 
-\noindent\textbf{Military-Alt:} Expands on the regular Military view by including role ratings.
+\boldlist{Military-Alt} Expands on the regular Military view by including role ratings.
 
 
-\noindent\textbf{Roles:} Lists the role ratings of your dwarves, a score out of 100 that tells you how
-adapted they are to that profession. This is a fairly advanced topic covered in detail in the section
-\textbf{``\nameref{sec:Roles}"}.
+\boldlist{Roles} Lists the role ratings of your dwarves, a score out of 100 that tells you how
+adapted they are to that profession. This view is discussed in \jump{Using Roles---The View Method}.
 
 
-\noindent\textbf{Social:} Catalogues your dwarves' social skills. The tooltip lists related roles, which
-are only present for some of the social skills.
+\boldlist{Social} Catalogues your dwarves' social skills. The tooltip lists related
+roles, which are only present for some of the social skills.
 
 
-\noindent\textbf{Social-Alt:} Expands on the regular Social view by including role ratings, as well as a
+\boldlist{Social-Alt} Expands on the regular Social view by including role ratings, as well as a
 non-social trait columns for traits are affected by social traits. For example, Assertiveness is added
 and grouped with Persuader, because having low assertiveness means it's impossible to increase the
 persuader trait.
 
 
-\noindent\textbf{Traits:} This is a special view that lists raw role ratings; see above.
+\boldlist{Traits} This is a special view that lists raw role ratings; see above.
 
 
-\noindent\textbf{Weapons:} Lists dwarves by which weapons they can wield. This view is dynamically
-generated: in vanilla it acts as a subview of the military view, but mods with large amounts of weapons
-will look significantly more exansive. Additonally, the weapons view will be tacked on to the military
-view as well if there are ten or fewer weapon groups.
-\newpage
+\boldlist{Weapons} Lists dwarves by which weapons they can wield. This view is
+dynamically generated: in vanilla it acts as a subview of the military view, but mods with large amounts
+of weapons will look significantly more exansive. Additonally, the weapons view will be tacked on to the
+military view as well if there are ten or fewer weapon groups.
 
 \subsection{Group By and Filters}
 \label{sec:Group By and Filters}
@@ -356,7 +436,7 @@ view as well if there are ten or fewer weapon groups.
 %\includegraphics[scale=.78]{Sec1Fig11}
 \end{figure}
 
-Filter scripts are an advanced topic covered in  \textbf{``\nameref{sec:Filter Scripts}"}, and will not
+Filter scripts are an advanced topic covered in \jump{Filter Scripts}, and will not
 be covered here, but the "Filter Dwarves" input field is quite simple: it just lets you filter your
 dwarves by name, making it easier to find any specific dwarf  you're looking for. Click on the red X to
 quickly remove the filter.
@@ -384,6 +464,10 @@ exist.}
 \noindent Happiness, the sort does a better job.
 
 \noindent Has Nickname, yes or no, useful when you're naming dwarves.
+
+\noindent Health, health status.
+
+\noindent Highest Skill, a demographic sort.
 
 \noindent Highest Moodable Skill, useful when grinding for a legendary armorsmith.
 
@@ -413,8 +497,8 @@ sub-special caste exists---in which case, race and caste does in fact diverge.}
 When a group is active it will be expandable and collapsable, and in the collapsed labors view will
 display the lowest happiness of the group as well as (for each skill) if anyone in the group has the
 skill enabled, resulting in a darkened box with a numerical dwarf count or, if they all have it enabled,
-in a bright green box. This feature can be toggled on or off in the options. Groups consisting entirely
-of children will appear bright green. For more on using groups, see \textbf{``\nameref{sec:Using Groups}"}.
+in a green box. This feature can be toggled on or off in the options. Groups consisting entirely of
+children will appear bright green. For more on using groups, see \jump{Using Groups}.
 
 \subsection{Population Indicator and Status Bar}
 \begin{wrapfigure}{R}{0.40\textwidth}
@@ -425,18 +509,17 @@ of children will appear bright green. For more on using groups, see \textbf{``\n
 \vspace{-20pt}
 \end{wrapfigure}
 
-% TODO: Do something about the awkward placement of the population/pending changes indicator in the
-% text, perhaps by enclosing it in a textbox.
-% TODO: Add information on the status bar.
-
 The population indicator in the top-right corner of the window gives an at-a-glance view of how many
 dwarves there are in your fortress, distributed adults/children/babies, and the number of currently
-active pending changes (refer to \textbf{``\nameref{sec:Managing Your Dwarves}"}).
+active pending changes (refer to \jump{Managing Your Dwarves}). This lets you keep track of the number of
+changes you have pending, though not their nature, without having to pull out the ``Pending Changes''
+dock (see \jump{Docks}).
 
 The basic status bar at the bottom of the window provides row and column information on the left, and a
 dwarf selection count and Dwarf Fortress version type information on the right.
 
-\newpage
+\vfill
+
 \subsection{Main Toolbar}
 \label{sec:Main Toolbar}
 \begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec1Fig13}
@@ -457,17 +540,19 @@ Shortcut \texttt{Ctrl + R}.
 effect. Shortcut \texttt{CTRL + >}.
 \item \textbf{Collapse All}: Collapses all group views, doing the opposite of the above command. Shortcut
 \texttt{CTRL + <}.
-\item \textbf{Clear}: Clears all labor preference changes (see \textbf{``\nameref{sec:Managing Your
-Dwarves}"}). Shortcut \texttt{Ctrl + E}.
+\item \textbf{Clear}: Clears all labor preference changes (see \jump{Managing Your
+Dwarves}). Shortcut \texttt{Ctrl + E}.
 \item \textbf{Commit}: Commits labor preference changes (see above). Shortcut \texttt{Ctrl + T}.
-\item \textbf{Optimize}: Runs an optimization plan---the test plan if none is defined. Optimization is an
-advanced topic covered in \textbf{``\nameref{sec:Optimization Plans}''}.
+\item \textbf{Optimize}: Runs an optimization plan. Optimization is an
+advanced topic covered in \jump{Optimization Plans}, and this option does not appear on the toolbar at
+all if you have no optimization plans defined.
 \item \textbf{Options}: Allows you to adjust settings. Will be covered in the section
-\textbf{``\nameref{sec:Options}"}.
+\jump{Options}.
 \item \textbf{Exit}: Exits the application.
 
 \end{itemize}
 
+\vfill
 \newpage
 \subsection{Docks}
 \label{sec:Docks}
@@ -493,9 +578,9 @@ so that the dock that is currently open gets to monopolize the screen space. And
 configuration is saved between instances of the program, of course. Note that the main menu is actually
 also a dock, albeit one that must stay independent when docked, and so can be moved anywhere or even
 gotten rid of entirely. A list of docks follows:
-\begin{itemize}
-\item \textbf{Dwarf Details}: This one lists a lot of stuff, so if you use it you should tab-dock it.
-Dwarf Details provides an expanded view of a dwarf's abilities, providing pretty much all of the
+
+\boldlist{Dwarf Details} This one lists a lot of stuff, so if you use it you should tab-dock
+it. Dwarf Details provides an expanded view of a dwarf's abilities, providing pretty much all of the
 information on their capacities in the various views (and then some) in one comprehensive tabular form.
 You've got name, translated name, age, profession, current job,  happiness level, skills table with
 progress bars, attribute table with maximum trainable value and message text, raw trait value with
@@ -514,23 +599,29 @@ message text, top ten role ratings, and a table of the dwarf's preferences.
 \end{figure}
 
 
-\item \textbf{Pending Labor Changes}: This dock displays which labors you are turning on or off in a
-tabular form (it also records the addition and removal of personal nicknames), and allows you to commit
-or clear your changes independent of the main toolbar. There are also buttons for expanding and
-collapsing labor changes displayed in the dock, useful when making mass labor swaps. For a discussion on
-Managing Your Dwarves (I'm getting there, I promise!) see \textbf{``\nameref{sec:Managing Your
-Dwarves}"}.
-\item \textbf{Custom Professions Icons}: This dock allows you to create custom professions and custom
-icons. For a discussion on creating custom professions see \textbf{``\nameref{sec:Creating Custom
-Professions}"}.
-\item \textbf{Grid Views}: Allows you to open grids from a menu, or create entirely new ones of your own
-design. See section \textbf{``\nameref{sec:Creating Your Own Grid Views}"}.
-\item \textbf{Skill Legend}: Provides a legend for skills display onscreen, and allows you to quickly
-change it with a drop-down menu. Not really very useful.
-\item \textbf{Preferences}: Lists your dwarves by preferences, and allows you to search through them by
+\boldlist{Pending Changes} This dock displays which labors you are turning on or off in a
+tabular form, and allows you to commit or clear your changes independent of the main toolbar.
+Originally called ``Pending Labor Changes'', the dock has been renamed in lieu of the fact that it now
+also displays, and allows the manipulation of, nickname, profession, and squad assignments, all things
+we'll discuss in time. There are also buttons for expanding and collapsing changes displayed in the dock,
+useful when making mass labor swaps. For a discussion on the basics of dwarven management (getting
+there!) see \jump{Managing Your Dwarves}.
+
+\boldlist{Customizations} This dock allows you to create, edit, and manage custom professions,
+custom icons, and super-labors, all things we'll discuss later in this guide. For a discussion on
+creating custom professions, the first of the trio we'll cover, see \jump{Creating Custom Professions}.
+
+\boldlist{Grid Views} Allows you to open grids from a menu, or create entirely new ones of your own
+design. See \jump{Creating Your Own Grid Views} for more.
+
+\boldlist{Skill Legend} Provides a legend for skills display onscreen, and allows you to quickly
+change it with a drop-down menu. Only really there for completeness.
+
+\boldlist{Preferences}: Lists your dwarves by preferences, and allows you to search through them by
 object of preference. Clicking on one or more of the preferences allows you to filter dwarves so that
 only those with that preference are displayed on-screen (and Clear Filter obviously clear the filter).
-\item \textbf{Thoughts}: Similar to the Preferences dock, this brings up popular thoughts by count,
+
+\boldlist{Thoughts} Similar to the Preferences dock, this brings up popular thoughts by count,
 allows you to search through them, and allows you to filter your dwarves by them.
 
 \begin{figure}[h!]
@@ -545,138 +636,109 @@ allows you to search through them, and allows you to filter your dwarves by them
         \end{subfigure}
 \end{figure}
 
-\item \textbf{Health Legend}: The health legend allows you to filter your dwarves by health status, using
+\boldlist{Health Legend} The health legend allows you to filter your dwarves by health status, using
 the information provided in-game by the health screen. The dock includes mundane irregularities such as
 hunger and thirst as well as rather severe conditions like missing limbs and paralysis. This information
-is summarized by the Health view.
-\end{itemize}
+is summarized in the Health view.
 
 \newpage
 \subsection{Menu Bar}
 \label{sec:Menu Bar}
-\begin{figure}[h!] \centering \includegraphics[width=\textwidth]{Sec1Fig17}
+\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec1Fig17}
 \end{figure}
-%\begin{wrapfigure}{R}{0.40\textwidth}
-%\vspace{-10pt}
-%  \begin{center}
-%    \includegraphics[width=0.38\textwidth]{Sec1Fig17}
-%  \end{center}
-%\vspace{-10pt}
-%\end{wrapfigure}
 
 The last piece of Dwarf Therapist we're going to analyze is the iconic menu bar (or taskbar), present on
 almost every real application ever written. I'm going to give a brief list of what's in it here, and
 direct you to the sections for specific functions when appropriate.
+
 \vspace{12pt}
-\begin{wrapfigure}{R}{0.50\textwidth}
+\begin{wrapfigure}{R}{0.40\textwidth}
   \begin{center}
-    \includegraphics{Sec1Fig18}
+    \includegraphics[width=\linewidth]{Sec1Fig18}
   \end{center}
-\vspace{-10pt}
+\vspace{-120pt}
 \end{wrapfigure}
 
-\noindent \textbf{File} provides a smorgasbord of options:
-\begin{itemize}
-\item Connect to DF \texttt{(CTRL + C)}. See \textbf{``\nameref{sec:Connecting to Dwarf
-Fortress}"}.
+\boldlist{\indent File} provides a smorgasbord of options:
 
-\item Read Dwarves \texttt{(CTRL + R)}. See \textbf{``\nameref{sec:Connecting to Dwarf
-Fortress}"}.
+\boldlist {Connect to DF} \texttt{(CTRL + C)} See \jump{Connecting to Dwarf
+Fortress}.
 
-
-\item Commit \texttt{(CTRL + T)}. See \textbf{``\nameref{sec:Managing Your Dwarves}"}.
+\boldlist {Read Dwarves} \texttt{(CTRL + R)} See link above.
 
 
-\item Clear \texttt{(CTRL + E)}. See \textbf{``\nameref{sec:Managing Your Dwarves}"}.
+\boldlist {Commit} \texttt{(CTRL + T)} See \jump{Managing Your Dwarves}.
 
 
-\item Import Professions from DF. See \textbf{``\nameref{sec:Exporting and Importing Professions}"}.
+\boldlist {Clear} \texttt{(CTRL + E)} See link above.
 
 
-\item Export Custom Professions. See \textbf{``\nameref{sec:Exporting and Importing Professions}"}.
+\boldlist {Import Professions from DF} See \jump{Exporting and Importing Professions}.
 
 
-\item Import Saved Custom Professions. See \textbf{``\nameref{sec:Exporting and Importing
-Professions}"}.
+\boldlist {Export Custom Professions} See link above.
 
 
-\item Export Current Grid View as CSV. Exports the current view as a "comma exported value"
+\boldlist {Import Saved Custom Professions} See link above.
+
+
+\boldlist {Export Current Grid View as CSV} Exports the current view as a "comma exported value"
 spreadsheet, which is a basic \texttt{TXT} that can be read by almost any spreadsheet software.
 
 
-\item Export Grid Views. Exports, in Dwarf Therapist's \texttt{DTG} export format, a chosen selection
-of grid views to a chosen file location.
-See \textbf{``\nameref{sec:Exporting and Importing Grid Views}"}.
+\boldlist {Export Grid Views} Exports, in Dwarf Therapist's \texttt{DTG} export format, a chosen
+selection of grid views to a chosen file location.
+See \jump{Exporting and Importing Grid Views}.
 
-\item Import Grid Views. Imports \texttt{DTG} grid views from the disk.
-\textbf{``\nameref{sec:Exporting and Importing Grid Views}"}.
+\boldlist{Import Grid Views} Imports \texttt{DTG} grid views from the disk.
+\jump{Exporting and Importing Grid Views}.
 
-\end{itemize}
-\begin{itemize}
-
-\item Snapshot \texttt{(CTRL + S)}. Takes a snapshot of the currently active Dwarf Therapist window,
-and stows it away where you tell it. Baically an extended version of the \texttt{PRNT SCR}
+\boldlist {Snapshot} \texttt{(CTRL + S)} Takes a snapshot of the currently active Dwarf Therapist
+window, and stows it away where you tell it. Baically an extended version of the \texttt{PRNT SCR}
 key.\footnote{ This option is functionally limited to full-window shots, and so should not be used too
 extensively---the screenshots for this guide, for instance, were done with Greenshot.}
 
-\item Clear User Settings. Deletes all user settings and then exits Dwarf Therapist. This restores all
-settings in the program back to default and erases all data, which is why it has a warning screen---it
+\boldlist {Clear User Settings} Deletes all user settings and then exits Dwarf Therapist. This restores
+all settings in the program back to default and erases all data, which is why it has a warning screen---it
 can be very damaging if you have complex scripts and other goodies programmed into the utility.
 
 
-\item Options \texttt{(CTRL + P)}. Also provided on the Main Toolbar; see 
-\textbf{``\nameref{sec:Options}"}.
+\boldlist {Options} \texttt{(CTRL + P)} Also provided on the Main Toolbar; see \jump{Options}.
 
 
-\item Scan Memory. See \textbf{``\nameref{sec:Scanning Memory}"}.
+\boldlist {Scan Memory} See \jump{Scanning Memory}.
 
 
-\item Exit. Immediately exits the program.
-\end{itemize}
-%\begin{wrapfigure}{R}{0.30\textwidth}
-%\vspace{-20pt}
-%  \begin{center}
-%    \includegraphics[width=0.30\textwidth]{Sec1Fig19}
-%  \end{center}
-%\vspace{-10pt}
-%\caption{The contents of Scripting.}
-%\end{wrapfigure}
+\boldlist {Exit} Immediately exits the program.
 
-\noindent \textbf{Scripting} provides facilities for generating Filter Scripts to apply to your dwarves.
-For a detailed discussion on Filter Scripts, see \textbf{``\nameref{sec:Filter Scripts}"}.
-\vspace{12pt}
+\boldlist{\indent Scripting} provides facilities for generating Filter Scripts to apply to your
+dwarves. For a detailed discussion on Filter Scripts, see \jump{Filter Scripts}.
 
-\noindent \textbf{Roles} provides facilities for creating, modifying, removing, importing, and exporting
-custom roles. For a detailed discussion on Roles, see \textbf{``\nameref{sec:Roles}"}.
-\vspace{12pt}
+\boldlist{\indent Roles} provides facilities for creating, modifying, removing, importing, and
+exporting custom roles. For a detailed discussion on Roles, see \jump{Roles}.
 
-\noindent \textbf{Optimizer} allows the creation, modification, deletion, importation, and exportation of
-Optimization Plans. For details, see \textbf{``\nameref{sec:Optimization Plans}"}.
-\vspace{12pt}
+\boldlist{\indent Optimizer} allows the creation, modification, deletion, importation, and exportation of
+Optimization Plans. For details, see \jump{Optimization Plans}.
 
-\noindent \textbf{Windows} allows you to modify the docks and main toolbar displays in a
+\boldlist{\indent Windows} allows you to modify the docks and main toolbar displays in a
 manner similar to right clicking on the main toolbar. For more information on Docks, see
-\textbf{``\nameref{sec:Docks}"}; for more information on the main toolbar, see
-\textbf{``\nameref{sec:Main Toolbar}"}.
-\vspace{12pt}
+\jump{Docks}.
 
-\noindent \textbf{Help} links you to a few different webpages and such:
-\begin{itemize}
+\boldlist{\indent Help} provides links to a few different helpful resources:
 
-\item Project Homepage. Provides a link to the project
-homepage:\\\url{http://www.code.google.com/r/splintermind-attributes/}.
+\boldlist {Project Homepage} Provides you with a link to the project homepage:\\
+\url{https://github.com/splintermind/Dwarf-Therapist}.
 
-\item Discussion Forums. Provides a link to the main Dwarf Therapist forum thread:\\
+\boldlist {Discussion Forums} Provides a link to the master Dwarf Therapist forum thread:\\
 \url{http://www.bay12forums.com/smf/index.php?topic=122968.0}.
 
-\item Request Feature / Report Bug. Provides a link to the Dwarf Therapist issue tracker:
+\boldlist {Request Feature / Report Bug} Provides a link to the Dwarf Therapist issue tracker:
 \url{http://www.code.google.com/p/dwarftherapist/issues/entry/}.
 
-\item Donate. For buying the poor developer a beer through PayPal.
+\boldlist {Donate} For buying the poor developer a beer through PayPal.
 
-\item About. Brings up a small splash screen giving you the Dwarf Therapist version number, some
+\boldlist {About} Brings up a small splash screen giving you the Dwarf Therapist version number, some
 accreditation links, and a link to check for updates.
-\end{itemize}
 
 \newpage
 \section{Managing Your Dwarves}
@@ -696,7 +758,7 @@ without having to deal with the game's clunky dwarfwise interface. This section 
 tenets of dwarven management and demonstrate why even when Dwarf Fortress updates that have
 been in the works for a year or more are released, many people still refuse to play until Dwarf
 Therapist is updated to match. If you've already gotten dwarven labor management down pat, you can
-skip ahead to \textbf{``\nameref{sec:Options}"}, or to \textbf{``\nameref{sec:Advanced Features}"} if
+skip ahead to \jump{Options}, or to \jump{Advanced Features} if
 you're itching to try out the program's more advanced features.
 
 \vfill
@@ -705,7 +767,7 @@ you're itching to try out the program's more advanced features.
 \begin{wrapfigure}{L}{0.025\textwidth}
 \vspace{-22pt}
   \begin{center}
-    \includegraphics[width=0.025\textwidth]{Sec2Fig2-1}
+    \includegraphics[width=0.023\textwidth]{Sec2Fig2-1}
   \end{center}
 \vspace{-10pt}
 \end{wrapfigure}
@@ -754,10 +816,11 @@ You can remove the need for collapsing changes by giving the dock a bit more bre
 \noindent Hitting "Clear Changes" will clear all of these changes and wipe Dwarf Therapist to its
 previous state, while hitting "Commit Changes" will send the new labor orders through to the game,
 updating Dwarf Therapist to reflect the changes and producing immediate results. These buttons are
-available on both the Pending Labor Changes dock and on the Main Toolbar, however they also have hotkeys:
+available on both the Pending Labor Changes dock and on the Main Toolbar, however they also have
+hotkeys:
 \texttt{Ctrl + E} and \texttt{Ctrl + T}, respectively. Since these are two of the most common operations
 you'll be conducting with the program, it's probably a good idea to remember these hotkeys---it will save
-you a lot of time (refer to \textbf{``\nameref{sec:Hotkeys}"} for the list of available hotkeys).
+you a lot of time (refer to \jump{Hotkeys} for the list of available hotkeys).
 
 Dwarves start off with certain labors enabled: labors they have above-dabbling level skill in, hauling
 labors (including the two medical ones), and cleaning are always going to be set to on. The presence or
@@ -789,6 +852,7 @@ when and where you need it.
 \newpage
 \subsection{Using Groups}
 \label{sec:Using Groups}
+%TODO Update this section to use the new view once I have a large enough fortress.
 Now, picking out who's who on the labors view is easy enough when there's just seven dwarves to deal
 with. But it becomes quite a bit more problematic when there's say, seventy of them running amok:
 \begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec2Fig6}
@@ -797,10 +861,10 @@ with. But it becomes quite a bit more problematic when there's say, seventy of t
 
 This is when two of the built-in sorting features of Dwarf Therapist, Groups and Sorts,  become useful
 (you can also use filters, but that's a more difficult topic for later: see 
-\textbf{``\nameref{sec:Filter Scripts}"} if you're impatient).
+\jump{Filter Scripts} if you're impatient).
 
-First, let's talk in terms of Groups. Groups are described in brief in the \textbf{``\nameref{sec:Group
-By and Filters}"} section of this guide, somewhere way above here: refer to it again if you need a
+First, let's talk in terms of Groups. Groups are described in brief in the \jump{Group
+By and Filters} section of this guide, somewhere way above here: refer to it again if you need a
 refresher. Right now I return to the game screen and discover that six of my dwarves are idling---not bad
 in fortress of this size, but I've always been one to keep my dwarves' hands as busy as possible; don't
 want them making friends in my dining room and then tantruming about it later. Maybe it's a lost cause -
@@ -811,7 +875,7 @@ party is taking place, and then redesignating it. The more you know...}
 \begin{wrapfigure}{R}{0.35\textwidth}
 \vspace{-20pt}
   \begin{center}
-    \includegraphics[width=0.35\textwidth]{Sec2Fig7}
+    \includegraphics[width=0.32\textwidth]{Sec2Fig7}
   \end{center}
 \vspace{-10pt}
 \end{wrapfigure}
@@ -866,7 +930,7 @@ is enabled, these groups carry across all of the views, not just the current one
 demographic breakdown of your dwarves, group them by Age or Sex. To see which of your dwarves are
 Legendary, group them by Legendary Status (or hit Highest Skill for a more inclusive view). To check up
 on happiness, hit Happiness. To start working with Nicknames, hit Nicknames (this will prove useful in
-\textbf{``\nameref{sec:Assigning Nicknames}"}, still ahead of us). To see what the chances of you
+\jump{Assigning Nicknames}, still ahead of us). To see what the chances of you
 getting a Legendary Armorsmith are, hit Highest Moodable Skill. To sort them by Military Status, click
 that, or Squad to check up on individual squads. To sort by Profession, hit profession.
 % Avoid Total Assigned Labors and Total Skill Levels, however---these are bugged and the counts are
@@ -903,13 +967,12 @@ Sorting by happiness will list your dwarves by their numerical happiness level, 
 down from estatic green to suicidal red---a far superior solution to the blunt and categorical Group
 equivalent.
 
-The Profession column works in a similar manner to the Current Job column, sorting by another abstract
-numerical system, this one known as the ``Profession ID'' list. This (and the many variety of
-professional icons) makes it much harder to recognize sorted professions from one another than grouped
-ones, so grouping is the clear winner when it comes to this particular task. The professional listing
-does have one useful function, though, in that it more immediately lists peasants at the top (or
-bottom) of the list. These ID lists are not immutable entities, and can in fact be edited: for
-information on how, see the section \textbf{``\nameref{sec:Profession IDs}"}, in the appendix.
+The fourth column in your view is the ``Profession'' column, which works in a similar manner to the
+Current Job column, sorting by another arbitrary numerical system, the ``Profession ID'' list. The
+arbitrary nature of the sort, and the large number of professional icons, makes it much harder to
+recognize sorted professions from one another than grouped ones, so grouping is the clear winner when it
+comes to this particular task. The professional listing does have one useful function, though, in that
+it more immediately lists peasants at the top (or bottom) of the list.
 
 Hovering over individual professions tells you how many dwarves have that labor enabled, and then
 clicking on it will sort your dwarves by their experience and skill in that category. This is much
@@ -928,10 +991,10 @@ in mind---like, say when building a marksdwarf squadron:
 \includegraphics[scale=.9]{Sec2Fig12}
 \end{figure}
 
-You can go even further with \textbf{``\nameref{sec:Filter Scripts}"} and
-\textbf{``\nameref{sec:Roles}"}, but those are advanced topics that we'll leave for later. If you right
+You can go even further with \jump{Filter Scripts} and
+\jump{Roles}, but those are advanced topics that we'll leave for later. If you right
 click on a column you can change the sort method---this is a more advanced role-based capacity, and will
-be discussed at length in the section \textbf{``\nameref{sec:Using Roles}"}.
+be discussed at length in the section \jump{Using Roles}.
 
 \newpage
 
@@ -952,7 +1015,7 @@ discuss these in detail in this section.
 \end{wrapfigure}
 Groupwise designation is actually a subset of fortress-wide designation, which can be achieved with the
 labor headers' right click menu, shown at right (the other options have to do with columnar sorting and
-are covered in \textbf{``\nameref{sec:Using Roles}"}). Options one and three respectively toggle the
+are covered in \jump{Using Roles}). Options one and three respectively toggle the
 labor on or off for \emph{every} eligible dwarf in the fortress. The second option, meanwhile, is a smart
 sort: it allows you to assign the labor only to those dwarves skilled in it (skill level Novice or
 above), and it will disable it on dabblers.
@@ -962,7 +1025,7 @@ war you can quickly toggle off dangerous jobs like Hunting and Plant Gathering, 
 you're finally getting around to dedicating a dwarf or a number of dwarves to a specific job you can
 quickly eliminate that labor from all other stragglers. Assigning every instance of a labor is not so
 immediately apparently useful but works well when combined with filter scripts, an advanced sort tool
-described in detail in \textbf{``\nameref{sec:Filter Scripts}"}. Skilled labor assignment, meanwhile, can
+described in detail in \jump{Filter Scripts}. Skilled labor assignment, meanwhile, can
 be used to put those hunters and gatherers back to work after the danger has passed, or for reinstating
 jobs accidentally deleted by careless labor editing.
 
@@ -1077,19 +1140,22 @@ awaiting committal:
 
 Commit the change, and you shall confuse the role this dwarf plays no longer.
 
+That concludes our discussion of Dwarf Therapist's basic labor management tools. We will cover many more
+advanced features in the \jump{Advanced Features} section of this guide, but for now
+let's examine another aspect of the program: the options menu.
+
+\addendum{
 \subsection{Addendum: Managing your Animals}
 While most of the views in Dwarf Therapist besides
-the labors view are non-interactive, one is---the Animals view---and so it's worth mentioning here. The
-Animals view provides information on the name (duh) and owner of the creature, their "profession" (really
-whether they are children or adults), their training level (nothing is displayed if they are tame),
-whether or not they are designated for or can be butchered, whether or not they are in a cage, and their
-physical attributes. I say that this menu is interactive, and it is: non-wild, non-pet creatures can be
-designated for butchering here. This makes a partial replacement for the Animal Status screen in-game -
-although you cannot (yet) designate creatures for taming through it.
-
-That concludes our discussion of Dwarf Therapist's basic labor management tools. We will cover many more
-advanced features in the \textbf{``\nameref{sec:Advanced Features}"} section of this guide, but for now
-let's examine another aspect of the program: the options menu.
+the labors view are non-interactive, two are. One is the Animals view, worth mentioning
+here; the second, the ``Roles'' view, is discussed in \jump{Using Roles---The View Method}. The Animals
+view provides information on the name (duh) and owner of the creature, their "profession" (really whether
+they are children or adults), their training level (nothing is displayed if they are tame), whether or
+not they are designated for or can be butchered, whether or not they are in a cage, and their physical
+attributes. I say that this menu is interactive, and it is: non-wild, non-pet creatures can be
+designated for butchering here. This allows it to replace the in-game Animal Status screen, provided
+that you don't try to tame any wildlife, as this cannot be done through Dwarf Therapist.
+}
 
 \newpage
 \section{Options}
@@ -1107,18 +1173,24 @@ or radio button does, hover over it and look for its description in the text box
 dialogue. It's all quite intuitive and well-explained, so instead of wasting a ton of time and space
 describing it, I invite you to explore the menu, and then come back to here.
 
-Good? Ok, let's leverage our options to improve how Dwarf Therapist looks and runs a bit.
+Good? If you're still interested in fiddling with the options, see the upcoming section. If not, skip
+ahead to the next part of this guide, \jump{Advanced Features}.
 
 \newpage
 \subsection{Formatting Your Display}
 \label{sec:Formatting Your Display}
 
-A big problem I have with the default configuration of the current version of Dwarf Therapist is how
-unnecessarily complicated and bulky it is. Dwarf Therapist is a \emph{utility}, and thus its beauty is in
-its usability---not the fancy and non-functional faded-out boxes and headers and dividers that eat up
-tons of screen space. So in this section we're going to leverage the program's high degree of
-customizability to simplify its appearance and increase its information density; if you like how it looks
-as it is, skip ahead to the next part of this guide, \textbf{``\nameref{sec:Advanced Features}"}.
+\legacy{
+A big problem I had with the default configuration of past versions of Dwarf Therapist is its affinity
+for gloss over informational density---non-functional fade-out boxes and headers and dividers that eat
+up tons of screen space were present, while several options that enhanced information display were not.
+More recent version of Dwarf Therapist have implemented some of the suggestions in this section by
+default, making some of these changes redundant, but this section is still provided to the reader as a
+reference. }
+
+% This section is left to the reader as a demonstration of the program's robust options menu.
+% Since most of these changes no longer need to be made the illustrations for this section are from legacy
+% versions of the program.}
 
 \begin{figure}[h!] \centering
 \includegraphics[width=\linewidth]{Sec2Fig18}
@@ -1219,7 +1291,7 @@ view and your docks more of it), uncheck the "Show Toolbar Text" option in \text
 
 To turn this feature on, hit "Highlight Nobles" in \texttt{Options > Nobles}. The default color is
 orange, and you can further pick specific colors for specific roles. Personally I set chief medical
-dwarves to dark red, bookeepers, managers, mayors, and brokers to magenta, royals to dark magenta, and
+dwarves to dark red, bookeepers, managers, mayors, and brokers to default, royals to magenta, and
 military types (militia leaders, champions) to dark green.
 \vspace{12pt}
 
@@ -1227,7 +1299,7 @@ military types (militia leaders, champions) to dark green.
 
 To turn this feature on, hit "Role Information in Labor Columns" in \texttt{Options >Roles}. We've barely
 talked about roles so far, and they're covered in-depth in the section on them, thoughtfully titled
-\textbf{``\nameref{sec:Roles}"}. For now it's just more information for you to peruse.\
+\jump{Roles}. For now it's just more information for you to peruse.\
 \vspace{12pt}
 
 \noindent \textbf{Move, or Remove, your Docks}
@@ -1274,12 +1346,6 @@ Here is what my display looked like at the end of this exercise:
 
 Cleaner, more informative, and most importantly: no horizontal scroll bar!
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CURRENT EDIT POINT %
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \newpage
 \part{Advanced Features}
 \label{sec:Advanced Features}
@@ -1308,42 +1374,57 @@ birth.\footnote{Attributes, alongside appearance modifiers, are inherited throug
 Where one dwarf might be naturally weak have superb spatial sense, another might lack analytical
 ability and be susceptible to disease, but be unnaturally strong. These attributes themselves fall into
 two categories, physical and mental; they can be assesed under the "Attributes" view, and they're
-described in detail on the DFWiki: \url{http://dwarffortresswiki.org/index.php/DF2012:Attributes}. Since
+described in detail on the DFWiki: \url{http://dwarffortresswiki.org/index.php/DF2014:Attributes}. Since
 they're pretty important for understanding roles, here's a quick list of the ones that affect job
 performance:\footnote{It should be noted that all creatures, not just dwarves, have attributes (for
 instance, the attributes of animals attached to your fortress are visible on the "Animals" view). The
 attributes of creatures that are not tied to your fortress---wildlife, unwelcome visitors, hostile
 sapient creatures, caravan traders and guards---will be hidden from you.}
-\vspace{12pt}
 
-\textbf{Physical Attributes}
-\begin{itemize}[itemsep=1mm] \item \textbf{Strength}: Alters the damage done in melee (increases velocity
+\boldlist{\indent Physical Attributes}
+
+\boldlist{Strength} Alters the damage done in melee (increases velocity
 of weapon swings), increases muscle mass (thicker muscle layer also resists damage more), and increases
 how much a creature can carry. Higher strength also increases the speed with which a creature, even a
 naked creature, may move. Movement speed is important for pretty much every task, but to a varying
 degree.
 
-\item \textbf{Agility:} This attribute increases the speed at which a creature works in the same way as
+\boldlist{Agility} This attribute increases the speed at which a creature works in the same way as
 strength -- a creature with maximum agility and strength can move around three times faster than a
 creature with minimum agility and strength.
 
-\item \textbf{Endurance:} Reduces the rate at which dwarves become exhausted, important for physically
+\boldlist{Endurance} Reduces the rate at which dwarves become exhausted, important for physically
 demanding tasks.
 
-\item \textbf{Toughness:} Reduces physical damage. Used by physically demanding tasks.
+\boldlist{Toughness} Reduces physical damage. Used by physically demanding tasks.
 
-\end{itemize}
+\boldlist{\indent Mental Attributes}
 
-\textbf{Mental Attributes}
-\begin{itemize}[itemsep=1mm] \item \textbf{Analytical Ability} \item \textbf{Focus} \item
-\textbf{Willpower:} Willpower directly reduces exertion and pain effects, useful for physically demanding
-tasks.
-\item \textbf{Creativity} \item \textbf{Intuition} \item \textbf{Patience} \item \textbf{Memory} \item
-\textbf{Linguistic Ability} \item \textbf{Spatial Sense} \item \textbf{Kinesthetic Sense:} Most skills
-involving any movement at all (lots of them), and many non-skilled tasks as well are affected by
-Kinesthetic Sense.
-\item \textbf{Social Awareness}
-\end{itemize}
+\boldlist{Analytical Ability}
+
+\boldlist{Focus}
+
+\boldlist{Willpower} Willpower directly reduces exertion and pain effects, useful for physically
+demanding tasks.
+
+\boldlist{Creativity}
+
+\boldlist{Intuition}
+
+\boldlist{Patience}
+
+\boldlist{Memory}
+
+\boldlist{Linguistic Ability}
+
+\boldlist{Spatial Sense}
+
+\boldlist{Kinesthetic Sense} Most skills involving any movement at all (lots of them), and many
+non-skilled tasks as well are affected by Kinesthetic Sense.
+
+\boldlist{Social Awareness}
+
+\vspace{12pt}
 
 Physical attributes will increase or decrease over time, depending on whether a dwarf uses
 or doesn't use them in their day to day tasks. Thus your Miner will become very tough and very strong
@@ -1372,10 +1453,12 @@ th default behavior, which can be seen and modified in the "Roles" Options menu 
 Roles}):
 \begin{figure}[h!] \centering
 \vspace{-5pt}
-\includegraphics[scale=.865]{Sec3Fig1}
+\includegraphics[width=\linewidth]{Sec3Fig1}
 \vspace{-5pt}
 \end{figure}
 
+\newpage
+%TODO Verify that the issue of sharpness is still present in the current iteration of Dwarf Therapist.
 Dwarf Therapist takes a dwarf's attributes, skills, traits, and preferences and weighs the ones that
 matter for a certain labor by the amounts inputted here. It then performs a \textbf{cumulative
 distribution function} on the results, giving you how fit that dwarf is for that role as a percentage
@@ -1410,7 +1493,7 @@ that the program uses are the result of conjecture---there's just no hard !!SCIE
 thing on as of now, and that's the reason that we have to use skill rank, drawbacks that it has, as a
 substitute.
 
-\subsection{Using Roles}
+\subsection{Using Roles---The Sort Method}
 \label{sec:Using Roles}
 
 \begin{wrapfigure}{R}{0.3\textwidth}\vspace{-22pt}
@@ -1419,6 +1502,10 @@ substitute.
   \end{center}
 \vspace{-15pt}
 \end{wrapfigure}
+There are two distinct ways to go about applying role ratings, one involving sorting, one involving a
+different view. I will describe them in order of preference---sorting settings first, the ``Roles'' view
+second.
+
 We've talked before about the utility of clicking on the labor headers and having your dwarves sorted in
 ascending order of experience. But did you know you can actually change this behavior? Indeed,
 right-clicking on anywhere on the labor headers will bring up a menu that allows you to change the
@@ -1433,7 +1520,7 @@ category is completed) is modified by, you guessed it, the dwarf's role, and so 
 straight up experience level---but experience is still the most important indicator of relative skill
 gain, so it won't change too much. However, the one we want right now is Role Rating. Click on it. Now,
 whenever you sort a column, the dwarves will be listed by their adeptness for that labor. Assuming you
-turned the role tooltip display on, as we did in \textbf{``\nameref{sec:Formatting Your Display}"}, then
+turned the role tooltip display on, as we did in \jump{Formatting Your Display}, then
 you can hover over a labor box to see the exactness of the match---if you skipped that section, you can
 toggle the behavior on now by going to \texttt{Options > Roles > Show role information in labor columns}.
 
@@ -1501,22 +1588,63 @@ changes to the game. I even give them nicknames, to be extra sure I won't forget
 \vspace{-5pt}
 \end{figure}
 
-Voila! I have now committed two well-suited dwarves to their new tasks. Works flawlessly, right? Well,
-\emph{almost}. There are other, similarly replaceable dwarves also in the fortress that would make better
-candidates for this job, but hunting them down is a pain. I could find the best-suited dwarves in the
-\emph{fortress} by turning off grouping and then sorting the column, but then I'd bump into another
-problem: which dwarves are replaceable, and which ones am I training up or holding onto with certain
-roles in mind? In this respect, your tools are crude---\emph{maybe} you remember exactly or can deduce
-from the labor settings what role each dwarf is set for, but in a fortress of 200, you probably don't. In
-large fortresses with many industries, it's simply not possible to easily keep track of so many variables
-at once.
+And voila---we are done. Now we take a quick look at how this problem can be approached using the
+``Roles'' view.
+
+\newpage
+\subsection{Using Roles---The View Method}
+\label{sec:Using Roles---The View Method}
+
+Another way to tweak your dwarves using roles is to use the ``Roles'' view.%TODO
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{Sec3Fig10+}
+\end{figure}
+
+This is one of the secondary views that is open by default when you first install the program. The
+difference here (besides the fact that this view uses the old labor organization system) is that instead
+of displaying dwarves' labor preferences, this view displays their role ratings, allowing you to
+manipulate their labor preferences based on role without having to change your sorting settings. This has
+the advantage of not having you to mess with your sorting settings, but the disadvantage of having to
+switch to another view.
+
+Other than the difference in the up-frontness of the information, using the view method to make
+role-informed labor changes isn't all too different from using the sort method---group up your
+migrants, click on the column to sort the role, then pick an acceptable candidate from the bunch.
+Overall, I prefer dealing with sort settings to dealing with another view, so in my games I use the sort
+method---but you are free to chose whichever appeals to you more.
+
+In either case, our end result is that we have now committed two well-suited dwarves to their new
+tasks \emph{almost} flawlessly. But there are other, similarly replaceable dwarves also in the fortress
+that would make better candidates for this job but aren't in this particular migratory wave, but hunting
+them down is a pain. I could find the best-suited dwarves in the \emph{fortress} by turning off grouping
+and then sorting the column, but then I'd bump into another problem: which dwarves are replaceable, and
+which ones am I training up or holding onto with certain roles in mind? In this respect, your tools are
+crude---\emph{maybe} you remember exactly or can deduce from the labor settings what role each dwarf is
+set for, but in a fortress of 200, you probably don't. In large fortresses with many industries, it's
+simply not possible to easily keep track of so many variables at once.
 
 We can solve this problem by using nicknames aggressively, designating all dwarves committed to a task
 with a nick, and then using the "Has Nickname" grouping in the view. Setting so many nicknames is
 tedious, however, and if you don't like using them then you're out of luck. Or are you? There is another,
 more powerful solution that will come later in this guide: filter scripts. For more details on this, see
-\textbf{``\nameref{sec:Filter Scripts}"} for the scoop.
+\jump{Filter Scripts} for the scoop.
 
+Assigning jobs based on role ratings is fine and all, but what if there was something you could do that
+would allow you to do this automatically? \jump{Optimization Plans}, which we'll discuss much later in
+this guide, do just that.
+
+\addendum{
+
+As mentioned in this section, any role which has skilled labors associated with it will automatically
+allow you to toggle those labors through the role's role rating column, and you can toggle multiple
+labors this way. This capacity often comes in handy when doing what we will be doing in the next section
+of this guide, defining our own grid views. See \jump{Custom Grid Views} for more.
+
+}
+
+\newpage
 \subsection{Creating Custom Roles}
 \label{sec:Creating Custom Roles}
 
@@ -1531,7 +1659,7 @@ related entries on it. Dwarf Therapist allows the creation of custom roles throu
 this dialogue, and you can also export and import other player's custom roles definitions. If you don't
 like a default role, you can overwrite it by building and saving a custom role with the same
 name.\footnote{You can also do this by exiting Dwarf Therapist and browsing to and modifying the
-\texttt{game\_data.ini} in the program's install directory: see \textbf{``\nameref{sec:Game Data}"} for
+\texttt{game\_data.ini} in the program's install directory: see \jump{Game Data} for
 more information. A word of warning: your changes will not be preserved should you update Dwarf
 Therapist.} Click on "New Custom Role" and it should bring up this dialogue:
 
@@ -1542,16 +1670,22 @@ Therapist.} Click on "New Custom Role" and it should bring up this dialogue:
 
 \newpage
 This is the editing interface for creating a custom role, and clearly demarkates the four components of a
-role. There is a scripting option available---this is a plug-in for \textbf{``\nameref{sec:Filter
-Scripts}"} that we'll talk about later. And finally, the italic text at the bottom of the window tells us
+role. There is a scripting option available---this is a plug-in for \jump{Filter
+Scripts} that we'll talk about later. And finally, the italic text at the bottom of the window tells us
 that roles changes will not be read in until you reread your dwarves, so we will have to do so after
 we're done here.
 
+% \legacy{
+% Dwarf Therapist ships with a pretty comprehensive role library---it even has lawdwarf (weak) and liar
+% options, and provides role information for jobs that are not implemented into the game, such as alchemy.
+% However, there is one feature that it lacked at the time of this guide's writing, and that was a role
+% setting for haulers. Such a role definition, based on the work done in this section, is now provided by
+% the program as an example of a custom role---we will proceed to build it here. }
 Dwarf Therapist ships with a pretty comprehensive role library---it even has lawdwarf (weak) and liar
 options, and provides role information for jobs that are not implemented into the game, such as alchemy.
-However, there is one feature that it lacks, and that is a role setting for haulers. Ye peasants do their
-job best when they're quick and strong, but there's no role for such a thing available! The solution, of
-course, is to write our own.
+However, there is one role definition that it lacks, and that is a role setting for haulers. Ye peasants
+do their job best when they're quick and strong, but there's no role for such a thing available! The
+solution, of course, is to write our own.
 
 Start by copying role settings from a similarly physically demanding job---say, mining. Scroll down to
 mining in the"Copy From" menu (or hit M while the menu is active to get there more quickly) and click
@@ -1584,14 +1718,11 @@ It's also possible to export custom roles, which creates a Dwarf Therapist expor
 that can saved and then passed along to another installation of the utility by importing it. You can
 export your custom roles and then upload them on the web (preferably the Dwarf Fortress File Depot:
 \url{http://www.dffd.wimbli.com/}) to share them with other players, or you can download one from the web
-and then import them into Dwarf Therapist so that you can use them too. By the end of this guide we're
-going to generate a lot of custom bits of code for the program to use, including a couple of custom
-roles, but for now let's just ignore the importing and exporting options, and talk about something else:
-custom professions.
+and then import them into Dwarf Therapist so that you can use them too.
 
 \section{Custom Professions}
 Dwarf Fortress has a \emph{lot} of professions, and even more skills, available to your dwarves. In fact,
-learning what each profession and skill corresponds too is one of the hardest part of learning to play
+learning what each profession and skill corresponds to is one of the hardest part of learning to play
 the game, because there's just so many of them. You can add to this sprawl by creating your own
 professions, assigning multiple labors to one unified profession. This ability has its uses, and in this
 section we're going to use it to unify hauling labors.
@@ -1601,7 +1732,7 @@ thing: either they're committed to their job, or they're not. It's not very usef
 perform \emph{certain} hauling tasks, unless you're getting into the extreme end of fortress management
 and optimization, so most players of the game have them either all on or all off on a dwarf-by-dwarf
 basis. We're also going to assign the "Hauler" role that we built in the previous section,
-\textbf{``\nameref{sec:Creating Custom Roles}"}, to this new, unified profession.
+\jump{Creating Custom Roles}, to this new, unified profession.
 
 \subsection{Creating Custom Professions}
 \label{sec:Creating Custom Professions}
@@ -1650,12 +1781,12 @@ make nicknames useful. However, since nicknames can be more easily seen at a gla
 Therapist utility (and don't get in the way of this feature's more advanced version), I recommend
 sticking with them for this function.
 
-For now, the functionality of custom professions is fairly limited. What you've created is essentially a
-triggerable mask. Although the profession icon has changed and although the dwarf will be listed under
-their new profession within Dwarf Therapist, actually triggering the profession is annoying: you have to
-right click on the dwarf, then click on "Custom Professions", then click on the profession as it appears
-in the menu. This will toggle the labors associated with that profession on, and turn off all others in
-the process. You have to do so much work that this shortcut becomes anything but!
+% For now, the functionality of custom professions is fairly limited. What you've created is essentially a
+% triggerable mask. Although the profession icon has changed and although the dwarf will be listed under
+% their new profession within Dwarf Therapist, actually triggering the profession is annoying: you have to
+% right click on the dwarf, then click on "Custom Professions", then click on the profession as it appears
+% in the menu. This will toggle the labors associated with that profession on, and turn off all others in
+% the process. You have to do so much work that this shortcut becomes anything but!
 
 \subsection{Exporting and Importing Professions}
 \label{sec:Exporting and Importing Professions}
@@ -1684,49 +1815,186 @@ functions we're discussing in this section of the guide. There are even dialogue
 choose which professions you want to export or import. Both options are available from the \texttt{File}
 menu.
 
+\addendum{
+
+\section{Addendum: Custom Icons}
+\label{sec:Custom Icons}
+
+If for some reason you do not like the default professional icon associated with any particular
+profession, you can change it to whatever icon you like by right clicking on the it and hitting
+``Customize''. You will be brought to a ``Custom Icon'' window very similar to the ``Custom Profession''
+window, but with the profession name grayed out and the labor toggles not present (since you're only
+dealing in iconographry). Any edited professional icons you use will be recognized by the program as
+custom icons, and presented as such in the ``Customizations'' dock, where you can edit or delete them.
+Note that custom professions are treated by the program as something rather more comprehensive than just
+a custom icon, and will show up in this dock as ``Custom Professions''---the icons you create for them
+will not be listed separately.
+
+}
+
 \newpage
 \section{Custom Grid Views}
 \label{sec:Custom Grid Views}
 
-So far we've stuck with the views that the utility generates for us---labor, military, etcetera---and
-the most interactive thing we've done with them is switch our labor screen to the beautifully
-structured, unfortunately named NO SPACERS version (that is, if you've read
-\textbf{``\nameref{sec:Formatting Your Display}"}). However, it's also possible to define your
-\emph{own} grid views---here we'll use it to make our own, better, labor management view.
+\legacy{
+Probably the most important immediate consequence of the writing of this guide was the introduction of
+the improved ``Labors'' view as the default view in Dwarf Therapist. This view was built over the
+course of this section, using Dwarf Therapist's custom grid view capacity. The way it was built, and the
+thought process behind the changes, is presented here.
+}
 
-\subsection{Creating Your Own Grid Views}
-\label{sec:Creating Your Own Grid Views}
-\begin{wrapfigure}{R}{0.3\textwidth}
+\begin{wrapfigure}{R}{0.35\textwidth}
 \vspace{-20pt}
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{Sec3Fig13}
+    \includegraphics[width=\linewidth]{Sec3Fig13}
   \end{center}
-\vspace{-15pt}
-\caption{The Grid Views dock.}
-\vspace{-15pt}
+\vspace{-50pt}
 \end{wrapfigure}
-Unfortunately, unlike the rest of the advanced utilities we're discussing in this section of the guide
-custom grid views can only be created through its associated dock, so if you don't have it open already
-you're going to have to do so at least for the duration of your editing.
+Unlike the rest of the advanced utilities we're discussing in this section of the guide, custom grid
+views can only be created and edited through the associated dock, so if you don't have it open already do
+so at least for the duration of your editing.
 
 Inside the dock you will find the grid views that the utility comes pre-loaded with, but they will be
 grayed out. You can create a new, editable grid view in one of two ways: either by hitting "Add New Grid
 View", which gives you a blank, or by right clicking on and copying one of the views that is already
-hardcoded in, which will generate you an editable copy of the view. Copy the Labors NO SPACERS view now,
-then right click on it and hit "Edit" (you can also copy it again or delete it entirely in this menu).
-This will open the Grid View dialogue:
+hardcoded in, which will generate you an editable copy of the view.\footnote{Note that the grid views
+that come hard-coded with the utility cannot be deleted.} At right you can see what the grid views dock
+looks like with one custom view, ``Recruitment'', already defined.
+
+Try hitting the ``Add a new grid view'' button and you will be brought to an empty grid view creation
+dialogue:
+\vspace{24pt}
+
 \begin{figure}[h!]
-\vspace{-5pt}
 \centering
-\includegraphics[scale=.86]{Sec3Fig14}
-\vspace{-5pt}
+\includegraphics[width=\linewidth]{Sec3Fig13+}
 \end{figure}
 
+The grid view creation dialogue organizes its columns into ``sets'', which are organizatory\ldots
+sets\ldots of columns of one color. If you try to create grid view columns without sets to place them in,
+Dwarf Therapist will complain to you. You can set the name and background color of a set, the latter of
+which is made the default background color for all columns in the set. Also note that you can make
+animal-specific views, like the ``Animals'' view packaged with the program by default. The main feature,
+however, is the individual columns themselves.
+
+\begin{wrapfigure}{R}{0.35\textwidth}
+\vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=\linewidth]{Sec3Fig13+1}
+  \end{center}
+\vspace{-100pt}
+\end{wrapfigure}
+
+\boldlist{Attributes} This is where you will find the attribute columns used in the default
+``Attribute'' view.
+
+\boldlist{Custom Professions} This option allows you to display labor toggles for the super-labors
+associated with these professions (see the next section, \jump{Super Labors}).
+
+\boldlist{Custom Roles} This option allows you to display role ratings for custom roles you've defined,
+exactly like you can with regular, pre-defined roles.
+
+\boldlist{Equipment} A special ``Equipment'' column present by default in labor views.
+
+\boldlist{Happiness} A special ``Happiness'' column present by default in the labor views.
+
+\boldlist{Health} This is where you will find the health information columns used in the
+default ``Health'' view.
+
+\boldlist{Idle/Current Job} A special ``Current Job'' column present by default in the labor
+views.
+
+\boldlist{Inventory} This is where you will find the military inventory information columns used
+in the default ``Military'' view, not including weapons, listed seperately.
+
+\boldlist{Labors} This is where you will find the labor setting columns that form the bulk of the default
+labor views---the core of the program.
+
+\boldlist{Moodable Skill} A special ``Moodable Skill'' column that presents each dwarf's moodable skill,
+an alternative way of displaying this information that contrasts with the ``Display Moodable Skills''
+option covered in \jump{Options}. Not enabled by default in any view, but you can add it in yourself if
+you'd like.
+
+\boldlist{Professions} A special ``Profession'' column present by default in the labor views.
+
+\boldlist{Roles} This is where you will find the pre-defined role rating columns used in the ``Roles''
+view.
+
+\boldlist{Skills} In cases where skills match labors one-to-one, skill columns are inferior to labor
+columns because the labor columns display the skill \emph{and} allow you to toggle the labor, which
+skill columns can't do. There are a \emph{lot} more skills than there are associated labors, though, so
+if you want to display skills ranging in implementation from ``Military Tactitian'' and ``Poet'' to
+``Armor User'' and ``Teacher'', you go here.
+
+\boldlist{Spacer} This option adds a simple spacer. You can adjust the width of the spacer with the right
+click menu---the default is 4 pixels.
+
+\boldlist{Super Labor Column} Super labors are a subset of what a custom profession. We will discuss
+super labors in depth in the very next section, \jump{Super Labors}.
+
+\boldlist{Trained} This option only works properly if you toggle ``Display Animals'' on. It lists the
+training level of the animals in your view, as seen in the default ``Animals'' view.
+
+\boldlist{Traits} Traits are like attributes, but while attributes are physical, traits are mental. These
+columns are used in the default ``Traits'' view.
+
+\boldlist{Weapons} Weapon columns tell you whether or not the dwarf can wield the weapon in question.
+Because of a bug, variety in the types of weapons dwarves can wield based on their size is not present,
+because Dwarf Fortress checks against the racial average instead of against the individual dwarf. For
+this reason dwarves will either all be able to or all be unable to wield a weapon of choice, which
+to a large extent limits the usefulness of these columnular options.
+
+\subsection{Super Labors}
+\label{sec:Super Labors}
+
+\begin{wrapfigure}{R}{0.35\textwidth}
+\vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=\linewidth]{Sec4Fig18}
+  \end{center}
+\end{wrapfigure}
+
+Super labors are a recent addition to Dwarf Therapist that allow you to define your own togglable labor
+columns out of multiple pre-existing labors. The primary method for creating super labors is to hit
+the ``Super Labor'' option on the Customizations dock, which brings you to dialogue displayed at right.
+Super labors are in reality a subset of a custom professions---in fact, you can't even name a super labor
+something that you have already named a custom profession, or vice versa, as it will cause Dwarf
+Therapist to complain. Give the super labor a unique name, associate it with a role (or don't, in which
+case a hidden role will be generated and associated with the super labor that uses the average of the
+chosen labor's role ratings), and then select the labors that you want to be included in the role. Once
+you're satisfied, hit ``OK'' and your new super labor will appear in the Customizations dock as a new
+editable (and deletable) item.
+
+A second way to define super labors is to do so using the dwarfwise menu, a procedure that almost exactly
+mirrors that of defining a dwarfwise custom profession---click on a dwarf and go to \texttt{Customization
+> New super labor from this unit}, and you will be presented with the same dialogue, this time with the
+labors that the dwarf currently has enabled, including pending changes, already filled out.
+
+The primary purpose of the super labor is that it allows you to bind together several labors into one
+toggle, allowing you to, for instance, unify all of the hauling subtasks, to save on space and sprawl.
+Once you have defined a super labor, it will appear in the ``Grid Views'' custom view definition dialogue
+as a new item under the ``Super Labors'' menu. A color gradient is used to provide information as to the
+number of subtasks enabled: if none are enabled, the box is unfilled; if at least one is enabled, it is
+lightly colored; if more, more darkly colored; and if all tasks are enabled, the box is completely filled
+out.
+
+In reality, the only thing differenciating a super labor from a custom profession is the lack of an
+assigned icon.\footnote{See also \jump{Custom Icons}.} Indeed, custom professions implement super labors
+in the background, allowing you to create custom professional multi-labor toggles through the ``Custom
+Professions'' item; custom roles also implement them for associated skilled labors, a behavior that can
+easily be seen in the ``Roles'' view. Most of the time, you'll want to be implementing custom professions
+instead, but you can always create explicit super labors instead you want to cut on cruft. See the
+addendum at the end of the next section for an example usage.
+
 \newpage
-The very first thing you should do is this:
+\subsection{Creating Your Own Grid Views}
+\label{sec:Creating Your Own Grid Views}
+
+Copy the Labors NO SPACERS view now, then right click on it and hit "Edit". The very first thing you
+should do is this:
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=.9]{Sec3Fig15}
+\includegraphics[width=\linewidth]{Sec3Fig15}
 \end{figure}
 
 Now if you add that view from the "Add Views" drop-down menu and delete the old one:
@@ -1757,12 +2025,10 @@ menu list of possible columns to add to your view. You can also add or remove sp
 don't serve too great a function, if you don't have the horizontal sceen space for them in a view,
 removing them might be extremely helpful.
 
-Now, let's make some modifications to our new and improved "Labor" view.\footnote{Since the publication
-of the first version of this guide the labor view constructed here has been packaged into the base
-utility as the ``Labor-Alt'' view.}
+Now, let's make some modifications to our new and improved "Labor" view.
 
 \begin{figure}[h!]
-\centering \includegraphics[scale=.47]{Sec3Fig17}
+\centering \includegraphics[width=\linewidth]{Sec3Fig17}
 \caption{Our Labor View at the beginning of this exercise.}
 \end{figure}
 
@@ -1908,29 +2174,32 @@ The finished result:
 \centering \includegraphics[width=\linewidth]{Sec3Fig26}
 \end{figure}
 
-It's organized, easy to view, nicely colored, and removed of all un-necessary bits; half an hour well
-spent. There's a full spread on the next page. Although we didn't use the capacity here, any custom roles
-you create will appear under the "Roles" selection menu, and can thus be added to custom grid views you
-create---you can very easily add a Hauler role fitness column (we defined this custom role as an example
-back in the section \textbf{``\nameref{sec:Formatting Your Display}"}) to your Labor view, for instance.
-Unfortunately one thing you \emph{cannot} do yet is is add labor columns for custom professions---this
-feature is currently under development.
+It's organized, easy to view, fully color-coded, and nicely streamlined; half an hour well spent.
+
+\addendum{
+
+The ``Super Labors'' feature added since the first version of this guide was published allows us to make
+one further, optional refinement to this view: merging all of the hauling sublabors into one. We can use
+either the example ``Hauler'' custom profession we defined earlier, or a new, explicit superlabor:
+
+\includegraphics[width=\linewidth]{Sec3Fig26+}
+
+On my 21-inch screen, this was enough to allow me to \emph{finally} use docks without horizontal
+scroll bars! There's a full spread on the next page.
+
+}
 
 \subsection{Exporting and Importing Grid Views}
 \label{sec:Exporting and Importing Grid Views}
 
-The ability to export and import grid views is actually very important, and both options are available
-from the File header under the taskbar. In the above section I spent about half an hour organizing,
-modifying, and documenting the changes I made in order to create a more useful and more readable
-professions grid. You can spare yourself at least some of the trouble by simply downloading and importing
-my exported grid view (I say at least some because there's bound to be some things with it you want to
-tweak) from the Dwarf Fortress File Depot: \url{http://dffd.wimbli.com/file.php?id=7880}.
+The ability to export and import grid views is very important, given the amount of work that must go
+into reproducing a custom view, and both options are available under the ``File'' header in the taskbar.
 
 \newpage
 \begin{figure}[h!]
     \vspace*{-2cm}
     \makebox[\linewidth]{
-        \includegraphics[width=.85\linewidth]{Sec3Fig28}
+        \includegraphics[width=.85\linewidth]{Sec3Fig29}
     }
 \end{figure}
 \newpage
@@ -1953,7 +2222,7 @@ script creation and modification dialogue:
 
 \begin{figure}[h!]
 \vspace{-5pt}
-\centering \includegraphics[scale=.81]{Sec4Fig1}
+\centering \includegraphics[width=\linewidth]{Sec4Fig1}
 \vspace{-5pt}
 \end{figure}
 
@@ -1967,8 +2236,9 @@ Therapist handles looping for you, so your job is simply to write a useful filte
 of the application of your filter to a dwarf, we want to end up with either a "true" or "false"
 statement. If the result is false, the dwarf will not be displayed; if it is true, they will be. All of
 the commands that you can enter into the script editor are all meant to be called on the "d" object, the
-abstracted dwarf in question, through the dot operator: \texttt{d.is\_child()}, for instance. Here's a
-table of the commands available to you:
+abstracted dwarf in question, through the dot operator: \texttt{d.is\_child()}, for instance. The
+options are documented fairly well in the lookup box on the right of the box---here's a partial list of
+some of the commands available to you:
 \vspace{12pt}
 
 \begin{tabular}{l c l}
@@ -2033,13 +2303,16 @@ for OR, and two statements linked in such a way will return true if either or bo
 \texttt{\&\&} means AND, and will only return true if \emph{both} statements are true. Statements based
 around a \texttt{==} operator will be evaluated for equivalency, and will return true if they are, and
 false if they are not. Statements surrounded by \texttt{()} operators will be evaluated ahead in PEMDAS
-order, much like they are in algebra. Finally, adding a \texttt{!} before a boolean statement negates it
-- false becomes true and true becomes false. Integers can be compared with \texttt{<} and \texttt{>}
+order, much like they are in algebra. Finally, adding a \texttt{!} before a boolean statement negates
+it---false becomes true and true becomes false. Integers can be compared with \texttt{<} and \texttt{>}
 operators as well as the \texttt{==} one. Strings must be surrounded in double quotes, \texttt{"Like
 This"}.
 
 \subsection{Writing Complex Scripts}
 \label{sec:Writing Complex Scripts}
+
+%\legacy{All of the scripts defined in this section are now provided as program defaults.}
+
 Now that we have the basic syntax down, let's use filtering to solve a non-trivial problem. Whenever a
 large migrant waves arrive at a fortress, or even a small one in a lot of cases, what happens is that you
 pick the best of the bunch and set them to work immediately, and get the rest of the wave doing generic
@@ -2050,14 +2323,14 @@ dwarves for tasks you need done on a longer term one by one. Some will become je
 operating furnaces, some will build parts for your pump stack, some will be enlisted in the miltiary -
 and some will remain plain old haulers.
 
-In  \textbf{``\nameref{sec:Using Roles}"} we discussed combining groups, sorts, and roles to find ideal
+In  \jump{Using Roles} we discussed combining groups, sorts, and roles to find ideal
 dwarves for a particular task within a group, but we were hamstrung by the limitations of a group:
 there's no easy way to group ``gainfully employed" dwarves committed to their tasks apart from
 ``part-time" ones that aren't. Your options were to make do with grouping them into migrant waves, which
 doesn't usually end with you selecting the best available dwarf in the \emph{fortress} for the task, or
 not grouping them at all, which requires you browse through dwarves that are already working on something
 and risks switching the tasks of a dwarf you'd designated for a new role earlier (a problem discussed in
-\textbf{``\nameref{sec:Assigning Nicknames}"}). We're going to neatly resolve this little problem with a
+\jump{Assigning Nicknames}). We're going to neatly resolve this little problem with a
 script we're going to write.
 
 \begin{figure}[h!]
@@ -2078,9 +2351,7 @@ such dwarves (in order of complexity):
 ``working-class" dwarf, but it's nowhere near exclusive.
 
 \item They don't have a nickname. Assuming you follow the advice given in
-\textbf{``\nameref{sec:Assigning Nicknames}"}, nicked dwarves have already been dedicated to something.
-We're not actually going to consider this one, because dedicated nicked dwarves are already excluded by
-the condition above.
+\jump{Assigning Nicknames}, nicked dwarves have already been dedicated to something.
 
 \item They have the masonry and/or stone detailing labors enabled, but are never above "adequate" skill
 in the former (since actually building stone blocks is assigned to dedicated masons), and never above
@@ -2117,22 +2388,22 @@ non-trivial: not only regular hauling but the two medical chores are folded in a
 said anywhere in the documentation (well, now it is). That means that our magic number is 11:
 
 \begin{verbatim}
-d.total_assigned_labors(true)---d.total_assigned_labors(false) == 11
+d.total_assigned_labors(true)-d.total_assigned_labors(false) == 11
 \end{verbatim}
 
-And if you plug that into your script editor and hit "Test Script" this is what you'll see:
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=.91]{Sec4Fig3}
-\end{figure}
+%And if you plug that into your script editor and hit "Test Script" this is what you'll see:
+%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=.91]{Sec4Fig3}
+%\end{figure}
 
 This script alone reduced my fortress from 70 to 38 candidates! In fact, the capacity to filter your
 dwarves by whether or not they have hauling enabled is actually extremely useful on its own, and there's
 no other way to do this kind of thing in the program. So let's keep it! Give the script a name and hit
 "Save". We can actually also write a quick Hauling \emph{Disabled} script, too, now:
 \begin{verbatim}
-d.total_assigned_labors(true)---d.total_assigned_labors(false) <= 10
+d.total_assigned_labors(true)-d.total_assigned_labors(false) <= 10
 \end{verbatim}
 
 \textbf{If Masonry or Stone Detailing are Enabled, they are at a low Skill Level}
@@ -2162,6 +2433,16 @@ This one's elementary, just test if the dwarf is in an active military squad and
 This isn't that useful as a standalone filter because there's a group for it. Next!
 \vspace{12pt}
 
+\textbf{They Never have a Nickname}
+
+This is fairly simple, though the call is somewhat confusingly named:
+
+\begin{verbatim}
+d.nice_name()==""
+\end{verbatim}
+
+\vspace{12pt}
+
 \textbf{They Never have Certain Key Labors Enabled}
 
 This one involves a lot of table lookup:
@@ -2179,14 +2460,15 @@ This one involves a lot of table lookup:
 !d.labor_enabled(49) &&
 !d.labor_enabled(00) &&
 !d.labor_enabled(53) &&
-!d.labor_enabled(46) &&
+!d.labor_enabled(46)
 \end{verbatim}
 \end{multicols}
 
 If you drop the negations and use OR statements, you pretty much get a list of key dwarves in your
 fortress: I call it "Key Dwarves". It's very useful for getting rid of new migrants who happen to be
-novices in skills that are dedicated to, say, my legendary woodcutter, so that they don't take up room at
-my carpenter's shop while my \emph{real} bedmaker sits around doing nothing in particular.
+novices in skills that are dedicated to, say, my legendary woodcutter, so that they don't take up our
+only axe to cut down a tree a minute while the \emph{real} lumberjack sits around doing nothing in
+particular.
 \vspace{12pt}
 
 \textbf{Niche and Useless Labors Still On}
@@ -2205,61 +2487,65 @@ skill level -1. So it's time for some more table lookup:
 
 Those are all our conditions; behold, the completed script!
 \begin{verbatim}
-(d.total_assigned_labors(true)---d.total_assigned_labors(false) == 11) && 
+// hauling test
+(d.total_assigned_labors(true) - d.total_assigned_labors(false) == 11) && 
 // masonry and stone detailing test
-(((d.labor_enabled(13) == true &&  d.labor_rating(13) < 3)
-|| d.labor_enabled(13) == false) || 
-((d.labor_enabled(12) == true &&  d.labor_rating(12) < 4)
-|| d.labor_enabled(12) == false)) &&
-!active_military() &&
-(!d.labor_enabled(47) && !d.labor_enabled(48) && !d.labor_enabled(29) &&
-!d.labor_enabled(11) && !d.labor_enabled(33) && !d.labor_enabled(38) &&
-!d.labor_enabled(45) && !d.labor_enabled(50) && !d.labor_enabled(51) &&
-!d.labor_enabled(49) && !d.labor_enabled(00) && !d.labor_enabled(53) &&
-!d.labor_enabled(46)) &&
-((d.labor_rating(16) > 0 && d.labor_enabled(16)) || (d.labor_rating(16) <= 0)) &&
-((d.labor_rating(43) > 0 && d.labor_enabled(43)) || (d.labor_rating(43) <= 0)) &&
-((d.labor_rating(26) > 0 && d.labor_enabled(26)) || (d.labor_rating(26) <= 0)) &&
-((d.labor_rating(72) > 0 && d.labor_enabled(72)) || (d.labor_rating(72) <= 0)) &&
-((d.labor_rating(71) > 0 && d.labor_enabled(71)) || (d.labor_rating(71) <= 0))
+(((d.labor_enabled(13) == true &&  d.labour_rating(13) < 3) ||
+d.labour_enabled(13) == false)  ||  ((d.labor_enabled(12) == true && 
+d.labour_rating(12) < 4)  || d.labour_enabled(12) == false)) &&
+// nickname test
+(d.nice_name == "") &&
+// military duty test
+!d.active_military() &&
+// key dwarf test
+(!d.labor_enabled(47) && !d.labor_enabled(48) && !d.labor_enabled(29)
+&& !d.labor_enabled(11) && !d.labor_enabled(33) && !d.labor_enabled(38)
+&& !d.labor_enabled(45) && !d.labor_enabled(50) && !d.labor_enabled(51)
+&& !d.labor_enabled(49) && !d.labor_enabled(00) && !d.labor_enabled(53)
+&& !d.labor_enabled(46)) &&
+// useless labors test
+((d.labour_rating(16) > 0 && d.labor_enabled(16)) || d.labour_rating(16) <= 0)
+&& // Animal Tr.
+((d.labour_rating(43) > 0 && d.labor_enabled(43)) || d.labour_rating(43) <= 0)
+&& // Fish Diss.
+((d.labour_rating(26) > 0 && d.labor_enabled(26)) || d.labour_rating(26) <= 0)
+&& // Animal Diss.
+((d.labour_rating(72) > 0 && d.labor_enabled(72)) || d.labour_rating(72) <= 0)
 \end{verbatim}
 
+\newpage
 \begin{wrapfigure}{R}{0.2\textwidth}
-\vspace{-20pt}
+\vspace{-5pt}
   \begin{center}
     \includegraphics[width=0.2\textwidth]{Sec4Fig4}
   \end{center}
 \vspace{-15pt}
 \end{wrapfigure}
 Over the course of composing this script we actually wrote three other useful scripts, which I think is a
-\emph{pretty good} demonstration of their utility.\footnote{Since the publication of the first version
-of this guide all of these scripts have been packaged into the base installation.} Unfortunately Dwarf
+\emph{pretty good} demonstration of their utility. Unfortunately Dwarf
 Therapist does not provide any facilities for exporting or importing filter scripts, which is a
 unfortunate, because filter scripts get very complicated and having to copy other people's scripts
-manually is very annoying, as even a single error or typo will likely invalidate the entire thing. If
-you like the scripts we wrote here, save yourself some trouble and simply copy paste them into your
-filters list!
+manually is very annoying, as even a single error or typo will likely invalidate the entire thing.
+If you like the scripts that were provided here, just copy-paste them into your program!
 
-\newpage
 \subsection{Running Filter Scripts}
 \label{sec:Running Filter Scripts}
-\begin{wrapfigure}{R}{0.4\textwidth}
+\begin{wrapfigure}{R}{0.5\textwidth}
   \begin{center}
   \vspace{-20pt}
-    \includegraphics[width=0.4\textwidth]{Sec4Fig4+}
+    \includegraphics[width=0.5\textwidth]{Sec4Fig4+}
   \vspace{-20pt}
   \end{center}
 \end{wrapfigure}
 
-Once you have a complete filter script running it is a matter of navigating to the ``Add Filter'' item on
-on the indicator bar, going to the drop-down menu, and activating your script. Crucially, Dwarf
+Once you have a complete filter script running it is a matter of navigating to the ``Add Filter'' item
+on on the indicator bar, going to the drop-down menu, and activating your script. Crucially, Dwarf
 Therapist allows you to run multiple filter scripts simultaneously, allowing a useful degree of finesse
 in your filtering. The sidebar by the drop-down menu will display the number of scripts you have active;
 clicking on it removes all active filters and resets the screen. If multiple scripts are active you can
 use the drop-down menu to remove them individually as well. This allows you to easily check
 how many of your key dwarves have hauling enabled, for instance, and to perform other such flexible
 tasks.
-% TODO Edit point. Here be information on running multiple scripts at once.
 
 \subsection{Exporting and Importing Filter Scripts}
 \label{sec:Exporting and Importing Filter Scripts}
@@ -2271,6 +2557,8 @@ planned for a future version of the utility.
 \newpage
 \section{Optimization Plans}
 \label{sec:Optimization Plans}
+
+%\legacy{The optimization plan created here is now included as a test plan in the default installation.}
 
 Optimization plans are a (somewhat complicated) way to automate the labor assignment process that we've
 so far been doing manually. To access it, go to \texttt{Optimization > New Optimization Plan}, which
@@ -2290,7 +2578,7 @@ their name) or multiple dwarves (by dragging the mouse down dwarves in a column,
 the first dwarf and shift-clicking on the last one) it will constrain itself to those
 dwarves.\footnote{You can also select all with the \texttt{Ctrl + A} hotkey.} You can use filters to
 only display those dwarves that you want to be optimized---I recommend using the "Available for Work"
-filter we just wrote in the last section, \textbf{``\nameref{sec:Writing Complex Scripts}"}.
+filter we just wrote in the last section, \jump{Writing Complex Scripts}.
 
 Let's use the optimizer for a simple task---say, assigning  (role-optimized) dedicated wood burner and
 furnace operator from betwixt a few dwarves. Open a new optimization plan again. Set "max jobs per dwarf"
@@ -2351,7 +2639,7 @@ our dwarves (I deliberately avoided doing this earlier to showcase predefined us
 the menu bar). As you might have guessed this cleaves our dwarves in two: a quarter each are assigned
 dedicated wood burning or furnace operating, and the remaining half are made haulers, with their other
 labors disabled. A note that needs to be made: optimization plans will obviously only work properly if
-roles are tuned to the default skill rank setting we discussed in \textbf{``\nameref{sec:Roles}"}.
+roles are tuned to the default skill rank setting we discussed in \jump{Roles}.
 
 \begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec4Fig11}
 \end{figure}
@@ -2463,6 +2751,11 @@ expect---he's ignored---and has the nice side effect of tidying up our ``five di
 \begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec4Fig15}
 \end{figure}
 
+\subsection{Using Optimization Plans}
+\label{Using Optimization Plans}
+
+For now, see \jump{Putting it all Together}.
+
 \subsection{Exporting and Importing Optimization Plans}
 \label{sec:Exporting and Importing Optimization Plans}
 
@@ -2473,35 +2766,37 @@ and made available for others to use, or imported and made available for use in 
 \end{figure}
 
 This feature is only available from the options bar on the optimization plan editing menu, and it doesn't
-appear in the Optimization taskbar item. This is currently under development.
-
-\section{Using Optimization Plans}
-\label{Using Optimization Plans}
-% Current work point: need to include a usecase for optimization plans, preferably one that ``binds it
-% all together''.
+appear in the Optimization taskbar item.% This is currently under development.
 
 \newpage
+\addendum{
 \section{Addendum: Memory Tools}
 \label{sec:Scanning Memory}
 If you click on the "Scan Memory" item in the File menu you will be brought to the Dwarf Therapist memory
 scanning utility:
-\begin{figure}[h!] \centering \includegraphics[width=\textwidth]{Sec4FigExtra}
-\caption{The result of a brute force string search for "hauling".}
-\end{figure}
+\vspace{12pt}
 
+\includegraphics[width=\textwidth]{Sec4FigExtra}
+
+\center{The result of a brute-force search for the string ``hauling''.}
+
+\vspace{6pt}
+
+% \begin{wrapfigure}{R}{0.28\textwidth}
+% \vspace{-20pt}
+%   \begin{center}
+%     \includegraphics[width=0.28\textwidth]{Sec4FigExtra3}
+%   \end{center}
+% \vspace{-15pt}
+% \end{wrapfigure}
+
+\begin{flushleft}
 \textbf{This will not be covered in this guide}. Dwarf Fortress memory mapping and modification is not
 for the faint of heart, and is used for two things: finding the RAM values for things necessary to get
 complex utilities and mods working (like, say, Dwarf Therapist), and cheating the game by changing them.
 The first is way out of the scope of this guide, and for the second there are much more elegant tools
 available: as labor management has been given a GUI by the community, so to has memory access and
 modification. I'm also not going to pretend I fully understand how the tool even \emph{works}.
-\begin{wrapfigure}{R}{0.28\textwidth}
-\vspace{-20pt}
-  \begin{center}
-    \includegraphics[width=0.28\textwidth]{Sec4FigExtra3}
-  \end{center}
-\vspace{-15pt}
-\end{wrapfigure}
 
 Additionally, if you right click on a dwarf's name and scroll to ``Memory Tools'' you will see that there
 are some memory options available for individual dwarves as well. You can ``Dump Memory" to open the
@@ -2510,8 +2805,202 @@ will also read the dwarf's memory values into a chart, but will save it to a \te
 Dwarf Therapist log subfolder. Finally, you can ``Copy Address to Clipboard" to copy that dwarf's memory
 location to your clipboard. This function may be useful if you're interested in modding your dwarves
 in-game, but once again it's not something the average user would need.
+\end{flushleft}
+}
+
 \vfill \newpage
+
+\newpage
+
+\section{Putting it all Together}
+\label{sec:Putting it all Together}
+
+\begin{figure}[h!]
+\includegraphics[width=\linewidth]{Sec5Fig1}
+\end{figure}
+
+We have now individually covered all of the features available to you in Dwarf Therapist, and so we are
+ready to put togethor everything we have learned so far and employ towards solving a particularly
+complex task: military recruitment.
+
+One of the most time-consuming and complex tasks in Dwarf Fortress is the creation, assignment, and
+management of military dwarves and military squads. Our goal in this section of the guide is to put
+together everything that we've learned up to now and apply it to this thorny problem, starting with
+streamlining the process for conscripting dwarves into our squads.
+
+The first thing we want to do is think about what kind of a view we will need for this task, as the
+default military view is far too comprehensive for the purposes of simple recruitment. Instead we are
+going to build our own, specialized view for the task. Let's begin by looking at how squads in Dwarf
+Fortress are or ought to be structured. You can have up to ten dwarves per squad, with a squad leader,
+subordinate to your assigned militia commander noble, and up to nine other dwarves. You can give each
+dwarf in a squad an individual uniform, but it's easiest and most logical to make them uniform: every
+dwarf in a squad is equipped with the same weapons and approximately the same kit, uniform availability
+depending. Clearly our squad leader should differ from his compatriats: he needs to be not only an
+excellent fighter, but also an excellent teacher and leader, so we are going to need roles for both
+individual fighting dwarves, and slightly more demanding ones for their officers.
+
+Dwarves can use any weapon that they can wield out of a certain large set of them---you can see the full
+list of wieldables, and whether or not individual dwarves can wield them, in the ``Weapons'' view or in
+the ``Military'' view. However, we are not going to concern ourselves with most of the items on this
+list, since they either cannot be produced domestically or cannot be wielded at all, and since dwarves
+will never come to your fortress with experience in weapons, like whips, which are not
+sufficiently ``dwarvish''. Thus our list of possible squad weapons is: battle axes, crossbows, maces,
+short swords, spears, picks, and war hammers. To be comprehensive, then, we will need to define a custom
+role for wielders of each of these weapons, as well as a parallel ones for their officers. Additionally
+we can define melee-generalist ``meleedwarf'' and ``lead meleedwarf'' roles, for squads with dwarve s
+meant to equip whichever weapon they are most skilled in already, to better take advantage of
+pre-existing skill rank. That brings us to a total of sixteen custom roles, split between our regular
+conscripts and our officers. \emph{However}, Dwarf Therapist ships with specific militiadwarf roles,
+excepting pickdwarf, already defined---so we have only the various officer dwarf roles, and the
+meleedwarf and pickdwarf roles, to define. Let's begin by writing these roles.
+
+\step{1}
+What's the difference between a meleedwarf and an axedwarf, or a hammerdwarf, or so on? None, except that
+he is excepted to be versed in any one weapon, as opposed to a specific one of your choosing. So to
+generate a meleedwarf custom role, open up the Custom Role definition window with \texttt{Roles > New
+Custom Role}, and copy in any meleedwarf role---axedwarf is closest. Add to this role all of the
+domestic melee weapon skills and domestic weapon preferences not already listed, and save the role.
+
+The process for creating a pickdwarf role mirrors that for creating the meeledwarf one, except that
+instead of importing all of the remaning weapons we instead kick out whatever weapon is in the role we
+copied, and add the mining skill and pickaxe preference.\footnote{Picks are not predefined because they
+are hardly ever used for combat, being meant for mining and all that---they even level with the
+Mining skill, instead of a dedicated combat skill. Not a very sexy weapon, but very effective in a
+pinch, I hear.}
+
+What makes for a good dwarven officer? Open up the role definition window again, and this time copy in
+your new meleedwarf role. Add to it the attributes (linguistic ability and social awareness) and skills
+(teacher) associated with the ``Teacher'' role, and save (you can also add some traits, like ``bravery''
+and somesuch, if you'd like). For the rest of the officer roles, just repeat this process. Tedious, but
+not difficult---if you don't want to bother, I include a packaged export of everything we create here at
+the end of this section.
+
+\step{2}
+Now that we have all of the roles we want to use defined and ready, let's create a part of the
+view in which we can use them. Open up the Grid View dock (\texttt{Windows > Docks > Grid Views}) and
+hit ``Add a New Grid View''. Name your view something appropriate---I called mine ``Recruitment''---and
+let's add what we have so far.
+
+\begin{figure}[h!]
+\includegraphics[width=\linewidth]{Sec5Fig2}
+\end{figure}
+
+Note that the ``Pickdwarf'' columns are labor toggles. If you inspect them you'll notice that, in a
+behavior described earlier in the addendum to \jump{Using Roles---The View Method}, roles with skilled
+labors associated with them (in this case, mining) will be togglable for those labors.
+
+\step{3}
+Within Dwarf Fortress only active-duty soldiers are assigned their military professions---when they are
+off-duty they are given their civilian professional names instead. This is fine when we have a part-time
+militia, but less helpful when we are trying to raise and train a professional military command. So let's
+write custom professions we can assign to fix this problem for us. No need to define lead dwarf
+professions, either---their status as assigned nobles tells all.
+
+It's easiest to do this out of the ``Customizations'' dock. The labors I assign to my dwarves are hauling
+for everyone, pump operating for all meleedwarves (pumps that don't pump anything are a great physical
+training regimen), hunting for all marksdwarves, mining for all pickdwarves, and wood cutting for all
+axedwarves.
+
+%\newpage
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=.4\linewidth]{Sec5Fig3}
+%\end{figure}
+
+
+\step{4}
+Let's now add these professions to our view! And while we're at it, let's add a set of columns for
+experience in the raw military skillsets we're using.
+
+\newpage
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{Sec5Fig5}
+\end{figure}
+
+\step{5}
+We now have our custom recruitment view in place, as well as a liturgy of appropriate new super-labors
+and professions in the customizations dock. The filter script we're going to use to weed fortress
+regulars from conscription is obvious---it's the availability script we wrote as an example in
+\jump{Filter Scripts}. This leaves us with only one last thing to write: our optimization plan, or
+perhaps plans.
+
+An optimization plan that optimizes just one squad of dwarves isn't strictly necessary, since you can
+sort the dwarves, assign them their labors, and then assign them the profession. Optimization plans can't
+assign professions, only labors, so you're not saving on much work with a single-squad plan. Instead we
+want to write a ``Military Starter'' optimization plan, similar to the ``Industry Starter'' plans that
+provide the bulk of this feature's utility. Usually, when I decide it's time to start a professional
+military, I start off with two squads: one of marksdwarves, and one with some sort of melee weapon.
+The usefulness of an optimization plan in this case is that it allows us to assign two squads of roughly
+equal parity. If we have a dwarf under consideration who is in the selection percentile for two
+different squads, then if you assign him manually, the squad he goes to will be a matter of which squad
+you assigned first. If you have an optimization plan, on the other hand, he'll go where he is needed
+most.
+
+\legacy{There are a couple of issues with using labor optimization in the manner described at
+the moment: the fact that numerical optimization is still under development, which can be worked around,
+and the fact that optimization clears all non-assigned labors, which cannot. Coming soon!}
+
+\step{6}
+There is one last thing we need to write: a simple filter script that only displays dwarves with
+pending changes, or ``dirty cells''. You'll see in a little bit why this is necessary. The filter is
+simple in concept, but large in size, since it reqires that we call \texttt{d.is\_labor\_state\_dirty()}
+on all possible labors---all 73 of them!
+
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=.5\linewidth]{Sec5Fig6}
+%\end{figure}
+
+We now have all the custom definitions we need to conscript our dwarves! Now let's walk through the
+process of actually assigning them.
+
+\step{1} Filter your dwarves down to those that are available for assignment, using the availability
+script we wrote in \jump{Writing Complex Scripts}.
+
+\step{2} Sort the dwarves by officer fitness, first in marksdwarvemanship and second in
+meleedwarvemanship. Take note of the names of those dwarves that appear at the top of the list. Within
+Dwarf Fortress, go to the ``Nobles'' screen (\texttt{N}) and make the fittest dwarf you have for each
+officer role a militia captain, sherrif, captain of the guard, or militia commander, whichever is
+appropriate. Since this is only the start of our budding military, it's probably best to make the head
+meleedwarf the militia commander, and the head marksdwarf the captain of the guard or
+sherrif.\footnote{Dwarves with crossbows elect to dole out physical punishment by beating dwarves with
+their crossbows, hence why they make good guards. Assuming you make your crossbows out of wood, this
+will have \emph{much} less gruesome results then, say, hacking at the poor dwarf with a sword!} I also
+recommend you name the squads something functional, so you can distinguish between them at-a-glace
+in-game: ``Fortress Guards'' and ``First Meleedwarves'', for instance.
+
+\step{3} Re-read dwarves from Dwarf Fortress, so that Dwarf Therapist can see the new squads. Filter them
+again down to those available for assignment.
+
+\step{3} Select all dwarves displayed using \texttt{Ctrl + A}, then hit our labor optimizer to conscript.
+
+\step{4} Now add the ``Pending Changes'' filter we defined in step six to the active filters, to remove
+those dwarves that escaped military assignment (this round) from the view.
+
+\step{7} Click on each dwarf with pending changes and assign them, from the dwarfwise menu, the proper
+military profession (and with it, the proper labors), and the proper squad. Remember---since we've
+already assigned the officers seperately, we only have the remaining 18 dwarves to go through.
+
+\step{8} Hit commit changes and admire your new dwarven military squads! The fun's not over, though,
+since you now have to go to the Dwarf Fortress military screen (\texttt{M}) and start assigning
+uniforms, schedules, and so on.
+
+\vspace{12pt}
+And there you have it!
+
+\newpage
 \part{Appendix}
+
+\section{Utility Packages}
+\label{sec:Utility Packages}
+
+In this section we will list some of the publicly available customizations and packages that have been
+exported out of the program and made available online.
+% We're also now going to write a new military management view, to compliment the military recruitment
+% procedure we've created above\ldots
+
+\newpage
 \section{Hotkeys}
 \label{sec:Hotkeys}
 
@@ -2523,16 +3012,16 @@ support is still quite limited.
 \textbf{Hotkey} & \textbf{Action} & \textbf{Refer To}\\
 \hline\\
 \multicolumn{3}{l}{\textbf{Commands}}\\
-\texttt{Ctrl + C} & Connect to Dwarf Fortress & \textbf{``\nameref{sec:Connecting to Dwarf Fortress}"}\\
-\texttt{Ctrl + R} & Read Dwarves & \textbf{``\nameref{sec:Connecting to Dwarf Fortress}"}\\
-\texttt{Ctrl + T} & Commit & \textbf{``\nameref{sec:Managing Your Dwarves}"}\\
-\texttt{Ctrl + E} & Clear & \textbf{``\nameref{sec:Managing Your Dwarves}"}\\
-\texttt{Ctrl + S} & Snapshot & \textbf{``\nameref{sec:Menu Bar}"}\\
-\texttt{Ctrl + P} & Options & \textbf{``\nameref{sec:Options}"}\\
+\texttt{Ctrl + C} & Connect to Dwarf Fortress & \jump{Connecting to Dwarf Fortress}\\
+\texttt{Ctrl + R} & Read Dwarves & \jump{Connecting to Dwarf Fortress}\\
+\texttt{Ctrl + T} & Commit & \jump{Managing Your Dwarves}\\
+\texttt{Ctrl + E} & Clear & \jump{Managing Your Dwarves}\\
+\texttt{Ctrl + S} & Snapshot & \jump{Menu Bar}\\
+\texttt{Ctrl + P} & Options & \jump{Options}\\
 \hline\\
 \multicolumn{3}{l}{\textbf{Views (when the View is active)}}\\
-\texttt{Scroll} & Scroll Vertically & \textbf{``\nameref{sec:Labors View}"}\\
-\texttt{Alt + Scroll} & Scroll Horizontally & \textbf{``\nameref{sec:Labors View}"}\\
+\texttt{Scroll} & Scroll Vertically & \jump{Labors View}\\
+\texttt{Alt + Scroll} & Scroll Horizontally & \jump{Labors View}\\
 \hline\\
 \multicolumn{3}{l}{\textbf{Groups (when Groups are active)}}\\
 \multicolumn{3}{l}{Hit the key that corresponds with the first letter of the group's name to bring it
@@ -2556,5 +3045,20 @@ update Dwarf Therapist the changes you've made to this document will be lost. Si
 are fine for the most part (the happiness bonuses/penalties for certain thoughts are complete guesswork,
 but that's because they are unknown to anyone), you should only modify stuff here if you \emph{really}
 know what you are doing.
+
+There is also a \texttt{Dwarf\_Therapist.ini} file which is placed in an approprate folder on your
+computer on installation---in roaming data if you are on PC, for instance. This file contains all of
+your presets and custom definitions, and is seperated from the rest of the installation so that when you
+update Dwarf Therapist to a new version, the settings, options, and custom code bits you had present in
+a previous version of the utility are still present. Deleting this file will revert the program back to
+base settings.
+
+\newpage
+\pagenumbering{gobble}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=.5]{Illustration2}
+\end{figure}
+%\center{{\LARGE Happy Forting!}}
 
 \end{document}

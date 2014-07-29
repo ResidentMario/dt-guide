@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.22)  22 JUL 2014 14:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.22)  29 JUL 2014 16:46
 entering extended mode
 **Dwarf*Therapist.tex
 ("E:\Eclipse\Projects\Dwarf Fortress\Dwarf Fortress\Dwarf Therapist.tex"
@@ -283,23 +283,31 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box56
 \enitdp@description=\count113
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
 ("E:\Eclipse\Projects\Dwarf Fortress\Dwarf Fortress\Dwarf Therapist.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
 \AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring OFF on input line 14.
+Package hyperref Info: Link coloring OFF on input line 58.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -309,9 +317,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count114
 )
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
-LaTeX Info: Redefining \nameref on input line 14.
+LaTeX Info: Redefining \ref on input line 58.
+LaTeX Info: Redefining \pageref on input line 58.
+LaTeX Info: Redefining \nameref on input line 58.
 
 ("E:\Eclipse\Projects\Dwarf Fortress\Dwarf Fortress\Dwarf Therapist.out")
 ("E:\Eclipse\Projects\Dwarf Fortress\Dwarf Fortress\Dwarf Therapist.out")
@@ -359,17 +367,17 @@ LaTeX Info: Redefining \selectfont on input line 126.
 \RaggedRightParindent=\skip60
 \JustifyingParindent=\skip61
 )
-<logo.png, id=187, 55.20625pt x 55.20625pt>
+<logo.png, id=211, 55.20625pt x 55.20625pt>
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 23.
+Package pdftex.def Info: logo.png used on input line 67.
 (pdftex.def)             Requested size: 44.16504pt x 44.16504pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 23.
+(Font)              <12> on input line 67.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 23.
+(Font)              <8> on input line 67.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 23.
+(Font)              <6> on input line 67.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <E:/Eclipse/Projects/Dwarf
@@ -377,664 +385,695 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ("E:\Eclipse\Projects\Dwarf Fortress\Dwarf Fortress\Dwarf Therapist.toc"
 [1])
 \tf@toc=\write4
- <Illustration2.jpg, id=252, 582.175pt x 676.5275pt>
-File: Illustration2.jpg Graphic file (type jpg)
-
-<use Illustration2.jpg>
-Package pdftex.def Info: Illustration2.jpg used on input line 33.
-(pdftex.def)             Requested size: 291.08679pt x 338.26291pt.
- [2 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Illustration2.jpg>]
+ [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 43.
- [3] [4] <Sec1Fig1.png, id=280, 388.45125pt x 123.46124pt>
+(Font)              <5> on input line 87.
+ [3] [4] <Sec1Fig1.png, id=309, 388.45125pt x 123.46124pt>
 File: Sec1Fig1.png Graphic file (type png)
 
 <use Sec1Fig1.png>
-Package pdftex.def Info: Sec1Fig1.png used on input line 119.
+Package pdftex.def Info: Sec1Fig1.png used on input line 189.
 (pdftex.def)             Requested size: 388.45029pt x 123.46092pt.
- <Sec1Fig2.png, id=282, 380.92313pt x 93.34875pt>
+ <Sec1Fig2.png, id=311, 380.92313pt x 93.34875pt>
 File: Sec1Fig2.png Graphic file (type png)
 
 <use Sec1Fig2.png>
-Package pdftex.def Info: Sec1Fig2.png used on input line 132.
+Package pdftex.def Info: Sec1Fig2.png used on input line 202.
 (pdftex.def)             Requested size: 380.92218pt x 93.34851pt.
- <Sec1Fig3.png, id=283, 145.29282pt x 40.65187pt>
+ <Sec1Fig3.png, id=312, 145.29282pt x 40.65187pt>
 File: Sec1Fig3.png Graphic file (type png)
 
 <use Sec1Fig3.png>
-Package pdftex.def Info: Sec1Fig3.png used on input line 139.
+Package pdftex.def Info: Sec1Fig3.png used on input line 209.
 (pdftex.def)             Requested size: 138.02737pt x 38.61905pt.
  [5 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig1.png> <E:/Eclips
 e/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig2.png> <E:/Eclipse/Projects/Dwa
 rf Fortress/Dwarf Fortress/Sec1Fig3.png>]
-<Sec1Fig4.png, id=294, 1264.725pt x 760.34062pt>
+<Sec1Fig4.png, id=323, 1264.725pt x 760.34062pt>
 File: Sec1Fig4.png Graphic file (type png)
  <use Sec1Fig4.png>
-Package pdftex.def Info: Sec1Fig4.png used on input line 161.
+Package pdftex.def Info: Sec1Fig4.png used on input line 230.
 (pdftex.def)             Requested size: 469.75502pt x 282.4122pt.
 
-<Sec1Fig5.png, id=295, 983.92593pt x 208.52907pt>
+<Sec1Fig5.png, id=324, 1003.49907pt x 205.5178pt>
 File: Sec1Fig5.png Graphic file (type png)
  <use Sec1Fig5.png>
-Package pdftex.def Info: Sec1Fig5.png used on input line 166.
-(pdftex.def)             Requested size: 469.75502pt x 99.55824pt.
-
-<Sec1Fig6.png, id=298, 946.28531pt x 111.41624pt>
-File: Sec1Fig6.png Graphic file (type png)
- <use Sec1Fig6.png>
-Package pdftex.def Info: Sec1Fig6.png used on input line 186.
-(pdftex.def)             Requested size: 469.75502pt x 55.30846pt.
+Package pdftex.def Info: Sec1Fig5.png used on input line 235.
+(pdftex.def)             Requested size: 469.75502pt x 96.20766pt.
  [6 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig4.png> <E:/Eclips
 e/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig5.png>]
-<Sec1Fig7.png, id=311, 143.78719pt x 106.14656pt>
-File: Sec1Fig7.png Graphic file (type png)
- <use Sec1Fig7.png>
-Package pdftex.def Info: Sec1Fig7.png used on input line 224.
-(pdftex.def)             Requested size: 143.78683pt x 106.1463pt.
- [7 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig6.png> <E:/Eclips
-e/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig7.png>]
-<Sec1Fig8.png, id=325, 309.40594pt x 398.99063pt>
+<Sec1Fig6+.png, id=335, 935.74594pt x 109.1578pt>
+File: Sec1Fig6+.png Graphic file (type png)
+ <use Sec1Fig6+.png>
+Package pdftex.def Info: Sec1Fig6+.png used on input line 255.
+(pdftex.def)             Requested size: 469.75502pt x 54.79861pt.
+
+<Sec1Fig6.png, id=336, 946.28531pt x 111.41624pt>
+File: Sec1Fig6.png Graphic file (type png)
+ <use Sec1Fig6.png>
+Package pdftex.def Info: Sec1Fig6.png used on input line 276.
+(pdftex.def)             Requested size: 446.26582pt x 52.54243pt.
+ [7 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig6+.png> <E:/Eclip
+se/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig6.png>]
+<Sec1Fig8.png, id=350, 310.15875pt x 458.46281pt>
 File: Sec1Fig8.png Graphic file (type png)
  <use Sec1Fig8.png>
-Package pdftex.def Info: Sec1Fig8.png used on input line 246.
-(pdftex.def)             Requested size: 309.40518pt x 398.98965pt.
+Package pdftex.def Info: Sec1Fig8.png used on input line 317.
+(pdftex.def)             Requested size: 248.12733pt x 366.77074pt.
  [8 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig8.png>]
-<Sec1Fig9.png, id=337, 414.04688pt x 17.31468pt>
+<Sec1Fig9.png, id=363, 414.04688pt x 17.31468pt>
 File: Sec1Fig9.png Graphic file (type png)
  <use Sec1Fig9.png>
-Package pdftex.def Info: Sec1Fig9.png used on input line 272.
+Package pdftex.def Info: Sec1Fig9.png used on input line 354.
 (pdftex.def)             Requested size: 414.04585pt x 17.31462pt.
 
-<Sec1Fig10.png, id=338, 135.50626pt x 219.82124pt>
+<Sec1Fig10.png, id=364, 135.50626pt x 219.82124pt>
 File: Sec1Fig10.png Graphic file (type png)
  <use Sec1Fig10.png>
-Package pdftex.def Info: Sec1Fig10.png used on input line 286.
+Package pdftex.def Info: Sec1Fig10.png used on input line 368.
 (pdftex.def)             Requested size: 135.5059pt x 219.8207pt.
  [9 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig9.png> <E:/Eclips
 e/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig10.png>]
-<Sec1Fig11.png, id=352, 649.67719pt x 19.57312pt>
+<Sec1Fig11.png, id=378, 649.67719pt x 19.57312pt>
 File: Sec1Fig11.png Graphic file (type png)
  <use Sec1Fig11.png>
-Package pdftex.def Info: Sec1Fig11.png used on input line 355.
+Package pdftex.def Info: Sec1Fig11.png used on input line 435.
 (pdftex.def)             Requested size: 469.75502pt x 14.15265pt.
 
-<Sec1Fig11+.png, id=354, 111.41624pt x 219.82124pt>
+<Sec1Fig11+.png, id=380, 111.41624pt x 219.82124pt>
 File: Sec1Fig11+.png Graphic file (type png)
  <use Sec1Fig11+.png>
-Package pdftex.def Info: Sec1Fig11+.png used on input line 370.
+Package pdftex.def Info: Sec1Fig11+.png used on input line 450.
 (pdftex.def)             Requested size: 83.56197pt x 164.86551pt.
 
-<Sec1Fig12.png, id=358, 181.42781pt x 21.83156pt>
+<Sec1Fig12.png, id=384, 181.42781pt x 21.83156pt>
 File: Sec1Fig12.png Graphic file (type png)
  <use Sec1Fig12.png>
-Package pdftex.def Info: Sec1Fig12.png used on input line 423.
+Package pdftex.def Info: Sec1Fig12.png used on input line 507.
 (pdftex.def)             Requested size: 178.5092pt x 21.48071pt.
  [10 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig11.png> <E:/Ecli
-pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig11+.png> <E:/Eclipse/Projects
-/Dwarf Fortress/Dwarf Fortress/Sec1Fig12.png>]
-<Sec1Fig13.png, id=369, 461.47406pt x 40.65187pt>
+pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig11+.png>]
+<Sec1Fig13.png, id=395, 465.23813pt x 40.65187pt>
 File: Sec1Fig13.png Graphic file (type png)
  <use Sec1Fig13.png>
-Package pdftex.def Info: Sec1Fig13.png used on input line 442.
-(pdftex.def)             Requested size: 469.75502pt x 41.38123pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 452.
+Package pdftex.def Info: Sec1Fig13.png used on input line 525.
+(pdftex.def)             Requested size: 469.75502pt x 41.04813pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 535.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 452.
- [11 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig13.png>]
-<Sec1Fig16-1.png, id=379, 249.18094pt x 434.37282pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 535.
+ [11 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig12.png> <E:/Ecli
+pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig13.png>]
+<Sec1Fig16-1.png, id=407, 249.18094pt x 434.37282pt>
 File: Sec1Fig16-1.png Graphic file (type png)
  <use Sec1Fig16-1.png>
-Package pdftex.def Info: Sec1Fig16-1.png used on input line 508.
+Package pdftex.def Info: Sec1Fig16-1.png used on input line 593.
 (pdftex.def)             Requested size: 158.54123pt x 276.3738pt.
 
-<Sec1Fig16-2.png, id=380, 202.50656pt x 311.66437pt>
+<Sec1Fig16-2.png, id=408, 249.18094pt x 411.03563pt>
 File: Sec1Fig16-2.png Graphic file (type png)
  <use Sec1Fig16-2.png>
-Package pdftex.def Info: Sec1Fig16-2.png used on input line 512.
-(pdftex.def)             Requested size: 169.1113pt x 260.27449pt.
+Package pdftex.def Info: Sec1Fig16-2.png used on input line 597.
+(pdftex.def)             Requested size: 169.1113pt x 278.96114pt.
 
 [12 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig16-1.png> <E:/Ecl
 ipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig16-2.png>]
-<Sec1Fig16-4.png, id=392, 208.52907pt x 310.15875pt>
+<Sec1Fig16-4.png, id=419, 208.52907pt x 310.15875pt>
 File: Sec1Fig16-4.png Graphic file (type png)
  <use Sec1Fig16-4.png>
-Package pdftex.def Info: Sec1Fig16-4.png used on input line 540.
+Package pdftex.def Info: Sec1Fig16-4.png used on input line 631.
 (pdftex.def)             Requested size: 176.15813pt x 262.02708pt.
 
-<Sec1Fig16-3.png, id=393, 202.50656pt x 294.34969pt>
+<Sec1Fig16-3.png, id=420, 202.50656pt x 294.34969pt>
 File: Sec1Fig16-3.png Graphic file (type png)
  <use Sec1Fig16-3.png>
-Package pdftex.def Info: Sec1Fig16-3.png used on input line 544.
+Package pdftex.def Info: Sec1Fig16-3.png used on input line 635.
 (pdftex.def)             Requested size: 169.1113pt x 245.81479pt.
 
 [13 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig16-4.png> <E:/Ecl
 ipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig16-3.png>]
-<Sec1Fig17.png, id=399, 456.20438pt x 15.05624pt>
+<Sec1Fig17.png, id=426, 456.20438pt x 15.05624pt>
 File: Sec1Fig17.png Graphic file (type png)
  <use Sec1Fig17.png>
-Package pdftex.def Info: Sec1Fig17.png used on input line 557.
+Package pdftex.def Info: Sec1Fig17.png used on input line 647.
 (pdftex.def)             Requested size: 469.75502pt x 15.50395pt.
 
-<Sec1Fig18.png, id=400, 207.77625pt x 313.9228pt>
+<Sec1Fig18.png, id=427, 207.77625pt x 313.9228pt>
 File: Sec1Fig18.png Graphic file (type png)
  <use Sec1Fig18.png>
-Package pdftex.def Info: Sec1Fig18.png used on input line 573.
-(pdftex.def)             Requested size: 207.77573pt x 313.92203pt.
+Package pdftex.def Info: Sec1Fig18.png used on input line 657.
+(pdftex.def)             Requested size: 187.89914pt x 283.90265pt.
  [14 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig17.png> <E:/Ecli
-pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig18.png>]
-Overfull \hbox (7.20569pt too wide) in paragraph at lines 627--629
-[][]\OT1/cmr/m/n/10 Options \OT1/cmtt/m/n/10 (CTRL + P)\OT1/cmr/m/n/10 . Also p
-ro-vided on the Main
- []
-
-[15] <Sec2Fig1.png, id=443, 86.57344pt x 85.06781pt>
+pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec1Fig18.png>] [15]
+<Sec2Fig1.png, id=457, 86.57344pt x 85.06781pt>
 File: Sec2Fig1.png Graphic file (type png)
  <use Sec2Fig1.png>
-Package pdftex.def Info: Sec2Fig1.png used on input line 687.
+Package pdftex.def Info: Sec2Fig1.png used on input line 749.
 (pdftex.def)             Requested size: 93.94957pt x 92.31837pt.
 
-<Sec2Fig2-1.png, id=446, 15.05624pt x 210.03468pt>
+<Sec2Fig2-1.png, id=460, 13.55063pt x 202.50656pt>
 File: Sec2Fig2-1.png Graphic file (type png)
  <use Sec2Fig2-1.png>
-Package pdftex.def Info: Sec2Fig2-1.png used on input line 708.
-(pdftex.def)             Requested size: 11.741pt x 163.79114pt.
+Package pdftex.def Info: Sec2Fig2-1.png used on input line 770.
+(pdftex.def)             Requested size: 10.802pt x 161.43689pt.
 
-<Sec2Fig3-1.png, id=447, 259.7203pt x 146.79843pt>
+<Sec2Fig3-1.png, id=461, 259.7203pt x 146.79843pt>
 File: Sec2Fig3-1.png Graphic file (type png)
  <use Sec2Fig3-1.png>
-Package pdftex.def Info: Sec2Fig3-1.png used on input line 742.
+Package pdftex.def Info: Sec2Fig3-1.png used on input line 804.
 (pdftex.def)             Requested size: 225.4804pt x 127.4448pt.
 
-<Sec2Fig3-2.png, id=448, 258.21469pt x 147.55125pt>
+<Sec2Fig3-2.png, id=462, 258.21469pt x 147.55125pt>
 File: Sec2Fig3-2.png Graphic file (type png)
  <use Sec2Fig3-2.png>
-Package pdftex.def Info: Sec2Fig3-2.png used on input line 746.
+Package pdftex.def Info: Sec2Fig3-2.png used on input line 808.
 (pdftex.def)             Requested size: 225.4804pt x 128.85034pt.
 
 [16 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig1.png> <E:/Eclips
 e/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig2-1.png> <E:/Eclipse/Projects/D
 warf Fortress/Dwarf Fortress/Sec2Fig3-1.png> <E:/Eclipse/Projects/Dwarf Fortres
 s/Dwarf Fortress/Sec2Fig3-2.png>]
-<Sec2Fig4.png, id=457, 197.23688pt x 22.58438pt>
+<Sec2Fig4.png, id=471, 197.23688pt x 22.58438pt>
 File: Sec2Fig4.png Graphic file (type png)
  <use Sec2Fig4.png>
-Package pdftex.def Info: Sec2Fig4.png used on input line 776.
+Package pdftex.def Info: Sec2Fig4.png used on input line 839.
 (pdftex.def)             Requested size: 197.23637pt x 22.5843pt.
 
-<Sec2Fig5.png, id=458, 709.14937pt x 69.25874pt>
+<Sec2Fig5.png, id=472, 709.14937pt x 69.25874pt>
 File: Sec2Fig5.png Graphic file (type png)
  <use Sec2Fig5.png>
-Package pdftex.def Info: Sec2Fig5.png used on input line 785.
+Package pdftex.def Info: Sec2Fig5.png used on input line 848.
 (pdftex.def)             Requested size: 469.75502pt x 45.87892pt.
  [17 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig4.png> <E:/Eclip
 se/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig5.png>]
-<Sec2Fig6.png, id=465, 988.44281pt x 611.28375pt>
+<Sec2Fig6.png, id=479, 1077.27469pt x 609.77812pt>
 File: Sec2Fig6.png Graphic file (type png)
  <use Sec2Fig6.png>
-Package pdftex.def Info: Sec2Fig6.png used on input line 794.
-(pdftex.def)             Requested size: 469.75502pt x 290.5027pt.
+Package pdftex.def Info: Sec2Fig6.png used on input line 858.
+(pdftex.def)             Requested size: 469.75502pt x 265.90265pt.
 
-<Sec2Fig7.png, id=469, 192.72pt x 94.85437pt>
+<Sec2Fig7.png, id=483, 164.11313pt x 94.85437pt>
 File: Sec2Fig7.png Graphic file (type png)
  <use Sec2Fig7.png>
-Package pdftex.def Info: Sec2Fig7.png used on input line 814.
-(pdftex.def)             Requested size: 164.41711pt x 80.9233pt.
- [18 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig6.png> <E:/Eclip
-se/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig7.png>]
-<Sec2Fig8.png, id=479, 451.6875pt x 11.29219pt>
+Package pdftex.def Info: Sec2Fig7.png used on input line 878.
+(pdftex.def)             Requested size: 150.32504pt x 86.88641pt.
+
+<Sec2Fig8.png, id=485, 451.6875pt x 11.29219pt>
 File: Sec2Fig8.png Graphic file (type png)
  <use Sec2Fig8.png>
-Package pdftex.def Info: Sec2Fig8.png used on input line 831.
+Package pdftex.def Info: Sec2Fig8.png used on input line 895.
 (pdftex.def)             Requested size: 469.75502pt x 11.74461pt.
-
-<Sec2Fig9.png, id=481, 840.89156pt x 67.0003pt>
+ [18 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig6.png> <E:/Eclip
+se/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig7.png>]
+<Sec2Fig9.png, id=496, 840.89156pt x 67.0003pt>
 File: Sec2Fig9.png Graphic file (type png)
  <use Sec2Fig9.png>
-Package pdftex.def Info: Sec2Fig9.png used on input line 851.
+Package pdftex.def Info: Sec2Fig9.png used on input line 915.
 (pdftex.def)             Requested size: 469.75502pt x 37.42891pt.
  [19 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig8.png> <E:/Eclip
 se/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig9.png>]
-<Sec2Fig10.png, id=491, 170.88844pt x 122.70844pt>
+<Sec2Fig10.png, id=505, 170.88844pt x 122.70844pt>
 File: Sec2Fig10.png Graphic file (type png)
  <use Sec2Fig10.png>
-Package pdftex.def Info: Sec2Fig10.png used on input line 889.
+Package pdftex.def Info: Sec2Fig10.png used on input line 953.
 (pdftex.def)             Requested size: 164.41711pt x 118.07024pt.
 
-<Sec2Fig11.png, id=493, 521.69907pt x 13.55063pt>
+<Sec2Fig11.png, id=506, 521.69907pt x 13.55063pt>
 File: Sec2Fig11.png Graphic file (type png)
  <use Sec2Fig11.png>
-Package pdftex.def Info: Sec2Fig11.png used on input line 919.
+Package pdftex.def Info: Sec2Fig11.png used on input line 982.
 (pdftex.def)             Requested size: 469.75502pt x 12.20163pt.
 
-<Sec2Fig12.png, id=494, 304.88907pt x 13.55063pt>
+<Sec2Fig12.png, id=507, 301.8778pt x 12.7978pt>
 File: Sec2Fig12.png Graphic file (type png)
  <use Sec2Fig12.png>
-Package pdftex.def Info: Sec2Fig12.png used on input line 928.
-(pdftex.def)             Requested size: 274.39761pt x 12.19543pt.
+Package pdftex.def Info: Sec2Fig12.png used on input line 991.
+(pdftex.def)             Requested size: 271.6875pt x 11.5179pt.
  [20 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig10.png> <E:/Ecli
 pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig11.png> <E:/Eclipse/Projects/
 Dwarf Fortress/Dwarf Fortress/Sec2Fig12.png>]
-<Sec2Fig5-3.png, id=506, 204.765pt x 52.69687pt>
+<Sec2Fig5-3.png, id=518, 204.765pt x 52.69687pt>
 File: Sec2Fig5-3.png Graphic file (type png)
  <use Sec2Fig5-3.png>
-Package pdftex.def Info: Sec2Fig5-3.png used on input line 949.
+Package pdftex.def Info: Sec2Fig5-3.png used on input line 1012.
 (pdftex.def)             Requested size: 187.89914pt x 48.35947pt.
 
-<Sec2Fig5-2.png, id=509, 139.27031pt x 59.47218pt>
+<Sec2Fig5-2.png, id=521, 139.27031pt x 59.47218pt>
 File: Sec2Fig5-2.png Graphic file (type png)
  <use Sec2Fig5-2.png>
-Package pdftex.def Info: Sec2Fig5-2.png used on input line 972.
+Package pdftex.def Info: Sec2Fig5-2.png used on input line 1035.
 (pdftex.def)             Requested size: 140.92793pt x 60.18167pt.
 
-<Sec2Fig5-4.png, id=510, 225.09094pt x 21.07875pt>
+<Sec2Fig5-4.png, id=522, 225.09094pt x 21.07875pt>
 File: Sec2Fig5-4.png Graphic file (type png)
  <use Sec2Fig5-4.png>
-Package pdftex.def Info: Sec2Fig5-4.png used on input line 991.
+Package pdftex.def Info: Sec2Fig5-4.png used on input line 1054.
 (pdftex.def)             Requested size: 187.89914pt x 17.59665pt.
 
 [21 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig5-3.png> <E:/Ecli
 pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig5-2.png> <E:/Eclipse/Projects
 /Dwarf Fortress/Dwarf Fortress/Sec2Fig5-4.png>]
-<Sec2Fig13.png, id=518, 876.27374pt x 18.0675pt>
+<Sec2Fig13.png, id=531, 876.27374pt x 18.0675pt>
 File: Sec2Fig13.png Graphic file (type png)
  <use Sec2Fig13.png>
-Package pdftex.def Info: Sec2Fig13.png used on input line 1042.
+Package pdftex.def Info: Sec2Fig13.png used on input line 1105.
 (pdftex.def)             Requested size: 469.75502pt x 9.68571pt.
 
-<Sec2Fig14.png, id=519, 139.27031pt x 147.55125pt>
+<Sec2Fig14.png, id=532, 139.27031pt x 147.55125pt>
 File: Sec2Fig14.png Graphic file (type png)
  <use Sec2Fig14.png>
-Package pdftex.def Info: Sec2Fig14.png used on input line 1047.
+Package pdftex.def Info: Sec2Fig14.png used on input line 1110.
 (pdftex.def)             Requested size: 139.26996pt x 147.55087pt.
  [22 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig13.png> <E:/Ecli
 pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig14.png>]
-<Sec2Fig15.png, id=528, 395.22656pt x 98.61844pt>
+<Sec2Fig15.png, id=541, 395.22656pt x 98.61844pt>
 File: Sec2Fig15.png Graphic file (type png)
  <use Sec2Fig15.png>
-Package pdftex.def Info: Sec2Fig15.png used on input line 1067.
+Package pdftex.def Info: Sec2Fig15.png used on input line 1130.
 (pdftex.def)             Requested size: 395.22559pt x 98.61818pt.
 
-<Sec2Fig16.png, id=529, 226.59656pt x 67.0003pt>
+<Sec2Fig16.png, id=542, 226.59656pt x 67.0003pt>
 File: Sec2Fig16.png Graphic file (type png)
  <use Sec2Fig16.png>
-Package pdftex.def Info: Sec2Fig16.png used on input line 1074.
+Package pdftex.def Info: Sec2Fig16.png used on input line 1137.
 (pdftex.def)             Requested size: 226.596pt x 67.00012pt.
  [23 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig15.png> <E:/Ecli
 pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig16.png>]
-<Sec2Fig17.png, id=538, 576.65437pt x 537.50812pt>
+<Sec2Fig17.png, id=553, 576.65437pt x 537.50812pt>
 File: Sec2Fig17.png Graphic file (type png)
  <use Sec2Fig17.png>
-Package pdftex.def Info: Sec2Fig17.png used on input line 1102.
+Package pdftex.def Info: Sec2Fig17.png used on input line 1168.
 (pdftex.def)             Requested size: 469.75502pt x 437.8807pt.
  [24 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig17.png>]
-<Sec2Fig18.png, id=546, 1006.51031pt x 37.64063pt>
+<Sec2Fig18.png, id=561, 1006.51031pt x 37.64063pt>
 File: Sec2Fig18.png Graphic file (type png)
  <use Sec2Fig18.png>
-Package pdftex.def Info: Sec2Fig18.png used on input line 1124.
+Package pdftex.def Info: Sec2Fig18.png used on input line 1196.
 (pdftex.def)             Requested size: 469.75502pt x 17.5676pt.
 
-<Sec2Fig19.png, id=549, 1007.26312pt x 36.135pt>
+<Sec2Fig19.png, id=564, 1007.26312pt x 36.135pt>
 File: Sec2Fig19.png Graphic file (type png)
  <use Sec2Fig19.png>
-Package pdftex.def Info: Sec2Fig19.png used on input line 1136.
+Package pdftex.def Info: Sec2Fig19.png used on input line 1208.
 (pdftex.def)             Requested size: 469.75502pt x 16.8522pt.
 
-<Sec2Fig20.png, id=550, 880.79062pt x 113.67468pt>
+<Sec2Fig20.png, id=565, 880.79062pt x 113.67468pt>
 File: Sec2Fig20.png Graphic file (type png)
  <use Sec2Fig20.png>
-Package pdftex.def Info: Sec2Fig20.png used on input line 1145.
+Package pdftex.def Info: Sec2Fig20.png used on input line 1217.
 (pdftex.def)             Requested size: 469.75502pt x 60.62541pt.
 
-<Sec2Fig21.png, id=551, 840.13875pt x 95.6072pt>
+<Sec2Fig21.png, id=566, 840.13875pt x 95.6072pt>
 File: Sec2Fig21.png Graphic file (type png)
  <use Sec2Fig21.png>
-Package pdftex.def Info: Sec2Fig21.png used on input line 1154.
+Package pdftex.def Info: Sec2Fig21.png used on input line 1226.
 (pdftex.def)             Requested size: 469.75502pt x 53.45796pt.
  [25 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig18.png> <E:/Ecli
 pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig19.png> <E:/Eclipse/Projects/
 Dwarf Fortress/Dwarf Fortress/Sec2Fig20.png> <E:/Eclipse/Projects/Dwarf Fortres
-s/Dwarf Fortress/Sec2Fig21.png>] <Sec2Fig22.png, id=561, 840.13875pt x 95.6072p
+s/Dwarf Fortress/Sec2Fig21.png>] <Sec2Fig22.png, id=576, 840.13875pt x 95.6072p
 t>
 File: Sec2Fig22.png Graphic file (type png)
 
 <use Sec2Fig22.png>
-Package pdftex.def Info: Sec2Fig22.png used on input line 1177.
+Package pdftex.def Info: Sec2Fig22.png used on input line 1249.
 (pdftex.def)             Requested size: 469.75502pt x 53.45796pt.
- <Sec2Fig23.png, id=562, 234.1247pt x 27.10126pt>
+ <Sec2Fig23.png, id=577, 234.1247pt x 27.10126pt>
 File: Sec2Fig23.png Graphic file (type png)
 
 <use Sec2Fig23.png>
-Package pdftex.def Info: Sec2Fig23.png used on input line 1190.
+Package pdftex.def Info: Sec2Fig23.png used on input line 1262.
 (pdftex.def)             Requested size: 140.92793pt x 16.31421pt.
- <Sec2Fig25.png, id=563, 114.4275pt x 69.25874pt>
+ <Sec2Fig25.png, id=578, 114.4275pt x 69.25874pt>
 File: Sec2Fig25.png Graphic file (type png)
 
 <use Sec2Fig25.png>
-Package pdftex.def Info: Sec2Fig25.png used on input line 1214.
+Package pdftex.def Info: Sec2Fig25.png used on input line 1286.
 (pdftex.def)             Requested size: 117.43875pt x 71.08365pt.
- <Sec2Fig26.png, id=565, 1264.725pt x 39.89906pt>
+ <Sec2Fig26.png, id=580, 1264.725pt x 39.89906pt>
 File: Sec2Fig26.png Graphic file (type png)
 
 <use Sec2Fig26.png>
-Package pdftex.def Info: Sec2Fig26.png used on input line 1241.
+Package pdftex.def Info: Sec2Fig26.png used on input line 1313.
 (pdftex.def)             Requested size: 469.75502pt x 14.81964pt.
  [26 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig22.png> <E:/Ecli
 pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig23.png> <E:/Eclipse/Projects/
 Dwarf Fortress/Dwarf Fortress/Sec2Fig25.png> <E:/Eclipse/Projects/Dwarf Fortres
 s/Dwarf Fortress/Sec2Fig26.png>]
-<Sec2Fig28.png, id=574, 1264.725pt x 760.34062pt>
+<Sec2Fig28.png, id=589, 1264.725pt x 760.34062pt>
 File: Sec2Fig28.png Graphic file (type png)
  <use Sec2Fig28.png>
-Package pdftex.def Info: Sec2Fig28.png used on input line 1271.
+Package pdftex.def Info: Sec2Fig28.png used on input line 1343.
 (pdftex.def)             Requested size: 467.94093pt x 281.32162pt.
  [27 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec2Fig28.png>] [28]
-<Sec3Fig1.png, id=589, 539.76656pt x 111.41624pt>
+<Sec3Fig1.png, id=604, 539.76656pt x 111.41624pt>
 File: Sec3Fig1.png Graphic file (type png)
  <use Sec3Fig1.png>
-Package pdftex.def Info: Sec3Fig1.png used on input line 1375.
-(pdftex.def)             Requested size: 466.89989pt x 96.37541pt.
+Package pdftex.def Info: Sec3Fig1.png used on input line 1456.
+(pdftex.def)             Requested size: 469.75502pt x 96.96704pt.
  [29 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig1.png>]
-<Sec3Fig2.png, id=595, 142.28156pt x 70.76437pt>
+<Sec3Fig2.png, id=610, 142.28156pt x 70.76437pt>
 File: Sec3Fig2.png Graphic file (type png)
  <use Sec3Fig2.png>
-Package pdftex.def Info: Sec3Fig2.png used on input line 1418.
+Package pdftex.def Info: Sec3Fig2.png used on input line 1501.
 (pdftex.def)             Requested size: 140.92793pt x 70.09796pt.
 
-<Sec3Fig4.png, id=598, 502.12593pt x 14.30344pt>
+<Sec3Fig4.png, id=613, 502.12593pt x 14.30344pt>
 File: Sec3Fig4.png Graphic file (type png)
  <use Sec3Fig4.png>
-Package pdftex.def Info: Sec3Fig4.png used on input line 1451.
+Package pdftex.def Info: Sec3Fig4.png used on input line 1538.
 (pdftex.def)             Requested size: 426.80907pt x 12.15796pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[30 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig2.png>]
-<Sec3Fig5.png, id=607, 609.77812pt x 42.91031pt>
+ [30 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig2.png>]
+<Sec3Fig5.png, id=621, 609.77812pt x 42.91031pt>
 File: Sec3Fig5.png Graphic file (type png)
  <use Sec3Fig5.png>
-Package pdftex.def Info: Sec3Fig5.png used on input line 1483.
+Package pdftex.def Info: Sec3Fig5.png used on input line 1570.
 (pdftex.def)             Requested size: 469.75502pt x 33.05804pt.
 
-<Sec3Fig6.png, id=608, 844.65562pt x 42.1575pt>
+<Sec3Fig6.png, id=622, 844.65562pt x 42.1575pt>
 File: Sec3Fig6.png Graphic file (type png)
  <use Sec3Fig6.png>
-Package pdftex.def Info: Sec3Fig6.png used on input line 1498.
+Package pdftex.def Info: Sec3Fig6.png used on input line 1585.
 (pdftex.def)             Requested size: 469.75502pt x 23.44656pt.
  [31 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig4.png> <E:/Eclip
 se/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig5.png> <E:/Eclipse/Projects/Dw
 arf Fortress/Dwarf Fortress/Sec3Fig6.png>]
-<Sec3Fig8.png, id=620, 515.67656pt x 529.22719pt>
+<Sec3Fig10+.png, id=630, 1025.33063pt x 192.72pt>
+File: Sec3Fig10+.png Graphic file (type png)
+ <use Sec3Fig10+.png>
+Package pdftex.def Info: Sec3Fig10+.png used on input line 1602.
+(pdftex.def)             Requested size: 469.75502pt x 88.2935pt.
+ [32 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig10+.png>]
+<Sec3Fig8.png, id=642, 515.67656pt x 529.22719pt>
 File: Sec3Fig8.png Graphic file (type png)
  <use Sec3Fig8.png>
-Package pdftex.def Info: Sec3Fig8.png used on input line 1540.
+Package pdftex.def Info: Sec3Fig8.png used on input line 1668.
 (pdftex.def)             Requested size: 438.32713pt x 449.84523pt.
- [32 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig8.png>]
-<Sec3Fig9.png, id=630, 491.58656pt x 277.78781pt>
+ [33 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig8.png>]
+<Sec3Fig9.png, id=652, 491.58656pt x 277.78781pt>
 File: Sec3Fig9.png Graphic file (type png)
  <use Sec3Fig9.png>
-Package pdftex.def Info: Sec3Fig9.png used on input line 1573.
+Package pdftex.def Info: Sec3Fig9.png used on input line 1707.
 (pdftex.def)             Requested size: 469.75502pt x 265.46098pt.
- [33 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig9.png>]
-<Sec3Fig10.png, id=638, 233.37187pt x 387.69844pt>
+ [34 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig9.png>]
+<Sec3Fig10.png, id=660, 233.37187pt x 387.69844pt>
 File: Sec3Fig10.png Graphic file (type png)
  <use Sec3Fig10.png>
-Package pdftex.def Info: Sec3Fig10.png used on input line 1611.
+Package pdftex.def Info: Sec3Fig10.png used on input line 1742.
 (pdftex.def)             Requested size: 169.11209pt x 280.95288pt.
 
-<Sec3Fig11.png, id=639, 214.55156pt x 77.53969pt>
+<Sec3Fig11.png, id=661, 214.55156pt x 77.53969pt>
 File: Sec3Fig11.png Graphic file (type png)
  <use Sec3Fig11.png>
-Package pdftex.def Info: Sec3Fig11.png used on input line 1638.
+Package pdftex.def Info: Sec3Fig11.png used on input line 1769.
 (pdftex.def)             Requested size: 214.55103pt x 77.53947pt.
 
-Overfull \hbox (3.1627pt too wide) in paragraph at lines 1638--1639
+Overfull \hbox (3.1627pt too wide) in paragraph at lines 1769--1770
  [][] 
  []
 
-[34 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig10.png>]
-<Sec3Fig12.png, id=646, 194.97844pt x 97.86563pt>
+[35 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig10.png>]
+<Sec3Fig12.png, id=668, 194.97844pt x 97.86563pt>
 File: Sec3Fig12.png Graphic file (type png)
  <use Sec3Fig12.png>
-Package pdftex.def Info: Sec3Fig12.png used on input line 1665.
+Package pdftex.def Info: Sec3Fig12.png used on input line 1796.
 (pdftex.def)             Requested size: 194.97795pt x 97.86537pt.
 
-Overfull \hbox (4.89272pt too wide) in paragraph at lines 1670--1680
+Overfull \hbox (4.89272pt too wide) in paragraph at lines 1801--1811
 [][]\OT1/cmr/m/n/10 Custom pro-fes-sions is ac-tu-ally one of the two []
  []
 
-[35 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig11.png> <E:/Eclip
+[36 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig11.png> <E:/Eclip
 se/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig12.png>]
-<Sec3Fig13.png, id=655, 194.97844pt x 150.5625pt>
+<Sec3Fig13.png, id=677, 193.47281pt x 220.57407pt>
 File: Sec3Fig13.png Graphic file (type png)
  <use Sec3Fig13.png>
-Package pdftex.def Info: Sec3Fig13.png used on input line 1702.
-(pdftex.def)             Requested size: 140.92793pt x 108.82762pt.
+Package pdftex.def Info: Sec3Fig13.png used on input line 1849.
+(pdftex.def)             Requested size: 164.41711pt x 187.44844pt.
 
-<Sec3Fig14.png, id=656, 524.71031pt x 426.84468pt>
-File: Sec3Fig14.png Graphic file (type png)
- <use Sec3Fig14.png>
-Package pdftex.def Info: Sec3Fig14.png used on input line 1721.
-(pdftex.def)             Requested size: 451.25006pt x 367.08578pt.
- [36 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig13.png> <E:/Ecli
-pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig14.png>]
-<Sec3Fig15.png, id=665, 504.38437pt x 24.84282pt>
+<Sec3Fig13+.png, id=679, 524.71031pt x 347.04657pt>
+File: Sec3Fig13+.png Graphic file (type png)
+ <use Sec3Fig13+.png>
+Package pdftex.def Info: Sec3Fig13+.png used on input line 1870.
+(pdftex.def)             Requested size: 469.75502pt x 310.70801pt.
+
+[37 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig13.png> <E:/Eclip
+se/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig13+.png>]
+<Sec3Fig13+1.png, id=687, 164.11313pt x 286.06876pt>
+File: Sec3Fig13+1.png Graphic file (type png)
+ <use Sec3Fig13+1.png>
+Package pdftex.def Info: Sec3Fig13+1.png used on input line 1883.
+(pdftex.def)             Requested size: 164.41711pt x 286.60059pt.
+
+[38 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig13+1.png>]
+<Sec4Fig18.png, id=696, 233.37187pt x 250.68657pt>
+File: Sec4Fig18.png Graphic file (type png)
+ <use Sec4Fig18.png>
+Package pdftex.def Info: Sec4Fig18.png used on input line 1953.
+(pdftex.def)             Requested size: 164.41711pt x 176.62311pt.
+ [39 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig18.png>]
+<Sec3Fig15.png, id=705, 504.38437pt x 24.84282pt>
 File: Sec3Fig15.png Graphic file (type png)
  <use Sec3Fig15.png>
-Package pdftex.def Info: Sec3Fig15.png used on input line 1729.
-(pdftex.def)             Requested size: 453.94173pt x 22.3583pt.
+Package pdftex.def Info: Sec3Fig15.png used on input line 1997.
+(pdftex.def)             Requested size: 469.75502pt x 23.1373pt.
 
-<Sec3Fig16.png, id=666, 368.87813pt x 21.07875pt>
+<Sec3Fig16.png, id=706, 368.87813pt x 21.07875pt>
 File: Sec3Fig16.png Graphic file (type png)
  <use Sec3Fig16.png>
-Package pdftex.def Info: Sec3Fig16.png used on input line 1735.
+Package pdftex.def Info: Sec3Fig16.png used on input line 2003.
 (pdftex.def)             Requested size: 368.87721pt x 21.07867pt.
 
-<Sec3Fig17.png, id=669, 1003.49907pt x 106.14656pt>
+<Sec3Fig17.png, id=708, 1003.49907pt x 106.14656pt>
 File: Sec3Fig17.png Graphic file (type png)
  <use Sec3Fig17.png>
-Package pdftex.def Info: Sec3Fig17.png used on input line 1765.
-(pdftex.def)             Requested size: 471.64462pt x 49.88889pt.
+Package pdftex.def Info: Sec3Fig17.png used on input line 2031.
+(pdftex.def)             Requested size: 469.75502pt x 49.68967pt.
 
-Overfull \hbox (1.8896pt too wide) in paragraph at lines 1765--1766
- [][][] 
- []
-
-[37 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig15.png> <E:/Eclip
+[40 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig15.png> <E:/Eclip
 se/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig16.png> <E:/Eclipse/Projects/D
 warf Fortress/Dwarf Fortress/Sec3Fig17.png>]
-<Sec3Fig19.png, id=679, 27.85406pt x 108.405pt>
+<Sec3Fig19.png, id=717, 27.85406pt x 108.405pt>
 File: Sec3Fig19.png Graphic file (type png)
  <use Sec3Fig19.png>
-Package pdftex.def Info: Sec3Fig19.png used on input line 1805.
+Package pdftex.def Info: Sec3Fig19.png used on input line 2071.
 (pdftex.def)             Requested size: 21.1381pt x 82.26788pt.
 
-<Sec3Fig20.png, id=680, 94.10156pt x 106.14656pt>
+<Sec3Fig20.png, id=718, 94.10156pt x 106.14656pt>
 File: Sec3Fig20.png Graphic file (type png)
  <use Sec3Fig20.png>
-Package pdftex.def Info: Sec3Fig20.png used on input line 1821.
+Package pdftex.def Info: Sec3Fig20.png used on input line 2087.
 (pdftex.def)             Requested size: 70.46037pt x 79.485pt.
 
-<Sec3Fig21.png, id=681, 67.0003pt x 106.89937pt>
+<Sec3Fig21.png, id=719, 67.0003pt x 106.89937pt>
 File: Sec3Fig21.png Graphic file (type png)
  <use Sec3Fig21.png>
-Package pdftex.def Info: Sec3Fig21.png used on input line 1834.
+Package pdftex.def Info: Sec3Fig21.png used on input line 2100.
 (pdftex.def)             Requested size: 51.67332pt x 82.44487pt.
- [38 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig19.png> <E:/Ecli
+ [41 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig19.png> <E:/Ecli
 pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig20.png> <E:/Eclipse/Projects/
 Dwarf Fortress/Dwarf Fortress/Sec3Fig21.png>]
-<Sec3Fig23.png, id=689, 148.30406pt x 106.89937pt>
+<Sec3Fig23.png, id=727, 148.30406pt x 106.89937pt>
 File: Sec3Fig23.png Graphic file (type png)
  <use Sec3Fig23.png>
-Package pdftex.def Info: Sec3Fig23.png used on input line 1887.
+Package pdftex.def Info: Sec3Fig23.png used on input line 2153.
 (pdftex.def)             Requested size: 150.32504pt x 108.3606pt.
 
-<Sec3Fig25.png, id=690, 297.36093pt x 106.14656pt>
+<Sec3Fig25.png, id=728, 297.36093pt x 106.14656pt>
 File: Sec3Fig25.png Graphic file (type png)
  <use Sec3Fig25.png>
-Package pdftex.def Info: Sec3Fig25.png used on input line 1891.
+Package pdftex.def Info: Sec3Fig25.png used on input line 2157.
 (pdftex.def)             Requested size: 300.64291pt x 107.32379pt.
 
-<Sec3Fig26.png, id=691, 976.39781pt x 106.14656pt>
+<Sec3Fig26.png, id=729, 976.39781pt x 106.14656pt>
 File: Sec3Fig26.png Graphic file (type png)
  <use Sec3Fig26.png>
-Package pdftex.def Info: Sec3Fig26.png used on input line 1908.
+Package pdftex.def Info: Sec3Fig26.png used on input line 2174.
 (pdftex.def)             Requested size: 469.75502pt x 51.068pt.
- [39 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig23.png> <E:/Ecli
-pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig25.png> <E:/Eclipse/Projects/
-Dwarf Fortress/Dwarf Fortress/Sec3Fig26.png>]
-<Sec3Fig28.png, id=700, 760.34062pt x 1264.725pt>
-File: Sec3Fig28.png Graphic file (type png)
- <use Sec3Fig28.png>
-Package pdftex.def Info: Sec3Fig28.png used on input line 1934.
+
+<Sec3Fig26+.png, id=730, 881.54344pt x 112.92188pt>
+File: Sec3Fig26+.png Graphic file (type png)
+ <use Sec3Fig26+.png>
+Package pdftex.def Info: Sec3Fig26+.png used on input line 2190.
+(pdftex.def)             Requested size: 450.96797pt x 57.76686pt.
+
+[42 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig23.png> <E:/Eclip
+se/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig25.png> <E:/Eclipse/Projects/D
+warf Fortress/Dwarf Fortress/Sec3Fig26.png> <E:/Eclipse/Projects/Dwarf Fortress
+/Dwarf Fortress/Sec3Fig26+.png>]
+<Sec3Fig29.png, id=738, 760.34062pt x 1264.725pt>
+File: Sec3Fig29.png Graphic file (type png)
+ <use Sec3Fig29.png>
+Package pdftex.def Info: Sec3Fig29.png used on input line 2203.
 (pdftex.def)             Requested size: 399.29463pt x 664.18356pt.
- [40 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig28.png>]
-<Sec4Fig1.png, id=706, 572.89032pt x 475.02469pt>
+ [43 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec3Fig29.png>]
+<Sec4Fig1.png, id=744, 685.05937pt x 475.02469pt>
 File: Sec4Fig1.png Graphic file (type png)
  <use Sec4Fig1.png>
-Package pdftex.def Info: Sec4Fig1.png used on input line 1956.
-(pdftex.def)             Requested size: 464.03862pt x 384.76788pt.
- [41 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig1.png>]
-Overfull \hbox (0.7417pt too wide) in paragraph at lines 1974--2003
+Package pdftex.def Info: Sec4Fig1.png used on input line 2225.
+(pdftex.def)             Requested size: 469.75502pt x 325.73785pt.
+ [44 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig1.png>]
+Overfull \hbox (0.7417pt too wide) in paragraph at lines 2244--2273
 [][][]  
  []
 
-[42] <Sec4Fig2.png, id=720, 642.90187pt x 12.7978pt>
+[45] <Sec4Fig2.png, id=756, 642.90187pt x 12.7978pt>
 File: Sec4Fig2.png Graphic file (type png)
  <use Sec4Fig2.png>
-Package pdftex.def Info: Sec4Fig2.png used on input line 2065.
+Package pdftex.def Info: Sec4Fig2.png used on input line 2338.
 (pdftex.def)             Requested size: 469.31447pt x 9.3423pt.
 
-[43 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig2.png>]
-<Sec4Fig3.png, id=733, 514.92375pt x 121.20282pt>
-File: Sec4Fig3.png Graphic file (type png)
- <use Sec4Fig3.png>
-Package pdftex.def Info: Sec4Fig3.png used on input line 2127.
-(pdftex.def)             Requested size: 468.58134pt x 110.29472pt.
- [44 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig3.png>]
-<Sec4Fig4.png, id=739, 93.34875pt x 73.02281pt>
+[46 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig2.png>] [47]
+[48] <Sec4Fig4.png, id=778, 93.34875pt x 73.02281pt>
 File: Sec4Fig4.png Graphic file (type png)
  <use Sec4Fig4.png>
-Package pdftex.def Info: Sec4Fig4.png used on input line 2230.
+Package pdftex.def Info: Sec4Fig4.png used on input line 2520.
 (pdftex.def)             Requested size: 93.94957pt x 73.49615pt.
- [45 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig4.png>]
-<Sec4Fig4+.png, id=747, 172.39406pt x 15.80907pt>
+
+<Sec4Fig4+.png, id=779, 247.67531pt x 58.71938pt>
 File: Sec4Fig4+.png Graphic file (type png)
  <use Sec4Fig4+.png>
-Package pdftex.def Info: Sec4Fig4+.png used on input line 2249.
-(pdftex.def)             Requested size: 187.89914pt x 17.23103pt.
- [46 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig4+.png>]
-<Sec4Fig5.png, id=753, 522.45187pt x 472.01344pt>
+Package pdftex.def Info: Sec4Fig4+.png used on input line 2536.
+(pdftex.def)             Requested size: 234.8775pt x 55.6854pt.
+ [49 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig4.png> <E:/Eclip
+se/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig4+.png>]
+<Sec4Fig5.png, id=786, 522.45187pt x 472.01344pt>
 File: Sec4Fig5.png Graphic file (type png)
  <use Sec4Fig5.png>
-Package pdftex.def Info: Sec4Fig5.png used on input line 2281.
+Package pdftex.def Info: Sec4Fig5.png used on input line 2569.
 (pdftex.def)             Requested size: 469.75502pt x 424.41203pt.
- [47 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig5.png>]
-<Sec4Fig7.png, id=763, 384.6872pt x 36.135pt>
+ [50 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig5.png>]
+<Sec4Fig7.png, id=796, 384.6872pt x 36.135pt>
 File: Sec4Fig7.png Graphic file (type png)
  <use Sec4Fig7.png>
-Package pdftex.def Info: Sec4Fig7.png used on input line 2310.
+Package pdftex.def Info: Sec4Fig7.png used on input line 2598.
 (pdftex.def)             Requested size: 384.68625pt x 36.13489pt.
 
-<Sec4Fig8.png, id=764, 535.2497pt x 40.65187pt>
+<Sec4Fig8.png, id=797, 535.2497pt x 40.65187pt>
 File: Sec4Fig8.png Graphic file (type png)
  <use Sec4Fig8.png>
-Package pdftex.def Info: Sec4Fig8.png used on input line 2329.
+Package pdftex.def Info: Sec4Fig8.png used on input line 2617.
 (pdftex.def)             Requested size: 469.75502pt x 35.67946pt.
 
-<Sec4Fig10.png, id=765, 935.74594pt x 67.75313pt>
+<Sec4Fig10.png, id=798, 935.74594pt x 67.75313pt>
 File: Sec4Fig10.png Graphic file (type png)
  <use Sec4Fig10.png>
-Package pdftex.def Info: Sec4Fig10.png used on input line 2343.
+Package pdftex.def Info: Sec4Fig10.png used on input line 2631.
 (pdftex.def)             Requested size: 469.75502pt x 34.01292pt.
- [48 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig7.png> <E:/Eclip
+ [51 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig7.png> <E:/Eclip
 se/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig8.png> <E:/Eclipse/Projects/Dw
 arf Fortress/Dwarf Fortress/Sec4Fig10.png>]
-<Sec4Fig11.png, id=775, 934.99312pt x 68.50594pt>
+<Sec4Fig11.png, id=807, 934.99312pt x 68.50594pt>
 File: Sec4Fig11.png Graphic file (type png)
  <use Sec4Fig11.png>
-Package pdftex.def Info: Sec4Fig11.png used on input line 2356.
+Package pdftex.def Info: Sec4Fig11.png used on input line 2644.
 (pdftex.def)             Requested size: 469.75502pt x 34.41908pt.
 
-<Sec4Fig12.png, id=776, 934.99312pt x 67.75313pt>
+<Sec4Fig12.png, id=808, 934.99312pt x 67.75313pt>
 File: Sec4Fig12.png Graphic file (type png)
  <use Sec4Fig12.png>
-Package pdftex.def Info: Sec4Fig12.png used on input line 2366.
+Package pdftex.def Info: Sec4Fig12.png used on input line 2654.
 (pdftex.def)             Requested size: 469.75502pt x 34.04085pt.
 
-<Sec4Fig13.png, id=777, 934.99312pt x 67.75313pt>
+<Sec4Fig13.png, id=809, 934.99312pt x 67.75313pt>
 File: Sec4Fig13.png Graphic file (type png)
  <use Sec4Fig13.png>
-Package pdftex.def Info: Sec4Fig13.png used on input line 2413.
+Package pdftex.def Info: Sec4Fig13.png used on input line 2701.
 (pdftex.def)             Requested size: 469.75502pt x 34.04085pt.
- [49 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig11.png> <E:/Ecli
+ [52 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig11.png> <E:/Ecli
 pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig12.png>]
-<Sec4Fig14.png, id=785, 935.74594pt x 68.50594pt>
+<Sec4Fig14.png, id=817, 935.74594pt x 68.50594pt>
 File: Sec4Fig14.png Graphic file (type png)
  <use Sec4Fig14.png>
-Package pdftex.def Info: Sec4Fig14.png used on input line 2437.
+Package pdftex.def Info: Sec4Fig14.png used on input line 2725.
 (pdftex.def)             Requested size: 469.75502pt x 34.39085pt.
 
-<Sec4Fig6.png, id=786, 414.79968pt x 13.55063pt>
+<Sec4Fig6.png, id=818, 414.79968pt x 13.55063pt>
 File: Sec4Fig6.png Graphic file (type png)
  <use Sec4Fig6.png>
-Package pdftex.def Info: Sec4Fig6.png used on input line 2445.
+Package pdftex.def Info: Sec4Fig6.png used on input line 2733.
 (pdftex.def)             Requested size: 414.79868pt x 13.55058pt.
 
-<Sec4Fig15.png, id=787, 934.99312pt x 68.50594pt>
+<Sec4Fig15.png, id=819, 934.99312pt x 68.50594pt>
 File: Sec4Fig15.png Graphic file (type png)
  <use Sec4Fig15.png>
-Package pdftex.def Info: Sec4Fig15.png used on input line 2463.
+Package pdftex.def Info: Sec4Fig15.png used on input line 2751.
 (pdftex.def)             Requested size: 469.75502pt x 34.41908pt.
-
-<Sec4Fig17.png, id=788, 496.85625pt x 20.32594pt>
-File: Sec4Fig17.png Graphic file (type png)
- <use Sec4Fig17.png>
-Package pdftex.def Info: Sec4Fig17.png used on input line 2472.
-(pdftex.def)             Requested size: 469.75502pt x 19.2174pt.
- [50 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig13.png> <E:/Ecli
+ [53 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig13.png> <E:/Ecli
 pse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig14.png> <E:/Eclipse/Projects/
 Dwarf Fortress/Dwarf Fortress/Sec4Fig6.png> <E:/Eclipse/Projects/Dwarf Fortress
-/Dwarf Fortress/Sec4Fig15.png>] [51 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf F
-ortress/Sec4Fig17.png>] <Sec4FigExtra.png, id=802, 845.40843pt x 601.4972pt>
+/Dwarf Fortress/Sec4Fig15.png>] <Sec4Fig17.png, id=829, 496.85625pt x 20.32594p
+t>
+File: Sec4Fig17.png Graphic file (type png)
+
+<use Sec4Fig17.png>
+Package pdftex.def Info: Sec4Fig17.png used on input line 2765.
+(pdftex.def)             Requested size: 469.75502pt x 19.2174pt.
+ [54 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4Fig17.png>] <Sec4Fi
+gExtra.png, id=836, 845.40843pt x 601.4972pt>
 File: Sec4FigExtra.png Graphic file (type png)
 
 <use Sec4FigExtra.png>
-Package pdftex.def Info: Sec4FigExtra.png used on input line 2488.
-(pdftex.def)             Requested size: 469.75502pt x 334.22037pt.
- <Sec4FigExtra3.png, id=803, 158.09062pt x 56.46094pt>
-File: Sec4FigExtra3.png Graphic file (type png)
+Package pdftex.def Info: Sec4FigExtra.png used on input line 2809.
+(pdftex.def)             Requested size: 450.96797pt x 320.85707pt.
+ [55 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4FigExtra.png>] <Sec
+5Fig1.jpg, id=842, 626.34pt x 275.0275pt>
+File: Sec5Fig1.jpg Graphic file (type jpg)
 
-<use Sec4FigExtra3.png>
-Package pdftex.def Info: Sec4FigExtra3.png used on input line 2501.
-(pdftex.def)             Requested size: 131.53082pt x 46.97885pt.
- [52 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4FigExtra.png> <E:/E
-clipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec4FigExtra3.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2560.
- [53]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2560.
+<use Sec5Fig1.jpg>
+Package pdftex.def Info: Sec5Fig1.jpg used on input line 2819.
+(pdftex.def)             Requested size: 469.75502pt x 206.2785pt.
+ [56 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec5Fig1.jpg>] <Sec5Fig
+2.png, id=849, 1034.36438pt x 316.93407pt>
+File: Sec5Fig2.png Graphic file (type png)
+
+<use Sec5Fig2.png>
+Package pdftex.def Info: Sec5Fig2.png used on input line 2885.
+(pdftex.def)             Requested size: 469.75502pt x 143.9344pt.
+ [57 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec5Fig2.png>] <Sec5Fig
+5.png, id=857, 1009.52156pt x 264.99pt>
+File: Sec5Fig5.png Graphic file (type png)
+ <use Sec5Fig5.png>
+Package pdftex.def Info: Sec5Fig5.png used on input line 2918.
+(pdftex.def)             Requested size: 469.75502pt x 123.30803pt.
+
+[58 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Sec5Fig5.png>] [59]
+[60] [61] <Illustration2.jpg, id=888, 582.175pt x 676.5275pt>
+File: Illustration2.jpg Graphic file (type jpg)
+
+<use Illustration2.jpg>
+Package pdftex.def Info: Illustration2.jpg used on input line 3060.
+(pdftex.def)             Requested size: 291.08679pt x 338.26291pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3064.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3064 \end{document}
+                      [1 <E:/Eclipse/Projects/Dwarf Fortress/Dwarf Fortress/Ill
+ustration2.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3064.
 
 ("E:\Eclipse\Projects\Dwarf Fortress\Dwarf Fortress\Dwarf Therapist.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2560.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2560.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3064.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3064.
 
 Package rerunfilecheck Info: File `Dwarf*Therapist.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2560.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3064.
  ) 
 Here is how much of TeX's memory you used:
- 7503 strings out of 493921
- 116727 string characters out of 3144879
- 194487 words of memory out of 3000000
- 10428 multiletter control sequences out of 15000+200000
+ 7603 strings out of 493921
+ 118257 string characters out of 3144879
+ 195775 words of memory out of 3000000
+ 10502 multiletter control sequences out of 15000+200000
  9852 words of font info for 35 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,8n,40p,275b,489s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,40p,275b,446s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/P
@@ -1049,9 +1088,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "Dwarf Therapist.pdf" (54 pages, 1920694 bytes).
+Output written on "Dwarf Therapist.pdf" (63 pages, 2223447 bytes).
 PDF statistics:
- 919 PDF objects out of 1000 (max. 8388607)
- 223 named destinations out of 1000 (max. 500000)
- 829 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 991 PDF objects out of 1000 (max. 8388607)
+ 240 named destinations out of 1000 (max. 500000)
+ 902 words of extra memory for PDF output out of 10000 (max. 10000000)
 
