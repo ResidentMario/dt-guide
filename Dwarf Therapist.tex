@@ -55,12 +55,26 @@
 \noindent \textbf{#1}
 }
 
+% Syntax for figures that all full-width, displayed inline.
+\newcommand{\fullfigure}[1] {
+\begin{figure}[h!]
+\includegraphics[width=\linewidth]{#1}
+\end{figure}
+}
+
+\newcommand{\fullfigurecaption}[1] {
+\begin{center}
+\vspace{-12pt}
+#1
+\end{center}
+}
+
 \begin{document}
 \pagenumbering{gobble}
 
 \title{ \begin{figure}[h!] \centering \includegraphics[scale=.8]{logo}
 \end{figure}
-\textbf{Dwarf Therapist}\\Version 23.1 Guide}
+\textbf{Dwarf Therapist}\\Version 23.2 \emph{Beta} Guide}
 \author{Resident Mario}
 \date{\today}
 \maketitle
@@ -181,14 +195,14 @@ fortress can be played sufficiently in new release versions to generate the need
 \part{Basics}
 \section{Connecting to Dwarf Fortress}
 \label{sec:Connecting to Dwarf Fortress}
+
 Dwarf Therapist requires Dwarf Fortress to be running and an active fortress to be open within the game
 in order to work properly. You can open the utility without the game running or without a fortress
 loaded, but it will complain to you:
 
-\vfill \begin{figure}[h!] \centering
-\includegraphics{Sec1Fig1}
+\begin{figure}[h!] \centering
+\includegraphics[width=.7\linewidth]{Sec1Fig1}
 \end{figure}
-\vfill
 
 This is because before Dwarf Therapist can do much of anything useful, it has to connect to a running
 instance of the game; the only function that the utility can provide by itself is the ability to write
@@ -198,18 +212,18 @@ unload it:\footnote{This behavior can be disabled in the general options. Howeve
 mode: cycling out of a fortress, making changes, loading it again, and then attempting to commit your
 offline changes will only cause the utility to crash.}
 
-\vfill \begin{figure}[h!] \centering
-\includegraphics{Sec1Fig2}
+\begin{figure}[h!] \centering
+\includegraphics[width=.7\linewidth]{Sec1Fig2}
 \end{figure}
-\vfill
 
-\begin{wrapfigure}{R}{0.3\textwidth}
+\begin{wrapfigure}{R}{0.35\textwidth}
 \vspace{-20pt}
   \begin{center}
-    \includegraphics[scale=.95]{Sec1Fig3}
+    \includegraphics[scale=1]{Sec1Fig3}
   \end{center}
   \vspace{-10pt}
   \end{wrapfigure}
+  
 To avoid such messages you should generally launch Dwarf Therapist second and close it first, but it
 doesn't really matter too much---you can connect at any time using the "Connect to DF" button on the
 main toolbar. To keep its memory usage down, Dwarf Therapist connects to your game intermittently, loading
@@ -227,13 +241,13 @@ spending some time on the Therapist screen once you switch to it, pausing is pro
 \label{sec:Main Display}
 Once you've connected to and loaded a fresh fortress into Dwarf Therapist, your screen should look
 something like this:
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec1Fig4}
-\end{figure}
+
+\fullfigure{Sec1Fig4}
 
 \subsection{Labors View}
 \label{sec:Labors View}
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec1Fig5}
-\end{figure}
+\fullfigure{Sec1Fig5}
+
 Most of the screen space is taken up by the the graphical management user interface
 (or \emph{view}), the main window visible onscreen. Since we've only just created our fortress it doesn't
 have many members yet, and so most of the view is whitespace.
@@ -252,8 +266,7 @@ formatting your display for compactness, see the section \jump{Formatting Your D
 
 Labors are organized into "tranches", with related labors categorized and sorted under industry
 allegiances roughly like the color assignments used by dwarves of those professions in-game:
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec1Fig6+}
-\end{figure}
+\fullfigure{Sec1Fig6+}
 
 These labors should be familiar to players of the game, as should be their categorical
 professions: miners, woodworkers, stoneworkers, rangers, doctors, farmers, fishery workers, metalsmiths,
@@ -269,19 +282,19 @@ same order and with the exact same colors that Dwarf Fortress sorts them:
 \vspace{2pt}
 
 The view is still available in the view add dropdown menu as the ``Labors Alt'' view. It has been
-replaced as the default by the more polished ``Labors Alt'' view, written over the course of this guide
+replaced as the default by the more polished ``Labors'' view, written over the course of this guide
 (see \jump{Custom Grid Views}) and then introduced into Dwarf Therapist as the new default shortly
 thereafter.
 
 }
 
 To the left of the labor columns are dwarfwise informational columns: a gendered list of your dwarves,
-alphabetically ordered, flanked by icons representing their (current) job, a color gradient their
-happiness (with or without emoticons, depending on your settings), and another set of icons their
-profession. Since we jumped into this view immediately after our fortress disembarked, our dwarves have
-neither jobs nor variance in their hapiness just yet, but they do exhibit the different professions I've
-selected for my starting set. Dwarves which reach legendary status in at least one skill will have their
-names displayed in boldface. to distinguish them from their ``lesser'' brethren.
+alphabetically ordered, flanked by a color gradient for their equipment status, icons representing their
+(current) job, a color gradient their happiness, and another set of icons their profession. Since we
+jumped into this view immediately after our fortress disembarked, our dwarves have neither jobs nor
+variance in their hapiness just yet, but they do exhibit the different professions I've selected for my
+starting set. Dwarves which reach legendary status in at least one skill will have their names displayed
+in boldface. to distinguish them from their ``lesser'' brethren.
 
 Clicking on a headers at the top of the screen for any of the columns allows us to sort the list by that
 column; click on it again to reverse the sort order, or on another column to go to that sort instead.
@@ -445,9 +458,10 @@ The Group By menu, meanwhile, changes what your dwarves are sorted by in the vie
 intuitive, mostly useful for examining various demographic breakdowns of your fortress. Options are:
 \vspace{12pt}
 
-\begin{wrapfigure}{R}{0.20\textwidth}
+\begin{wrapfigure}{R}{0.225\textwidth}
 \begin{center}
-\includegraphics[scale=.75]{Sec1Fig11+.png}
+\vspace{-10pt}
+\includegraphics[scale=.85]{Sec1Fig11+.png}
 \vspace{-20pt}
 \end{center}
 \end{wrapfigure}
@@ -522,8 +536,7 @@ dwarf selection count and Dwarf Fortress version type information on the right.
 
 \subsection{Main Toolbar}
 \label{sec:Main Toolbar}
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec1Fig13}
-\end{figure}
+\fullfigure{Sec1Fig13}
 
 The main toolbar presents the most important ``shortcuts'' the program has to offer. Except for the
 Optimizer, all of the toolbar items have an associated hotkey. Right clicking on the main toolbar allows
@@ -644,8 +657,7 @@ is summarized in the Health view.
 \newpage
 \subsection{Menu Bar}
 \label{sec:Menu Bar}
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec1Fig17}
-\end{figure}
+\fullfigure{Sec1Fig17}
 
 The last piece of Dwarf Therapist we're going to analyze is the iconic menu bar (or taskbar), present on
 almost every real application ever written. I'm going to give a brief list of what's in it here, and
@@ -845,19 +857,17 @@ and behold, an option to toggle all jobs in that grouping on or off appears! I'm
 quickly and seamlessly turn off hauling for my miners, and dedicate them to their labors. This toggle
 feature is mostly useless for professions labors, but devilishly handy for designating hauling on or off
 when and where you need it.
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec2Fig5}
-\caption{Mischief, managed.}
-\end{figure}
+\fullfigure{Sec2Fig5}
+\fullfigurecaption{Mischief, managed.}
 
 \newpage
 \subsection{Using Groups}
 \label{sec:Using Groups}
-%TODO Update this section to use the new view once I have a large enough fortress.
+
 Now, picking out who's who on the labors view is easy enough when there's just seven dwarves to deal
 with. But it becomes quite a bit more problematic when there's say, seventy of them running amok:
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec2Fig6}
-\caption{Who's who? Beats me.}
-\end{figure}
+\fullfigure{Sec2Fig6}
+\fullfigurecaption{Who's who? Beats me.}
 
 This is when two of the built-in sorting features of Dwarf Therapist, Groups and Sorts,  become useful
 (you can also use filters, but that's a more difficult topic for later: see 
@@ -890,11 +900,7 @@ again,\footnote{I cannot recommend the utility DFHack, and specifically its digv
 makes digging designations \emph{so} much easier!} and I add some processing jobs to an idle Farmer's
 Workshop. Bam; idle hands, managed! Ah, but what's this:
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\linewidth]{Sec2Fig8}
-%\caption{And below it, a series of barrel-and-seed job cancellations.}
-\end{figure}
+\fullfigure{Sec2Fig8}
 
 Migrants! What are we going to do with them? After letting them get used to my fortress surroundings, I
 open up the Dwarf Therapist, group by Migrant Wave, open up the new guys, and am now ready to do some
@@ -910,11 +916,8 @@ a series of labor boxes that, based on whether they'll filled out or not, tells 
 been enabled within the group. Since these are new migrants and I haven't make adjustments yet, it
 basically tells me what skills the random number god has gifted me with this immigratory wave:
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\linewidth]{Sec2Fig9}
-\caption{Unfortunately Armok has not graced me with an armorer this season.}
-\end{figure}
+\fullfigure{Sec2Fig9}
+\fullfigurecaption{Unfortunately Armok has not graced me with an armorer this season.}
 
 By clicking on these headers you can enable or disable a labor for an entire grouping. Since we don't
 want the new migrants idling, but haven't yet made facilities for most of them to use, let's do what we
@@ -977,15 +980,14 @@ it more immediately lists peasants at the top (or bottom) of the list.
 Hovering over individual professions tells you how many dwarves have that labor enabled, and then
 clicking on it will sort your dwarves by their experience and skill in that category. This is much
 quicker and cleaner than performing the same operation with groups:
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\linewidth]{Sec2Fig11}
-\caption{Anyone can pick plants, but only true farmers can plant seeds.}
-\end{figure}
+
+\fullfigure{Sec2Fig11}
+\fullfigurecaption{Anyone can pick plants, but only true farmers can plant seeds.}
 
 The ability to seamlessly list your dwarves by their competence at a task is one Dwarf Therapist's key
 sources of utility, and has many obvious applications when you need to find dwarves for a task you have
 in mind---like, say when building a marksdwarf squadron:
+
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=.9]{Sec2Fig12}
@@ -1100,10 +1102,8 @@ professional name might be "Woodworker", but to you they're "Furnace Operator", 
 allows you to keep track of that while their professional name catches up to their new role.
 
 Let's look at one such fella for which a naming would be useful, a certain Medtob Swinwind.
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\linewidth]{Sec2Fig13}
-\end{figure}
+
+\fullfigure{Sec2Fig13}
 
 \begin{wrapfigure}{R}{0.35\textwidth}
   \begin{center}
@@ -1163,10 +1163,7 @@ that you don't try to tame any wildlife, as this cannot be done through Dwarf Th
 
 The Options menu is available from a few different places: either a button on the main taskbar, through
 the "File" menu in the main menu, or with the \texttt{Ctrl + P} hotkey. This brings up a menu:
-\begin{figure}[h!] \centering
-\vspace{-5pt}
-\includegraphics[width=\linewidth]{Sec2Fig17}
-\end{figure}
+\fullfigure{Sec2Fig17}
 
 The options menu is extremely well-documented: if you're ever at a loss for what a particular checkbox
 or radio button does, hover over it and look for its description in the text box at the bottom of the
@@ -1192,10 +1189,8 @@ reference. }
 % Since most of these changes no longer need to be made the illustrations for this section are from legacy
 % versions of the program.}
 
-\begin{figure}[h!] \centering
-\includegraphics[width=\linewidth]{Sec2Fig18}
-\caption{My horizontal scroll bar at the beginning of this exercise.}
-\end{figure}
+\fullfigure{Sec2Fig18}
+\fullfigurecaption{My horizontal scroll bar at the beginning of this exercise.}
 
 \noindent \textbf{Remove Spacers}
 
@@ -1203,29 +1198,23 @@ To remove the spacers from the long-form Labor view, peruse the \textbf{\nameref
 in the "Labor NO SPACERS" view from the menu and then delete the old one. Of course having "NO SPACERS"
 stare at us is quite annoying; we'll look at ways to fix this later in this guide.\footnote{Note that as
 of version 20.6 Dwarf Therapist now ships with the very view solution first presented in this guide as
-an alternative option to the default: check the ``Labors Alt'' option.} \begin{figure}[h!]
-\centering
-\includegraphics[width=\linewidth]{Sec2Fig19}
-\caption{Getting better...}
-\end{figure}
+an alternative option to the default: check the ``Labors Alt'' option.}
+
+\fullfigure{Sec2Fig19}
 
 \noindent \textbf{Turn off Gradient Shading on Headers}
 
 To remove the gradient shading in the column headers and return them to plain coloration, uncheck
 "Gradient Shade Column Headers" in \texttt{Options > Grid Options}.
-\begin{figure}[h!] \centering
-\includegraphics[width=\linewidth]{Sec2Fig20}
-\caption{Much more readable.}
-\end{figure}
+
+\fullfigure{Sec2Fig20}
 
 \noindent \textbf{Turn off Gradient Shading on Cells}
 
 To remove the gradient shading present on table cells that are toggled on, uncheck "Gradient Shade Cells"
 in \texttt{Options > Grid Options}.
-\begin{figure}[h!] \centering
-\includegraphics[width=\linewidth]{Sec2Fig21}
-\caption{Easier on the eyes.}
-\end{figure}
+
+\fullfigure{Sec2Fig21}
 
 \noindent \textbf{Synchronize Scrolling between Views}
 
@@ -1245,10 +1234,8 @@ at a glance through a Group. Though it doesn't say it, this option also highligh
 legendary because of a mood with a different colored box. You can change the colors in \texttt{Options >
 Grid Colors}.
 
-\begin{figure}[h!] \centering
-\includegraphics[width=\linewidth]{Sec2Fig22}
-\caption{Moodable in green, already mooded in brown.}
-\end{figure}
+\fullfigure{Sec2Fig22}
+\fullfigurecaption{Moodable in green, already mooded in brown.}
 
 \noindent \textbf{Show Highest Moodable Skill in Tooltip}
 
@@ -1268,18 +1255,6 @@ This will add a "Highest Moodable Skill" entry to the dwarf tooltip---no real re
 To shrink the main toolbar a bit so that it doesn't take up so much vertical room (and thus give your
 view and your docks more of it), uncheck the "Show Toolbar Text" option in \texttt{Options > General}.
 \vspace{12pt}
-
-%\noindent \textbf{Replace Happiness Icons with Colors}
-%I didn't wait until I got this far in the guide, and turned off those stupid happiness icons halfway
-%here. To get rid of them, toggle off "Show Happiness Icons" at \texttt{Options > Happiness}. You won't
-%regret it (although unfortunately there's no color gradients).
-%\vfill
-%\begin{figure}[h!]
-%\centering
-%\includegraphics[scale=1]{Sec2Fig24}
-%\caption{Happy, happy dwarves.}
-%\end{figure}
-%\vfill
 
 \begin{wrapfigure}{L}{0.25\textwidth}\vspace{-20pt}
   \begin{center}
@@ -1308,12 +1283,9 @@ Docks are a very useful thing, displaying useful information in a compact form. 
 make the most use of your space: go without. Removing all docks from the right side of the screen so that
 the edge of the view window is now plum against the right edge should be enough to let you see the
 entirety of the grid on a moderately large screen.
-\begin{figure}[h!] \centering
-\vspace{-5pt}
-\includegraphics[width=\linewidth]{Sec2Fig26}
-\caption{On my (21-inch) monitor, it was enough to get rid of the scroll bar completely.}
-\vspace{-5pt}
-\end{figure}
+
+\fullfigure{Sec2Fig26}
+\fullfigurecaption{On my (21-inch) monitor, it was enough to get rid of the scroll bar completely.}
 
 If you want to get rid of the scroll bar but want to keep your docks, too, another option is to place
 them at the bottom. This is a dock-heavy option, however, because the docks are not optimized to use
@@ -1338,11 +1310,7 @@ from 16px to 15px has a noticeable effect.
 \vspace{12pt}
 
 Here is what my display looked like at the end of this exercise:
-\begin{figure}[h!] \centering
-\vspace{-5pt}
-\includegraphics[scale=.37]{Sec2Fig28}
-\vspace{-5pt}
-\end{figure}
+\fullfigure{Sec2Fig28}
 
 Cleaner, more informative, and most importantly: no horizontal scroll bar!
 
@@ -1451,11 +1419,7 @@ question is: how are role numbers calculated? As it turns out, this is not a tri
 There are, essentially, three ways of ``thinking about''---and hence using---roles. Let's first examine
 th default behavior, which can be seen and modified in the "Roles" Options menu (\texttt{Options >
 Roles}):
-\begin{figure}[h!] \centering
-\vspace{-5pt}
-\includegraphics[width=\linewidth]{Sec3Fig1}
-\vspace{-5pt}
-\end{figure}
+\fullfigure{Sec3Fig1}
 
 \newpage
 %TODO Verify that the issue of sharpness is still present in the current iteration of Dwarf Therapist.
@@ -1465,11 +1429,8 @@ distribution function} on the results, giving you how fit that dwarf is for that
 calculated against the \emph{current dwarves in your fortress}. The result of this statistical trickery
 is that while the result is a \emph{current} rating, it's \emph{non-transferable} (a 75\% rating in one
 skill is not directly comparable to a 75\% rating in another) and \emph{non-preservable} (role ratings
-will resettle every migrant wave, or every time a child grows up). It's also razor sharp: since perhaps
-nine out of ten average dwarves are unskilled in a particular labor, and since the CDF is based on
-probability density, a dwarf that happens to be even a novice at a labor will shoot up to 90+ percent
-compatibility, and reaching proficient rank is usually enough for any dwarf to hit 100 percent. For the
-purposes of this guide, I call this rating \textbf{skill rank}.
+will resettle every migrant wave, or every time a child grows up). For the purposes of this guide, I call
+this rating \textbf{skill rank}.
 
 Changing the second option in \texttt{Options > Roles}, "Default Skill Weight", to 0 removes it from the
 equation. With skills no longer counting for anything, the role rating now shows what I refer to as
@@ -1489,9 +1450,9 @@ legendary +5 dwarf with maximum stats and perfect preferences and whatnot would 
 Well\ldots you can't. It's a pipe dream. There are simply too many variables involved in job completion
 length and skills gain and no one's ever fully done anything beyond rudimentary research on the topic -
 it's very complicated and not nearly as glamerous as combat weapon penetration rates. Even the weights
-that the program uses are the result of conjecture---there's just no hard !!SCIENCE!! to base the whole
-thing on as of now, and that's the reason that we have to use skill rank, drawbacks that it has, as a
-substitute.
+that the program uses are the result of conjecture---there's just not enough !!SCIENCE!! to base the
+whole thing on as of now, and that's the reason that we have to use skill rank, drawbacks that it has,
+as a substitute.
 
 \subsection{Using Roles---The Sort Method}
 \label{sec:Using Roles}
@@ -1532,14 +1493,8 @@ that we took it out of the calculations in the previous section, this indicates 
 gain from performing labors that use that attribute is simply not that high. And so it may be that your
 primary mason is buried nearer to the bottom of the list, with a compatibility of 14\%, with a long list
 of mostly dabbling dwarves that outrank him:
-\begin{figure}[h!]
-\centering
-\vspace{-5pt}
-\includegraphics[scale=.85]{Sec3Fig4}
-\vspace{-5pt}
-\caption{Lucky number 15? Well, maybe not.}
-\vspace{-10pt}
-\end{figure}
+
+\fullfigure{Sec3Fig4}
 
 In this case the reason that the dwarf that became my chief mason was so incompatible with his job is
 that he was part of my starting seven, and so his attributes were random---and the random number god did
@@ -1564,29 +1519,17 @@ Try doing this exercise yourself---you need not even have a fresh migrant wave. 
 by migration wave, collapse them, and open the latest wave. Now, with the sorting method set
 appropriately, hit "Metalcrafting" to sort these dwarves by role score. Now look down your list.
 
-\begin{figure}[h!]
-\centering
-\vspace{-5pt}
-\includegraphics[width=\linewidth]{Sec3Fig5}
-\vspace{-15pt}
-\caption{This migrant wave is \emph{almost} fresh. For extra clarity, unnecessary details have been 
-omitted.}
-\vspace{-5pt}
-\end{figure}
+\fullfigure{Sec3Fig5}
+
 In my case, the first dwarf on the list was an Adept miner with a score of 98.1 percent; but mining is a
 useful skill and I'd rather he cut rock for the fortress, so I keep going down. The next option is
 better: a ranger whose only real usable skill is hunting, and a farmer with some assorted non-essential
 skills, both of whom are easily replaceable. I right click on their names and hit "Clear all Labors" to
 quickly wipe their workloads, designate metalcrafting for the pair, and then hit "Commit" to send the
 changes to the game. I even give them nicknames, to be extra sure I won't forget about them:
-\begin{figure}[h!]
-\centering
-\vspace{-5pt}
-\includegraphics[width=\linewidth]{Sec3Fig6}
-\vspace{-15pt}
-\caption{Notice the change is sorting behavior to reflect changes in labor designation.}
-\vspace{-5pt}
-\end{figure}
+
+\fullfigure{Sec3Fig6}
+\fullfigurecaption{Notice the change is sorting behavior to reflect changes in labor designation.}
 
 And voila---we are done. Now we take a quick look at how this problem can be approached using the
 ``Roles'' view.
@@ -1595,12 +1538,9 @@ And voila---we are done. Now we take a quick look at how this problem can be app
 \subsection{Using Roles---The View Method}
 \label{sec:Using Roles---The View Method}
 
-Another way to tweak your dwarves using roles is to use the ``Roles'' view.%TODO
+Another way to tweak your dwarves using roles is to use the ``Roles'' view.
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\linewidth]{Sec3Fig10+}
-\end{figure}
+\fullfigure{Sec3Fig10+}
 
 This is one of the secondary views that is open by default when you first install the program. The
 difference here (besides the fact that this view uses the old labor organization system) is that instead
@@ -1663,10 +1603,7 @@ name.\footnote{You can also do this by exiting Dwarf Therapist and browsing to a
 more information. A word of warning: your changes will not be preserved should you update Dwarf
 Therapist.} Click on "New Custom Role" and it should bring up this dialogue:
 
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=.85]{Sec3Fig8}
-\end{figure}
+\fullfigure{Sec3Fig8}
 
 \newpage
 This is the editing interface for creating a custom role, and clearly demarkates the four components of a
@@ -1702,11 +1639,8 @@ want them taking two-season breaks, after all---so let's add that into the mix, 
 let's give your new role a name: "Hauler" seems appropriate.
 
 This is what the important settings in the interface should look like at the end of our little exercise:
-\begin{figure}[h!]
-\vspace{-5pt}
-\centering \includegraphics[width=\linewidth]{Sec3Fig9}
-\vspace{-10pt}
-\end{figure}
+
+\fullfigure{Sec3Fig9}
 
 Hit "Save" to save your new custom role. Now, whenever you go to the Custom Roles dialogue box, hovering
 over "Edit Custom Role" or "Delete Custom Role" will give you the option to perform that action on your
@@ -1754,19 +1688,18 @@ icon, one of the spare ones in the utility's default set that's not already used
 make it clearer that this icon is for haulers, I'm going to use the text and text coloration option
 provided in the window to draw a white H over my icon. You can also add a background color, but the
 regular icon set keeps a transparent white background, so I will too. I hit ok and the profession is now
-listed under "Custom Professions" in the Custom Professions and Icons dock (which is the only way to edit
-or delete a custom profession, fyi). To make it appear in the display, you have to commit your changes
-and reload your dwarves.
+listed under "Custom Professions" in the Custom Professions and Icons dock. To make it appear in the
+display, you have to commit your changes and reload your dwarves.
 
 To work the way we intended, make sure you don't check the Mask option in the window---this will change
 the behavior so that the custom profession only masks the dwarf's ordinary profession, and it will not
 allow you to make designation changes. You can remove a dwarf's custom profession designation with "Reset
 to default profession" and then a commit to the game.
 
-\begin{wrapfigure}{R}{0.45\textwidth}
-\vspace{-20pt}
+\begin{wrapfigure}{R}{0.40\textwidth}
+\vspace{-10pt}
   \begin{center}
-    \includegraphics{Sec3Fig11}
+    \includegraphics[width=\linewidth]{Sec3Fig11}
   \end{center}
 \vspace{-10pt}
 \end{wrapfigure}
@@ -1779,14 +1712,8 @@ transferring the profession to other dwarves. Thus it's like a nickname applied 
 profession, and in fact provides the same "who's this dwarf?" functionality that we previously used to
 make nicknames useful. However, since nicknames can be more easily seen at a glance within the Dwarf
 Therapist utility (and don't get in the way of this feature's more advanced version), I recommend
-sticking with them for this function.
-
-% For now, the functionality of custom professions is fairly limited. What you've created is essentially a
-% triggerable mask. Although the profession icon has changed and although the dwarf will be listed under
-% their new profession within Dwarf Therapist, actually triggering the profession is annoying: you have to
-% right click on the dwarf, then click on "Custom Professions", then click on the profession as it appears
-% in the menu. This will toggle the labors associated with that profession on, and turn off all others in
-% the process. You have to do so much work that this shortcut becomes anything but!
+sticking with them for this function. For more on custom professions, in particular a part of
+their utility that we're not yet ready to cover here, see \jump{Super Labors}.
 
 \subsection{Exporting and Importing Professions}
 \label{sec:Exporting and Importing Professions}
@@ -1798,7 +1725,7 @@ sticking with them for this function.
 \vspace{-15pt}
 \caption{Binmaker extrordinare.}
 \end{wrapfigure}
-Custom professions is actually one of the two \hbox{Dwarf Therapist} features we discuss (alongside
+Custom professions is actually one of the two Dwarf Therapist features we discuss (alongside
 nicknames) that are present within the base game, although custom professions have less utility within
 the game---they simply replace the dwarf's professional name. If you want to assign the same profession
 to multiple dwarves you have to do so manually, retyping it in each time. If you assign a custom
@@ -1865,10 +1792,7 @@ Try hitting the ``Add a new grid view'' button and you will be brought to an emp
 dialogue:
 \vspace{24pt}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\linewidth]{Sec3Fig13+}
-\end{figure}
+\fullfigure{Sec3Fig13+}
 
 The grid view creation dialogue organizes its columns into ``sets'', which are organizatory\ldots
 sets\ldots of columns of one color. If you try to create grid view columns without sets to place them in,
@@ -1998,10 +1922,7 @@ should do is this:
 \end{figure}
 
 Now if you add that view from the "Add Views" drop-down menu and delete the old one:
-\begin{figure}[h!]
-\centering
-\includegraphics{Sec3Fig16}
-\end{figure}
+\fullfigure{Sec3Fig16}
 
 NO SPACERS, banished!
 
@@ -2027,10 +1948,8 @@ removing them might be extremely helpful.
 
 Now, let's make some modifications to our new and improved "Labor" view.
 
-\begin{figure}[h!]
-\centering \includegraphics[width=\linewidth]{Sec3Fig17}
-\caption{Our Labor View at the beginning of this exercise.}
-\end{figure}
+\fullfigure{Sec3Fig17}
+\fullfigurecaption{Our Labor View at the beginning of this exercise.}
 
 The first thing we should do is remove alchemy. Assuming you're not using mods, it's not implemented into
 the game, and so it has no place in the labor view. Go to Other Jobs, right-click on Alchemy, and hit
@@ -2170,9 +2089,7 @@ operating folds into siege engineering, so I fade those halfway down the colorat
 individualize them.\vspace{12pt}
 
 The finished result:
-\begin{figure}[h!]
-\centering \includegraphics[width=\linewidth]{Sec3Fig26}
-\end{figure}
+\fullfigure{Sec3Fig26}
 
 It's organized, easy to view, fully color-coded, and nicely streamlined; half an hour well spent.
 
@@ -2182,7 +2099,9 @@ The ``Super Labors'' feature added since the first version of this guide was pub
 one further, optional refinement to this view: merging all of the hauling sublabors into one. We can use
 either the example ``Hauler'' custom profession we defined earlier, or a new, explicit superlabor:
 
+\vspace{5pt}
 \includegraphics[width=\linewidth]{Sec3Fig26+}
+\vspace{-5pt}
 
 On my 21-inch screen, this was enough to allow me to \emph{finally} use docks without horizontal
 scroll bars! There's a full spread on the next page.
@@ -2220,11 +2139,7 @@ here.
 Go to the dedicated Scripting item on the menubar and hit \texttt{Add New Filter Script} to bring up the
 script creation and modification dialogue:
 
-\begin{figure}[h!]
-\vspace{-5pt}
-\centering \includegraphics[width=\linewidth]{Sec4Fig1}
-\vspace{-5pt}
-\end{figure}
+\fullfigure{Sec4Fig1}
 
 As you can see, on the right side there is a fairly detailed demonstration of what filter scripts are
 meant to do, and then further down the list we get a list of methods we can use and then several
@@ -2333,11 +2248,8 @@ and risks switching the tasks of a dwarf you'd designated for a new role earlier
 \jump{Assigning Nicknames}). We're going to neatly resolve this little problem with a
 script we're going to write.
 
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=.73]{Sec4Fig2}
-\caption{In my fort I just started funneling my dwarves into tower fortress building duty.}
-\end{figure}
+\fullfigure{Sec4Fig2}
+\fullfigurecaption{In my fort I just started funneling my dwarves into tower fortress building duty.}
 
 Whenever you write a script the first question you've got to ask is, "what are the characteristics of a
 dwarf that I want" (if you're writing an \emph{inclusive} script), or "what are the characteristics of a
@@ -2564,10 +2476,7 @@ Optimization plans are a (somewhat complicated) way to automate the labor assign
 so far been doing manually. To access it, go to \texttt{Optimization > New Optimization Plan}, which
 should bring up a screen similar to the following one:
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\linewidth]{Sec4Fig5}
-\end{figure}
+\fullfigure{Sec4Fig5}
 
 This isn't the easiest of screens to piece apart, so let's look at what each option is meant to do first.
 It isn't immediately apparent, but the labor optimizer works by assigning jobs in a ratio-wise manner.
@@ -2614,8 +2523,7 @@ us to edit or remove our new optimization plan from its associated taskbar item,
 plan in-view using the ``Test Optimize'' button. Properly applying your designation, however,
 requires a new item that appears on your main menu bar---the optimization button.
 
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec4Fig8}
-\end{figure}
+\fullfigure{Sec4Fig8}
 
 This button will not appear when you don't have any optimization plans saved. When you have multiple
 optimization plans, a button appears besides it that lets you drop down a menu to select which script is
@@ -2626,10 +2534,7 @@ hitting Optimize will cleave them in two, between the wood burners and the smelt
 dwarves selected is odd you will get an uneven number of job divisions---in this case three furnace
 operators but only two wood burners.
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\linewidth]{Sec4Fig10}
-\end{figure}
+\fullfigure{Sec4Fig10}
 
 Now let's add a fold of complexity to our plan by including hauling as well. To edit an optimization
 plan, go to ``Optimizer" on the taskbar and select the plan from the ``Edit Optimization Plan" menu. This
@@ -2641,8 +2546,7 @@ dedicated wood burning or furnace operating, and the remaining half are made hau
 labors disabled. A note that needs to be made: optimization plans will obviously only work properly if
 roles are tuned to the default skill rank setting we discussed in \jump{Roles}.
 
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec4Fig11}
-\end{figure}
+\fullfigure{Sec4Fig11}
 
 From our little group of five dwarves this results in one wood burner, one furnace operator, and three
 haulers. Once again because five is indivisable by two the division is uneven, with more haulers being
@@ -2651,8 +2555,7 @@ if the numbers don't fold there will inevitably be some fudging on the corners.
 
 Let's dig a little deeper. Set the maximum number of jobs a dwarf can have to 2 this time, and test the
 script again to see what effect this has:
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec4Fig12}
-\end{figure}
+\fullfigure{Sec4Fig12}
 
 Unless you're particularly insightful, it's probably not immediately apparent what's going on here---why
 is only one dwarf hauling anything? So far we've generated three optimization scenarios; now let's use
@@ -2697,9 +2600,7 @@ number\:of\:labors\:to\:be\:assigned \times \frac{that\:labor's\:ratio}{sum\:of\
 Let's take this to its logical conclusion: what would happen if we kept jobs cap at 2, but raised the
 labor cap to 100 percent? Logically that would mean that every instance of that labor will be assigned -
 and a quick test confirms that, indeed, that is the case:
-\begin{figure}[h!] \centering
-\includegraphics[width=\linewidth]{Sec4Fig13}
-\end{figure}
+\fullfigure{Sec4Fig13}
 
 What about the funkiness with the assignment of hauling in example three? If you were following along
 with the examples I was giving, and didn't check the tooltip text on the Hauler Percent box in the
@@ -2748,8 +2649,7 @@ disbanded.
 As it turns out, dwarf number five in our examples above is actually a noble---I just haven't been
 excluding him in the optimization process. Doing so results in exactly the sort of behavior you would
 expect---he's ignored---and has the nice side effect of tidying up our ``five divided by two" problem.
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec4Fig15}
-\end{figure}
+\fullfigure{Sec4Fig15}
 
 \subsection{Using Optimization Plans}
 \label{Using Optimization Plans}
@@ -2760,13 +2660,11 @@ For now, see \jump{Putting it all Together}.
 \label{sec:Exporting and Importing Optimization Plans}
 
 Like most of the configurable utilities packaged into Dwarf Therapist, optimization plans can be exported
-and made available for others to use, or imported and made available for use in your program.
-
-\begin{figure}[h!] \centering \includegraphics[width=\linewidth]{Sec4Fig17}
-\end{figure}
-
-This feature is only available from the options bar on the optimization plan editing menu, and it doesn't
+and made available for others to use, or imported and made available for use in your program. This
+feature is only available from the options bar on the optimization plan editing menu, as it doesn't
 appear in the Optimization taskbar item.% This is currently under development.
+
+\fullfigure{Sec4Fig17}
 
 \newpage
 \addendum{
@@ -2808,16 +2706,12 @@ in-game, but once again it's not something the average user would need.
 \end{flushleft}
 }
 
-\vfill \newpage
-
 \newpage
 
 \section{Putting it all Together}
 \label{sec:Putting it all Together}
 
-\begin{figure}[h!]
-\includegraphics[width=\linewidth]{Sec5Fig1}
-\end{figure}
+\fullfigure{Sec5Fig1}
 
 We have now individually covered all of the features available to you in Dwarf Therapist, and so we are
 ready to put togethor everything we have learned so far and employ towards solving a particularly
@@ -2881,9 +2775,7 @@ view in which we can use them. Open up the Grid View dock (\texttt{Windows > Doc
 hit ``Add a New Grid View''. Name your view something appropriate---I called mine ``Recruitment''---and
 let's add what we have so far.
 
-\begin{figure}[h!]
-\includegraphics[width=\linewidth]{Sec5Fig2}
-\end{figure}
+\fullfigure{Sec5Fig2}
 
 Note that the ``Pickdwarf'' columns are labor toggles. If you inspect them you'll notice that, in a
 behavior described earlier in the addendum to \jump{Using Roles---The View Method}, roles with skilled
@@ -2912,11 +2804,7 @@ axedwarves.
 Let's now add these professions to our view! And while we're at it, let's add a set of columns for
 experience in the raw military skillsets we're using.
 
-\newpage
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\linewidth]{Sec5Fig5}
-\end{figure}
+\fullfigure{Sec5Fig5}
 
 \step{5}
 We now have our custom recruitment view in place, as well as a liturgy of appropriate new super-labors
@@ -2992,15 +2880,6 @@ And there you have it!
 \newpage
 \part{Appendix}
 
-\section{Utility Packages}
-\label{sec:Utility Packages}
-
-In this section we will list some of the publicly available customizations and packages that have been
-exported out of the program and made available online.
-% We're also now going to write a new military management view, to compliment the military recruitment
-% procedure we've created above\ldots
-
-\newpage
 \section{Hotkeys}
 \label{sec:Hotkeys}
 
@@ -3052,6 +2931,16 @@ your presets and custom definitions, and is seperated from the rest of the insta
 update Dwarf Therapist to a new version, the settings, options, and custom code bits you had present in
 a previous version of the utility are still present. Deleting this file will revert the program back to
 base settings.
+
+\newpage
+
+\section{Utility Packages}
+\label{sec:Utility Packages}
+
+In this section we will list some of the publicly available customizations and packages that have been
+exported out of the program and made available online.
+% We're also now going to write a new military management view, to compliment the military recruitment
+% procedure we've created above\ldots
 
 \newpage
 \pagenumbering{gobble}
