@@ -2403,9 +2403,9 @@ Those are all our conditions; behold, the completed script!
 // hauling test
 (d.total_assigned_labors(true) - d.total_assigned_labors(false) == 11) && 
 // masonry and stone detailing test
-(((d.labor_enabled(13) == true &&  d.labour_rating(13) < 3) ||
-d.labour_enabled(13) == false)  ||  ((d.labor_enabled(12) == true && 
-d.labour_rating(12) < 4)  || d.labour_enabled(12) == false)) &&
+(((d.labor_enabled(13) == true &&  d.labor_rating(13) < 3) ||
+d.labor_enabled(13) == false)  ||  ((d.labor_enabled(12) == true && 
+d.labor_rating(12) < 4)  || d.labor_enabled(12) == false)) &&
 // nickname test
 (d.nice_name == "") &&
 // military duty test
@@ -2417,13 +2417,13 @@ d.labour_rating(12) < 4)  || d.labour_enabled(12) == false)) &&
 && !d.labor_enabled(49) && !d.labor_enabled(00) && !d.labor_enabled(53)
 && !d.labor_enabled(46)) &&
 // useless labors test
-((d.labour_rating(16) > 0 && d.labor_enabled(16)) || d.labour_rating(16) <= 0)
+((d.labor_rating(16) > 0 && d.labor_enabled(16)) || d.labor_rating(16) <= 0)
 && // Animal Tr.
-((d.labour_rating(43) > 0 && d.labor_enabled(43)) || d.labour_rating(43) <= 0)
+((d.labor_rating(43) > 0 && d.labor_enabled(43)) || d.labor_rating(43) <= 0)
 && // Fish Diss.
-((d.labour_rating(26) > 0 && d.labor_enabled(26)) || d.labour_rating(26) <= 0)
+((d.labor_rating(26) > 0 && d.labor_enabled(26)) || d.labor_rating(26) <= 0)
 && // Animal Diss.
-((d.labour_rating(72) > 0 && d.labor_enabled(72)) || d.labour_rating(72) <= 0)
+((d.labor_rating(72) > 0 && d.labor_enabled(72)) || d.labor_rating(72) <= 0)
 \end{verbatim}
 
 \newpage
@@ -2807,6 +2807,7 @@ experience in the raw military skillsets we're using.
 
 \fullfigure{Sec5Fig5}
 
+\newpage
 \step{5}
 We now have our custom recruitment view in place, as well as a liturgy of appropriate new super-labors
 and professions in the customizations dock. The filter script we're going to use to weed fortress
@@ -2826,9 +2827,7 @@ different squads, then if you assign him manually, the squad he goes to will be 
 you assigned first. If you have an optimization plan, on the other hand, he'll go where he is needed
 most.
 
-\legacy{There are a couple of issues with using labor optimization in the manner described at
-the moment: the fact that numerical optimization is still under development, which can be worked around,
-and the fact that optimization clears all non-assigned labors, which cannot. Coming soon!}
+To do this, assign ``Hunting'' and ``Pump Operating'', the two labors which are unique to marksdwarves and militiadwarves, respectively, in equal amounts in your plan, and save.
 
 \step{6}
 There is one last thing we need to write: a simple filter script that only displays dwarves with
@@ -2862,7 +2861,9 @@ in-game: ``Fortress Guards'' and ``First Meleedwarves'', for instance.
 \step{3} Re-read dwarves from Dwarf Fortress, so that Dwarf Therapist can see the new squads. Filter them
 again down to those available for assignment.
 
-\step{3} Select all dwarves displayed using \texttt{Ctrl + A}, then hit our labor optimizer to conscript.
+\step{3} Select all dwarves displayed using \texttt{Ctrl + A} then go to the plan editor again. We want to optimize twenty dwarf, but have available some number of them, save, 80. With some quick math, it becomes apparent that we want to optimize 25 percent of our dwarves---so enter that value into the Percent Total Jobs textbox, and save. Now run the plan!
+
+\addendum{Numerical optimization, a feature planned for future releases, will automate this procedure.}
 
 \step{4} Now add the ``Pending Changes'' filter we defined in step six to the active filters, to remove
 those dwarves that escaped military assignment (this round) from the view.
@@ -2935,15 +2936,6 @@ base settings.
 
 \newpage
 
-\section{Utility Packages}
-\label{sec:Utility Packages}
-
-In this section we will list some of the publicly available customizations and packages that have been
-exported out of the program and made available online.
-% We're also now going to write a new military management view, to compliment the military recruitment
-% procedure we've created above\ldots
-
-\newpage
 \pagenumbering{gobble}
 \begin{figure}[h!]
 \centering
