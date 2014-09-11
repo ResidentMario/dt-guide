@@ -11,3 +11,4 @@ To minimize my incremental workload, the next overhaul will probably occur at th
 | 8/10/2013  | First version of this guide posted to the [Dwarf Therapist File Depot](http://dffd.wimbli.com/file.php?id=7889). |
 | 7/22/2014  | First online repo version posted to GitHub.  |
 | 8/08/2014  | The contents of this guide have now been thoroughly updated to match Dwarf Therapist version 23.2 beta. Page count increased from 52 to 62.  |
+| 9/10/2014  | The contents of this project have now been ported directly into the [Dwarf Therapist master repository](https://github.com/splintermind/Dwarf-Therapist) as the project's primary reference document. I encourage users to make any further commits will be made to that repo, though for now I leave this repo up as a "snapshot". |
